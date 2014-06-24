@@ -30,6 +30,11 @@ if ( $in['name'] ) {
 	}
 }
 
+// 회원정보 수정 완료 전 콜백
+if ( function_exists('before_edit_profile_submit_done') ) {
+		before_edit_profile_submit_done();
+}
+
 if ( $sy['mb']->update($in) ) {
 	// 업데이트가 완료 되면 업로드된 프로파일 이미지의 finished를 Y로 변경 한다. 
 	$sy['db']->update(DATA_TABLE, array('finished'=>'Y'), array('gid'=>$in['gid']));

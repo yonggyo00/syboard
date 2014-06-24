@@ -34,6 +34,12 @@ if ( $post_cfg['use_secret'] ) {
 	}
 }
 
+// 글쓰기, 글 수정 완료 전
+if ( function_exists('before_write_submit_done') ) {
+	before_write_submit_done();
+}
+
+
 if ( $in['mode'] == 'update' ) {
 	if (  $sy['post']->update($in) ) {
 		// 파일 업데이트 finished 변경

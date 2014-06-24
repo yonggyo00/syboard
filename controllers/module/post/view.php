@@ -13,9 +13,24 @@ if ( $p ) {
 		}
 	}
 	
+	// 게시판 제목 상단 콜백
+	if ( function_exists('before_view_post_subject') ) {
+			before_view_post_subject();
+	}
+	
 	// 게시판 제목
 	if ( !$view_post_subject_skin = $post_cfg['view_post_subject_skin'] ) $view_post_subject_skin = 'default';
 	load_skin('view_post_subject', $view_post_subject_skin);
+	
+	// 게시판 제목 하단 콜백
+	if ( function_exists('after_view_post_subject') ) {
+			after_view_post_subject();
+	}
+	
+	// 메뉴, 투표 상단 콜백
+	if ( function_exists('before_view_menu_vote') ) {
+			before_view_menu_vote();
+	}
 ?>
 	<table cellpadding=0 cellspacing=0 width='100%'>
 		<tr valign='top'>
@@ -36,15 +51,38 @@ if ( $p ) {
 		</tr>
 	</table>
 	<?php
+	// 메뉴, 투표 하단 콜백
+	if ( function_exists('after_view_menu_vote') ) {
+			after_view_menu_vote();
+	}
+	
 	// 글 보기 제목 스킨
 	if ( !$view_subject_skin = $post_cfg['view_subject_skin'] ) $view_subject_skin = 'default';
 	load_skin ( 'view_subject', $view_subject_skin );
 	
+	// 글 제목 하단 콜백
+	if ( function_exists('after_view_subject') ) {
+			after_view_subject();
+	}
+	
+	// 글 본문 상단 콜백
+	if ( function_exists('before_view_content') ) {
+			before_view_content();
+	}
 	
 	// 글 보기 스킨
 	if ( !$view_skin = $post_cfg['view_skin'] ) $view_skin = 'default';
 	load_skin ( 'view', $view_skin );
 	
+	// 글 본문 하단 콜백
+	if ( function_exists('after_view_content') ) {
+			after_view_content();
+	}
+	
+	// 지도 상단 콜백
+	if ( function_exists('before_view_map') ) {
+			before_view_map();
+	}
 	
 	// 지도 보기 스킨
 	if ( $post_cfg['map_use'] ) { // 지도 사용 선택 되었다면,
@@ -52,13 +90,38 @@ if ( $p ) {
 		load_skin('map', $map_skin, array('title'=>'지도'));
 	}
 	
+	// 지도 하단 콜백
+	if ( function_exists('after_view_map') ) {
+			after_view_map();
+	}
+	
+	// 댓글 폼 상단 콜백
+	if ( function_exists('before_view_comment_form') ) {
+			before_view_comment_form();
+	}
+	
 	// 댓글 폼
 	if ( $post_cfg['view_with_comment'] &&  ( $sy['mb']->is_login() || empty($post_cfg['use_login_post']))) {
 		include_once 'comment.form.php';
 	}
 	
+	// 댓글 폼 하단 콜백
+	if ( function_exists('after_view_comment_form') ) {
+			after_view_comment_form();
+	}
+	
+	// 댓글 목록 상단 콜백
+	if ( function_exists('before_view_comment_list') ) {
+			before_view_comment_list();
+	}
+	
 	if ( $post_cfg['view_with_comment_list'] ) {
 		include_once 'comment.list.php';
+	}
+	
+	// 댓글 목록 하단 콜백
+	if ( function_exists('after_view_comment_list') ) {
+			after_view_comment_list();
 	}
 	
 	// 리스트 추가

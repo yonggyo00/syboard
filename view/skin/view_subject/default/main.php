@@ -49,6 +49,12 @@ if ( empty($p['guest_secret'] ) ) {
 	</div>
 	<div style='clear:left;'></div>
 </div>
+<?php
+// 글 제목 상단 콜백
+if ( function_exists('before_view_subject') ) {
+		before_view_subject();
+}
+?>
 <div id="view-subject">
 	<?=stripslashes($p['subject'])?>
 </div>

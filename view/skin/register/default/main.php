@@ -9,7 +9,7 @@ if ( $so['mode'] == 'update' ) {
 	$hidden_input = "<input type='hidden' name='seq' value='".$info['seq']."' />";
 	$gid = $info['gid'];
 	$notice = "<div id='notice'>반드시 수정하기 버튼을 클릭해서 완료 하셔야 사진이 반영이 됩니다.</div>";
-	$email = "<span class='sub-title'>이메일*</span> &nbsp;&nbsp;&nbsp;".$info['email'];
+	$email = "<span class='sub-title'>이메일*</span> ".$info['email'];
 }
 else {
 	if ( $site_config['use_terms_conds'] || $site_config['use_policy'] )  {
@@ -28,7 +28,7 @@ else {
 		
 		$email = $sy['mb']->register_auth_email($in['auth_key']);
 		
-		$email = "<span class='sub-title'>이메일*</span> &nbsp;&nbsp;&nbsp;".$email . "
+		$email = "<span class='sub-title'>이메일*</span> ".$email . "
 					<input type='hidden' name='email' value='".$email."' />";
 	}
 	else $email = "<span class='sub-title'>이메일*</span> <input type='text' name='email' />";
@@ -81,11 +81,21 @@ $proflie_uploader = ob_get_clean();
 		<div><?=$email?></div>
 		<div><span class='sub-title'>휴대전화</span> <input type='text' name='mobile' value='<?=$info['mobile']?>' /></div>
 		<div><span class='sub-title'>유선전화</span> <input type='text' name='landline' value='<?=$info['landline']?>' /></div>
+		<div>
+			<span class='sub-title'>지역</span>
+			<?php 
+				$option = array();
+				if ( $info['province'] ) $option['selected_province'] = $info['province'];
+				if ( $info['city'] ) $option['selected_city'] = $info['city'];
+				
+				load_skin('location', 'philippines_location', $option);
+			?>
+		</div>
 		<div><span class='sub-title'>주소</span> <input type='text' name='address' value='<?=$info['address']?>' /></div>
 		<div><span class='sub-title'>서명</span> <input type='text' name='signature' value='<?=$info['signature']?>' /></div>
 		<div><span class='sub-title'>자기소개</span>
 		<hr />
-			<div id='introduction'><textarea rows=5 cols='95%' name='introduction'><?=$info['introduction']?></textarea></div>
+			<div id='introduction'><textarea rows=5 name='introduction'><?=$info['introduction']?></textarea></div>
 		</div>
 		
 	<?php

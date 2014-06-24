@@ -7,6 +7,7 @@
 		<a href='?module=member&action=update'>회원정보수정</a>
 <? } else {?>
 	<a href='?module=member&action=login_page#login_box'>로그인</a>
+	<a href='?module=member&action=register'>회원가입</a>
 <?}?>
 <?php
 	if ( !$mobile_pc_skin = $site_config['mobile_pc_skin'] ) $mobile_pc_skin = 'default';

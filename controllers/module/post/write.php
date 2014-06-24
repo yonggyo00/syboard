@@ -10,7 +10,6 @@ if ( $in['post_id'] ) {
 	
 	if ( ($post_cfg['use_editor'] && $in['action'] == 'write') || ($in['action'] == 'update' && $p['editor_used'] )  ) include_once 'editor_js.php';
 
-	if ( !$write_form_skin = $post_cfg['write_form_skin'] ) $write_form_skin =  'default';
 	echo module_css(__FILE__);
 	echo module_javascript(__FILE__);
 
@@ -28,8 +27,18 @@ if ( $in['post_id'] ) {
 	?>
 	<div id="write-module">
 	<?php
+		// 제목 상단 콜백
+		if ( function_exists('before_write_post_subject') ) {
+			before_write_post_subject();
+		}
+	
 		if ( !$write_subject_skin = $post_cfg['write_subject_skin'] ) $write_subject_skin = 'default';
 		load_skin('write_subject', $write_subject_skin);
+		
+		// 제목 하단 콜백
+		if ( function_exists('after_write_post_subject') ) {
+			after_write_post_subject();
+		}
 	?>
 		<form method='post' id='write-form' target='hiframe' autocomplete='off'>
 			<input type='hidden' name='module' value='post' />
@@ -51,8 +60,21 @@ if ( $in['post_id'] ) {
 			<? if ( $in['action'] == 'update' ) {?>
 				<input type='hidden' name='mode' value='update' />
 			<?}?>
+		
+			<?php 
+				// 쓰기 폼 상단 콜백
+				if ( function_exists('before_write_form') ) {
+					before_write_form();
+				}
 			
-			<?php load_skin('write_form', $write_form_skin);?>
+				if ( !$write_form_skin = $post_cfg['write_form_skin'] ) $write_form_skin =  'default';
+				load_skin('write_form', $write_form_skin);
+				
+				// 쓰기 폼 하단 콜백
+				if ( function_exists('after_write_form') ) {
+					after_write_form();
+				}
+			?>
 			
 			<?php
 				if ( $post_cfg['map_use'] ) { // 지도 사용 선택 되었다면,
@@ -67,6 +89,12 @@ if ( $in['post_id'] ) {
 				<input type='reset' value='취소' />
 			</div>
 		</form>
+		<?php
+			// form 하단 콜백   
+			if ( function_exists('write_form_end') ) {
+				write_form_end();
+			}
+		?>
 <?php 
 	if ( ($post_cfg['use_editor'] && $in['action'] == 'write') || ($in['action'] == 'update' && $p['editor_used'] ) ) {?>
 		<div id="file-uploader-wrapper">	

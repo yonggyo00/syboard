@@ -71,3 +71,8 @@
 	font-weight: normal;
 	float: right;
 }
+
+#member-register #introduction textarea {
+	width: 98%;
+	resize: none;
+}

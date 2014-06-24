@@ -127,6 +127,8 @@ if ( $_POST['done'] ) {
 						"`email` varchar(255) NOT NULL DEFAULT '',".
 						"`mobile` varchar(60) NOT NULL DEFAULT '',".
 						"`landline` varchar(60) NOT NULL DEFAULT '',".
+						"`province` varchar(100) NOT NULL DEFAULT '',".
+						"`city` varchar(100) NOT NULL DEFAULT '',".
 						"`address` varchar(255) NOT NULL DEFAULT '',".
 						"`signature` varchar(255) NOT NULL DEFAULT '',".
 						"`introduction` text,".
@@ -136,6 +138,26 @@ if ( $_POST['done'] ) {
 						"`resign_stamp` int(11) NOT NULL DEFAULT '0',".
 						"`point` int(11) NOT NULL DEFAULT '0',".
 						"`is_admin` char(1) NOT NULL DEFAULT '',".
+						"`int_1` int(11) NOT NULL DEFAULT '0',".
+						"`int_2` int(11) NOT NULL DEFAULT '0',".
+						"`int_3` int(11) NOT NULL DEFAULT '0',".
+						"`int_4` int(11) NOT NULL DEFAULT '0',".
+						"`int_5` int(11) NOT NULL DEFAULT '0',".
+						"`char_1` char(1) NOT NULL DEFAULT '',".
+						"`char_2` char(1) NOT NULL DEFAULT '',".
+						"`char_3` char(1) NOT NULL DEFAULT '',".
+						"`char_4` char(1) NOT NULL DEFAULT '',".
+						"`char_5` char(1) NOT NULL DEFAULT '',".
+						"`varchar_1` varchar(255) NOT NULL DEFAULT '',".
+						"`varchar_2` varchar(255) NOT NULL DEFAULT '',".
+						"`varchar_3` varchar(255) NOT NULL DEFAULT '',".
+						"`varchar_4` varchar(255) NOT NULL DEFAULT '',".
+						"`varchar_5` varchar(255) NOT NULL DEFAULT '',".
+						"`text_1` text,".
+						"`text_2` text,".
+						"`text_3` text,".
+						"`text_4` text,".
+						"`text_5` text,".
 						"PRIMARY KEY (`seq`),".
 						"KEY `username` (`username`),".
 						"KEY `name` (`name`),".
@@ -147,7 +169,22 @@ if ( $_POST['done'] ) {
 						"KEY `cellphone` (`mobile`),".
 						"KEY `landline` (`landline`),".
 						"KEY `domain` (`domain`),".
-						"KEY `gid` (`gid`)".
+						"KEY `gid` (`gid`),".
+						"KEY `int_1` (`int_1`),".
+						"KEY `int_2` (`int_2`),".
+						"KEY `int_3` (`int_3`),".
+						"KEY `int_4` (`int_4`),".
+						"KEY `int_5` (`int_5`),".
+						"KEY `char_1` (`char_1`),".
+						"KEY `char_2` (`char_2`),".
+						"KEY `char_3` (`char_3`),".
+						"KEY `char_4` (`char_4`),".
+						"KEY `char_5` (`char_5`),".
+						"KEY `varchar_1` (`varchar_1`),".
+						"KEY `varchar_2` (`varchar_2`),".
+						"KEY `varchar_3` (`varchar_3`),".
+						"KEY `varchar_4` (`varchar_4`),".
+						"KEY `varchar_5` (`varchar_5`)".
 						") ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;"
 					);
 					

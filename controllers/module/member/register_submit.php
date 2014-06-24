@@ -30,6 +30,11 @@ if ( $in['username'] && $in['password'] && $in['confirm_password'] && $in['name'
 	if ( $sy['mb']->check_email($in['email']) ) return $sy['js']->alert("이미 가입된 이메일 입니다.");
 	
 	if ( $in['password'] == $in['confirm_password'] ) {
+		// 회원 가입 완료 전 콜백
+		if ( function_exists('before_register_submit_done') ) {
+			before_register_submit_done();
+		}
+		
 		if ( $insert_id = $sy['mb']->register( $in ) ) {
 			// 정상적으로 가입이 된 경우 가입 포인트를 업데이트 한다.
 			
