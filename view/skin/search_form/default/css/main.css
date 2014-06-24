@@ -1,0 +1,41 @@
+#search-form-skin {
+	border: 1px solid #d5d5d5;
+	padding: 10px;
+	border-radius: 3px;
+	margin: 10px 10px 10px 0;
+	position: relative;
+}
+
+#search-form-skin > #title {
+	background-color: #496380;
+	color: #ffffff;
+	display: inline-block;
+	padding: 3px 10px;
+	position: absolute;
+	top: -10px;
+	left: -5px;
+}
+
+#search-form-skin input[type='submit'] {
+	display:inline-block;
+	background-color: #6d899e;
+	border: 1px solid #465a69;
+	padding: 5px 30px;
+	color: #ffffff;
+	cursor: pointer;
+	font-family: dotum;
+}
+
+#search-form-skin input[type='submit']:hover {
+	background-color: #465a69;
+}
+
+#search-form-skin input[type='text'], #search-form-skin select {
+	padding: 5px 10px;
+	border: 1px solid #666666;
+	border-radius: 3px;
+}
+
+#search-form-skin input[name='key'] {
+	width: 74%;
+}

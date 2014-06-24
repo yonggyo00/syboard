@@ -1,0 +1,61 @@
+#my-posts-skin #no_of_post {
+	color: #444444;
+	border-bottom: 1px solid #d5d5d5;
+	padding: 0 10px 5px 10px;
+}
+
+#my-posts-skin #no_of_post b {
+	color: #394766;
+}
+
+
+
+#my-posts-skin a {
+	text-decoration: none;
+	color: #444444;
+}
+
+#my-posts-skin .row {
+	height: 25px;
+	line-height: 25px;
+	border-bottom: 1px solid #d5d5d5;
+	padding: 0 10px;
+	
+}
+
+#my-posts-skin .row .subject {
+	float: left;
+	display: inline-block;
+	height: 25px;
+	line-height: 25px;
+	width: 70%;
+	overflow: hidden;
+	word-break: break-all;
+}
+
+#my-posts-skin .row:hover  {
+	background-color: #d5d5d5;
+}
+
+#my-posts-skin #button-group {
+	margin-top: 10px;
+	padding-left: 10px;
+}
+
+#my-posts-skin #select-all, #my-posts-skin input[type='submit'] {
+	display:inline-block;
+	background-color: #6d899e;
+	border: 1px solid #465a69;
+	padding: 4px 5px;
+	color: #ffffff;
+	cursor: pointer;
+	font-family: dotum;
+}
+
+#my-posts-skin #select-all:hover, #my-posts-skin input[type='submit']:hover {
+	background-color: #465a69;
+}
+
+#my-posts-skin input[type='submit'] {
+	float: right;
+}

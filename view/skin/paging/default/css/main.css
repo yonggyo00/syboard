@@ -1,0 +1,22 @@
+.paging {
+	text-align: center;
+	padding: 5px 0;
+	margin: 10px 0;
+}
+.paging a {
+	text-decoration: none;
+	font-size: 8.7pt;
+	color: #666666;
+	border: 1px solid #d5d5d5;
+	display: inline-block;
+	padding: 2px;
+	border-radius: 2px;
+	margin-left: 3px;
+	text-align: center;
+}
+.paging a:hover, .paging .selected {
+	border: 1px solid orange;
+}
+.paging .page_no {
+	width: 15px;
+}

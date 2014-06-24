@@ -1,0 +1,47 @@
+#user-info {
+	padding: 10px;
+	border: 1px solid #666666;
+	border-radius: 3px;
+}
+#user-info #title {
+	font-family: '맑은 고딕', AppleGothic;
+	border-bottom: 1px solid #666666;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	color: #303562;
+	font-weight: bold;
+	font-family: '맑은 고딕', AppleGothic;
+	font-size: 11pt;
+}
+
+#user-info .sub-title {
+	color: #ffffff;
+	background-color: #465373;
+	display: inline-block;
+	width: 100px;
+	padding: 4px 10px;
+	margin-bottom: 3px;
+	margin-right: 10px;
+}
+
+#user-info input[type='submit'] {
+	display:inline-block;
+	background-color: #6d899e;
+	border: 1px solid #465a69;
+	padding: 5px 10px;
+	color: #ffffff;
+	cursor: pointer;
+	font-family: dotum;
+	float: right;
+	margin-top: 20px;
+}
+
+#user-info input[type='submit']:hover {
+	background-color: #465a69;
+}
+
+#user-info #notice {
+	font-size: 8.7pt;
+	color: #644428;
+	font-family: '맑은 고딕', AppleGothic;
+}

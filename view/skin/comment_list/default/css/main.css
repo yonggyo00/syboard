@@ -1,0 +1,117 @@
+#comment-list {
+	margin-bottom: 20px;
+}
+#comment-list .comment-reply {
+	margin-left: 50px;
+}
+#comment-list .row {
+	border: 1px solid #666666;
+	min-height: 80px;
+	padding: 10px;
+	margin-bottom: 5px;
+	border-radius: 3px;
+	font-size: 9pt;
+	font-family: '맑은 고딕', AppleGothic;
+	position: relative;
+	z-index: 0;
+}
+#comment-list .row > .comment-pannel {
+	margin-bottom: 5px;
+}
+
+#comment-list .row > .comment-user-info {
+	border-radius: 3px;
+	color: #49495e;
+}
+
+#comment-list .row > .comment-user-info b {
+	color: #22223b;
+}
+
+#comment-list .row > .comment-user-info .date {
+	padding: 5px 10px;
+}
+#comment-list .row .comment-cancel-button, #comment-list .row .comment-write-button, #comment-list .row .comment-edit-button, #comment-list .row .comment-delete-button, #comment-list .row #scrap {
+	cursor: pointer;
+	display:inline-block;
+	background-color: #6d899e;
+	border: 1px solid #465a69;
+	padding: 4px 7px;
+	color: #ffffff;
+	text-decoration: none;
+	position: relative;
+	z-index: 1;
+}
+
+#comment-list .row .comment-cancel-button:hover, #comment-list .row .comment-write-button:hover, #comment-list .row .comment-edit-button:hover, #comment-list .row .comment-delete-button:hover, #comment-list .row #scrap:hover {
+	background-color: #465a69;
+}
+#comment-list .row #scrap {
+	margin-right: 4px;
+}
+#comment-list .row .comment-cancel-button {
+	display: none;
+}
+
+#comment-list .row .comment-write-form iframe {
+	width: 100%;
+	height: 220px;	
+	
+}
+#comment-list .row .comment-delete-button {
+	margin: 0 2px 0 4px;
+}
+
+#comment-list .row .profile-photo {
+	float: left;
+	margin-right: 5px;
+	width: 40px;
+	height: 40px;
+	border-radius: 10px;
+	overflow: hidden;
+}
+#comment-list .row .profile-photo img {
+	width: 100%;
+	height: 100%;
+}
+
+#comment-list .row .user-info {
+	float: left;
+}
+
+#comment-list .row .user-info .signature {
+	height: 20px;
+	line-height: 20px;
+	overflow: hidden;
+	margin-top: 2px;
+}
+
+#comment-list .row .username {
+	cursor: pointer;
+}
+
+#comment-list .row .username span:hover {
+	text-decoration: underline;
+}
+
+#comment-list .row .user-popup {
+	border: 1px solid #666666;
+	position: absolute;
+	background-color: #ffffff !important;
+	display: none;
+	z-index: 100 !important;
+	padding: 10px;
+	border-radius: 3px;
+	text-align: center;
+}
+
+#comment-list .row .user-popup a {
+	line-height: 17px !important;
+	height: 17px !important;
+	font-weight: normal !important;
+	color: #313131 !important;
+}
+
+#comment-list .row .user-popup a:hover {
+	text-decoration: underline !important;
+}

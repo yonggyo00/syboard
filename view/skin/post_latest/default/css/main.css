@@ -1,0 +1,37 @@
+#post-latest-default-skin {
+	border: 1px solid #666666;
+	padding: 10px;
+	border-radius: 3px;
+}
+
+#post-latest-default-skin  > #title {
+	border-bottom: 1px solid #666666;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+}
+
+#post-latest-default-skin  > #title a {
+	text-decoration: none;
+	font-size: 10pt;
+	color: #303562;
+	font-weight: bold;
+	font-family: '맑은 고딕', AppleGothic;
+}
+
+#post-latest-default-skin > .row a {
+	text-decoration: none;
+	color: #444444;
+	line-height: 17px;
+	height: 17px;
+	overflow: hidden;
+	word-break: break-all;
+	display: inline-block;
+}
+
+#post-latest-default-skin > .row a:hover {
+	text-decoration: underline;
+}
+
+#post-latest-default-skin > .row .secret {
+	color: #722121;
+}

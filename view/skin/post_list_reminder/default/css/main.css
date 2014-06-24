@@ -1,0 +1,46 @@
+#post-list-reminder-skin {
+	border: 1px solid #d5d5d5;
+	padding: 15px 10px 10px 10px;
+	border-radius: 3px;
+	position: relative;
+	margin: 20px 0 10px 5px;
+}
+
+#post-list-reminder-skin > #title {
+	background-color: #496380;
+	color: #ffffff;
+	display: inline-block;
+	padding: 3px 20px;
+	position: absolute;
+	top: -10px;
+	left: -5px;
+}
+
+#post-list-reminder-skin> .row {
+	border-bottom: 1px solid #d5d5d5;
+	padding: 0 10px;
+}
+
+#post-list-reminder-skin> .row:last-child {
+	border-bottom: none;
+}
+
+#post-list-reminder-skin> .row a {
+	text-decoration: none;
+	color: #334d61;
+	height: 25px;
+	line-height: 28px;
+	overflow: hidden;
+	word-break: break-all;
+	display: inline-block;
+	padding: 0 10px;
+}
+
+#post-list-reminder-skin> .row:hover, #post-list-reminder-skin> .selected {
+	background-color: #496380;
+	border-radius: 3px;
+}
+
+#post-list-reminder-skin> .row:hover a, #post-list-reminder-skin> .selected a {
+	color: #ffffff;
+}

@@ -1,0 +1,65 @@
+#login-page-skin {
+	width: 315px;
+	border: 1px solid #666666;
+	margin: 150px auto;
+	padding: 15px 10px 10px 10px; 
+	border-radius: 3px;
+	position: relative;
+}
+
+#login-page-skin > #title {
+	background-color: #496380;
+	color: #ffffff;
+	display: inline-block;
+	padding: 3px 10px;
+	position: absolute;
+	top: -10px;
+	left: -5px;
+}
+
+#login-page-skin a {
+	text-decoration: none;
+	color: #394454;
+	font-family: '맑은 고딕', AppleGothic;
+}
+
+#login-page-skin .sub-title {
+	background-color: #6d899e;
+	padding: 3px 10px;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+#login-page-skin #login-page-top {
+	margin-bottom: 5px;
+	color: #394454;
+	font-family: '맑은 고딕', AppleGothic;
+}
+
+#login-page-skin #login-page-top > #auto-login {
+	float: right;
+}
+
+#login-page-skin #login-page-top > a:hover {
+	text-decoration: underline;
+}
+
+#login-page-skin input[type='text'], #login-page-skin input[type='password'] {
+	width: 130px;
+	padding: 2px 10px;
+}
+
+#login-page-skin input[type='submit'] {
+	display:inline-block;
+	background-color: #6d899e;
+	border: 1px solid #465a69;
+	padding: 5px 0;
+	width: 313px;
+	color: #ffffff;
+	cursor: pointer;
+	font-family: dotum;
+}
+
+#login-page-skin input[type='submit']:hover {
+	background-color: #465a69;
+}

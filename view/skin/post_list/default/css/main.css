@@ -1,0 +1,93 @@
+#post-info-top {
+	margin-top: 10px;
+}
+
+#post-info-top #no_of_post, #post-info-top #post-level {
+	padding: 0 10px;
+	color: #444444;
+}
+
+#post-info-top #no_of_post {
+	float: left;
+}
+
+#post-info-top #no_of_post b, #post-info-top #post-level b {
+	color: #2b4e76;
+}
+
+#post-info-top #post-level {
+	float: right;
+}
+
+#post-list-skin {
+	border-top: 1px solid #d5d5d5;
+	margin-top: 10px;
+	position: relative;
+	z-index: 0;
+}
+#post-list-skin > .selected a {
+	font-weight: bold;
+	color: #3f6583 !important;
+}
+
+#post-list-skin > .rows {
+	border-bottom: 1px solid #d5d5d5;
+	height: 30px;
+	padding: 0 10px;
+}
+#post-list-skin > .rows:hover {
+	background-color: #eaeaea;
+	color: #465a69;
+}
+
+#post-list-skin > .rows a {
+	text-decoration: none;
+	color: #444444;
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	max-width: 450px;
+	overflow: hidden;
+}
+
+#post-list-skin > .rows > .date, #post-list-skin > .rows > .nickname, #post-list-skin > .rows > .no_of_view {
+	float: right;
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	margin-left: 10px;
+}
+
+#post-list-skin > .rows > .nickname {
+	cursor: pointer;
+}
+
+#post-list-skin > .rows .secret {
+	color: #722121;
+}
+
+#post-list-skin .user-popup {
+	border: 1px solid #666666;
+	position: absolute;
+	background-color: #ffffff;
+	z-index: 3;
+	display: none;
+	padding: 10px 15px;
+	border-radius: 3px;
+	text-align: center;
+}
+
+#post-list-skin .user-popup a {
+	line-height: 17px !important;
+	height: 17px !important;
+	font-weight: normal !important;
+	color: #313131 !important;
+}
+
+#post-list-skin .user-popup a:hover {
+	text-decoration: underline !important;
+}
+
+#post-list-skin .user-popup .popup-sendmessage {
+	margin-top: 10px;
+}

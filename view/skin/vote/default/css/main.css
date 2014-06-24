@@ -1,0 +1,19 @@
+#vote-skin {
+	margin-bottom: 10px;
+	padding-right: 10px;
+}
+
+#vote-skin > a{
+	font-size: 9pt;
+	background-color: #6d899e;
+	border: 1px solid #465a69;
+	padding: 5px 10px;
+	color: #ffffff;
+	cursor: pointer;
+	font-family: dotum;
+	text-decoration: none;
+}
+
+#vote-skin > a:hover {
+	background-color: #465a69;
+}

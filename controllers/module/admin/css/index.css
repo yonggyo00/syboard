@@ -1,0 +1,25 @@
+#admin-container {
+	min-height: 800px;
+	background-color: #d8e2f3;
+	padding: 60px 20px 20px 20px;
+}
+
+.admin-title {
+	background-color: #2c374c;
+	height: 40px;
+	line-height: 40px;
+	color: #ffffff;
+	font-weight: bold;
+	padding: 0 20px;
+	font-size: 12pt;
+	margin-bottom: 10px;
+}
+
+.admin-sub-title {
+	font-size: 11pt;
+	color: #2c374c;
+	font-weight: bold;
+	border-bottom: 1px solid #2c374c;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+}

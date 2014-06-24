@@ -1,0 +1,13 @@
+#move-post-sel > #move-select-all {
+	display:inline-block;
+	background-color: #6d899e;
+	border: 1px solid #465a69;
+	padding: 4px 5px;
+	color: #ffffff;
+	cursor: pointer;
+	font-family: dotum;
+}
+
+#move-post-sel > #move-select-all:hover {
+	background-color: #465a69;
+}

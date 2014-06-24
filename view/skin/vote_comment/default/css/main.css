@@ -1,0 +1,23 @@
+.vote-comment {
+	float: right;
+	margin-right: 2px;
+	position: relative;
+	top: -2px;
+}
+.vote-comment .vote-button{
+	font-size: 9pt;
+	background-color: #6d899e;
+	border: 1px solid #465a69;
+	padding: 5px 0 4px 0;
+	color: #ffffff;
+	cursor: pointer;
+	font-family: dotum;
+	text-decoration: none;
+	width: 60px;
+	text-align: center;
+	
+}
+
+.vote-comment .vote-button:hover {
+	background-color: #465a69;
+}

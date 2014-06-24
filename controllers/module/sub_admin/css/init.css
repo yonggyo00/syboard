@@ -1,0 +1,104 @@
+#sub-admin {
+	border: 1px solid #666666;
+	padding: 10px;
+}
+
+#sub-admin fieldset {
+	border: 1px solid #666666;
+	border-radius: 3px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+#sub-admin .sub-admin-title {
+	font-family: '맑은 고딕', AppleGothic;
+	font-size: 11pt;
+	color: #343434;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+#sub-admin .title {
+	font-family: '맑은 고딕', AppleGothic;
+	font-size: 11pt;
+	color: #313948;
+	border-bottom: 1px solid #d5d5d5;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+}
+
+#sub-admin .sub-title, #sub-admin input[type='submit']{
+	display:inline-block;
+	background-color: #6d899e;
+	border: 1px solid #465a69;
+	padding: 4px 10px;
+	width: 60px;
+	color: #ffffff;
+	font-family: dotum;
+	margin-right: 5px;
+}
+
+#sub-admin .sub-admin-row {
+	margin-bottom: 5px;
+}
+
+#sub-admin input[type='text'], #sub-admin select {
+	padding: 2px 10px;
+	position: relative;
+	top: 1px;
+}  
+
+#sub-admin input[type='submit'] {
+	width: 120px;
+	text-align: center;
+	cursor: pointer;
+}
+
+#sub-admin input[type='submit']:hover {
+	background-color: #465a69;
+}
+
+#sub-admin #no_of_result {
+	margin: 20px 0 5px 0;
+	padding: 0 10px;
+}
+
+#sub-admin #no_of_result b {
+	color: #333b4d;
+}
+
+#sub-admin table {
+	margin-bottom: 10px;
+}
+
+#sub-admin table tr td {
+	border-bottom: 1px solid #898989;
+	padding: 5px 10px;
+	background-color: #ffffff;
+}
+
+#sub-admin table #tr_header td{
+	border-top: 1px solid #898989;
+	background-color: #666666;
+	color: #ffffff;
+}
+
+#sub-admin #select-all, #sub-admin input[type='submit'] {
+	display:inline-block;
+	background-color: #6d899e;
+	border: 1px solid #465a69;
+	padding: 4px 5px;
+	color: #ffffff;
+	cursor: pointer;
+	font-family: dotum;
+}
+
+#sub-admin #select-all:hover, #sub-admin input[type='submit']:hover {
+	background-color: #465a69;
+}
+
+#sub-admin input[type='submit'] {
+	padding: 4px 5px;
+	position: relative;
+	top: 1px;
+}

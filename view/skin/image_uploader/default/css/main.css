@@ -1,0 +1,15 @@
+#image-uploader-skin #sub-title {
+	color: #ffffff;
+	background-color: #465373;
+	display: inline-block;
+	width: 100px;
+	padding: 4px 10px;
+	margin-bottom: 3px;
+	margin-right: 10px;
+}
+
+#image-uploader-skin #image img {
+	border: 1px solid #c6c6c6;
+	padding: 3px;
+	border-radius: 2px;
+}

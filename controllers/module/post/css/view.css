@@ -1,0 +1,24 @@
+/* ÆÄÀÏ ¾÷·Îµå */
+.content-file-info  {
+	border: 1px solid #d5d5d5;
+	display: inline-block;
+	padding: 3px 5px;
+	border-radius: 3px;
+	background-color: #e6e6e6;
+	margin-bottom: 3px;
+	font-size: 9pt;
+}
+.content-file-info .content-filename {
+	font-family: '¸¼Àº °íµñ', AppleGothic;
+}
+
+.content-file-info .file-download {
+	margin-left: 3px;
+	display:inline-block;
+	background-color: #6d899e;
+	border: 1px solid #465a69;
+	padding: 2px 3px;
+	color: #ffffff;
+	cursor: pointer;
+	margin-left: 10px;
+}

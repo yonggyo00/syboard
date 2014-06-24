@@ -1,0 +1,17 @@
+.comment-update-form {
+	font-size: 9pt;
+	font-family: dotum;
+}
+.comment-update-form input[type='submit'], .comment-update-form input[type='reset'] {
+	cursor: pointer;
+	display:inline-block;
+	background-color: #6d899e;
+	border: 1px solid #465a69;
+	padding: 4px 7px;
+	color: #ffffff;
+	float: right;
+}
+
+.comment-update-form input[type='submit']:hover, .comment-update-form input[type='reset']:hover {
+	background-color: #465a69 !important;
+}

@@ -1,0 +1,81 @@
+#view-user-info {
+	margin-bottom: 5px;
+	font-family: '맑은 고딕', AppleGothic;
+	font-size: 10pt;
+	color: #666666;
+	position: relative;
+	z-index: 0;
+	z-index: 0;
+}
+#view-user-info b {
+	color: #4b5b6c;
+	margin-right: 5px;
+}
+#view-user-info #right #user-info #user-info-left {
+	display: inline-block;
+	width: 49%;
+}
+#view-user-info #right #user-info #user-info-right {
+	display: inline-block;
+	width: 49%;
+	text-align: right;
+}
+#view-user-info #view-date, #view-user-info #no_of_view {
+	margin-right: 10px;
+}
+#view-subject {
+	font-size: 12pt;
+	font-weight: bold;
+	font-family: '맑은 고딕', AppleGothic;
+	border: 1px solid #666666;
+	padding: 10px;
+	margin-bottom: 5px;
+	color: #4b5b6c;
+	word-break: break-all;
+}
+#view-user-info #profile-photo {
+	float: left;
+	width: 5%;
+}
+#view-user-info #profile-photo img {
+	width: 100%;
+	border-radius: 7px;
+}
+#view-user-info #right {
+	float: left;
+	white-space: nowrap;
+	width: 92%;
+	padding-left: 1%;
+}
+
+#view-user-info #right #signature {
+	line-height: 19px;
+	height: 19px;
+	overflow: hidden;
+}
+
+#view-user-info #view-username {
+	cursor: pointer;
+}
+
+#view-user-info #view-user-popup {
+	position: absolute;
+	border: 1px solid #666666;
+	padding: 10px 15px;
+	border-radius: 3px;
+	z-index: 3;
+	background-color: #ffffff;
+	top: 18px;
+	left: 95px;
+	display: none;
+}
+
+#view-user-info #view-user-popup > div > a {
+	color: #313131;
+	text-decoration: none;
+	line-height: 18px;
+}
+
+#view-user-info #view-user-popup > div > a:hover {
+	text-decoration: underline;
+}

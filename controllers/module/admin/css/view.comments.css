@@ -1,0 +1,60 @@
+#view-posts {
+	border: 1px solid #666666;
+	padding: 10px;
+	border-radius: 3px;
+	font-size: 9pt;
+}
+
+#view-posts > #user-info {
+	border: 1px solid #1b243a;
+	padding: 10px;
+	border-radius: 3px;
+	margin-bottom: 10px;
+}
+
+#view-posts > #user-info > #title {
+	font-size: 11pt;
+	font-family: '맑은 고딕', AppleGothic;
+	font-weight: bold;
+	color: #21293d;
+	border-bottom: 1px solid #666666;
+	margin-bottom: 10px;
+	padding-bottom: 5px;
+}
+#view-posts > #user-info .sub-title {
+	color: #ffffff;
+	background-color: #465373;
+	display: inline-block;
+	width: 60px;
+	padding: 4px 10px;
+	margin-bottom: 3px;
+	margin-right: 10px;
+}
+
+#view-posts a {
+	text-decoration: none;
+	color: #313131;
+}
+
+#view-posts > .row {
+	border-bottom: 1px solid #d5d5d5;
+	height: 25px;
+	line-height: 25px;
+	padding: 0 10px;
+}
+
+#select-all, input[type='submit'] {
+	display:inline-block;
+	background-color: #6d899e;
+	border: 1px solid #465a69;
+	padding: 4px 10px;
+	color: #ffffff;
+	cursor: pointer;
+	font-family: dotum;
+	font-size: 9pt;
+	margin-top: 10px;
+}
+
+#select-all:hover, input[type='submit']:hover {
+	background-color: #465a69;
+}

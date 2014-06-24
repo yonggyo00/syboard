@@ -1,0 +1,24 @@
+#visitor-stat-default-skin {
+	border: 1px solid #666666;
+	padding: 10px;
+}
+#visitor-stat-default-skin > #title {
+	font-family: '맑은 고딕', AppleGothic;
+	border-bottom: 1px solid #666666;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	color: #303562;
+	font-weight: bold;
+	font-family: '맑은 고딕', AppleGothic;
+}
+
+#visitor-stat-default-skin > .row {
+	line-height: 17px;
+	height: 17px;
+	color: #313131;
+}
+
+#visitor-stat-default-skin > .row > .sub-title {
+	display: inline-block;
+	width: 60px;
+}

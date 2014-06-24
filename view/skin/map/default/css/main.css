@@ -1,0 +1,16 @@
+.default_map {
+	border: 1px solid #d5d5d5;
+	padding: 5px;
+	margin-bottom: 5px;
+	border-radius: 3px;
+}
+
+.default_map .title {
+	border-bottom: 1px solid #d5d5d5;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+	font-family: '맑은 고딕', AppleGothic;
+	color: #555555;
+	font-weight: bold;
+	font-weight: 9pt;
+}	

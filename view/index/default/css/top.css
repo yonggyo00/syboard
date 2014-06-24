@@ -1,0 +1,15 @@
+#site-top {
+	position: relative;
+}
+
+#site-top > #lang-default-skin {
+	position: absolute;
+	right: 0;
+	
+}
+
+#site-top > #mobile-pc-skin {
+	position: absolute;
+	right: 85px;
+	top: 4px;
+}

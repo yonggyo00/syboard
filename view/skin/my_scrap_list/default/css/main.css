@@ -1,0 +1,46 @@
+#my-scrap-list-skin #no_of_scrap {
+	color: #444444;
+	border-bottom: 1px solid #d5d5d5;
+	padding: 0 10px 5px 10px;
+}
+
+#my-scrap-list-skin #no_of_scrap b {
+	color: #394766;
+}
+
+#my-scrap-list-skin .row {
+	border-bottom: 1px solid #d5d5d5;
+	padding: 0 10px;
+}
+
+#my-scrap-list-skin a {
+	text-decoration: none;
+	color: #444444;
+}
+
+#my-scrap-list-skin .row .subject {
+	float: left;
+	display: inline-block;
+	height: 25px;
+	line-height: 25px;
+	width: 70%;
+	overflow: hidden;
+	word-break: break-all;
+}
+#my-scrap-list-skin .row:hover  {
+	background-color: #d5d5d5;
+}
+#my-scrap-list-skin .row .delete {
+	float: right;
+	display:inline-block;
+	background-color: #6d899e;
+	border: 1px solid #465a69;
+	padding: 3px 10px;
+	color: #ffffff;
+	cursor: pointer;
+	font-family: dotum;
+}
+
+#my-scrap-list-skin .row .delete:hover {
+	background-color: #465a69;
+}

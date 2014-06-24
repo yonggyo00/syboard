@@ -1,0 +1,48 @@
+#keyword-stat-default-skin {
+	border: 1px solid #666666;
+	padding: 10px;
+}
+
+#keyword-stat-default-skin > #title {
+	font-family: '맑은 고딕', AppleGothic;
+	border-bottom: 1px solid #666666;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	color: #303562;
+	font-weight: bold;
+	font-family: '맑은 고딕', AppleGothic;
+}
+
+#keyword-stat-default-skin > .row a {
+	text-decoration: none;
+	color: #444444;
+}
+
+#keyword-stat-default-skin > .row a:hover {
+	text-decoration: underline;
+}
+
+#keyword-stat-default-skin > .row .rank {
+	display:inline-block;
+	background-color: #6d899e;
+	color: #ffffff;
+	cursor: pointer;
+	font-family: dotum;
+	padding: 0 3px;
+	font-size: 8pt;
+}
+
+#keyword-stat-default-skin > .row > .keyword {
+	float: left;
+	display: inline-block;
+	width: 70%;
+	line-height: 17px;
+	height: 17px;
+	overflow: hidden;
+	word-break: break-all;
+	margin-bottom: 3px;
+}
+
+#keyword-stat-default-skin > .row > .variation {
+	float: right;
+}

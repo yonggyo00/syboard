@@ -1,0 +1,33 @@
+#captcha {
+	display: inline-block;
+	margin-bottom: 10px;
+	position: relative;
+}
+#captcha > #captcha-image {
+	cursor: pointer;
+	position: absolute;
+	top: 3px;
+	border-radius: 3px;
+	border: 1px solid #465a69;
+	height: 25px;
+
+}
+
+#captcha > #captcha-change {
+	display:inline-block;
+	background-color: #6d899e;
+	border: 1px solid #465a69;
+	padding: 6px 10px;
+	color: #ffffff;
+	cursor: pointer;
+	font-family: dotum;
+	margin-left: 108px;
+}
+
+#captcha > #captcha-change:hover {
+	background-color: #465a69;
+}
+
+#captcha > input[name='captcha'] {
+	padding: 4px 10px;
+}

@@ -1,0 +1,19 @@
+#post-list-menu {
+	text-align: right;
+	padding: 0 10px;
+}
+
+#post-list-menu > a {
+	font-size: 9pt;
+	background-color: #6d899e;
+	border: 1px solid #465a69;
+	padding: 5px 10px 4px 10px;
+	color: #ffffff;
+	cursor: pointer;
+	font-family: dotum;
+	text-decoration: none;
+}
+
+#post-list-menu > a:hover {
+	background-color: #465a69;
+}

@@ -1,0 +1,38 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 9pt;
+	font-family: dotum;
+	min-height: 800px;
+	color: #313131;
+	
+}
+body a {
+	text-decoration: none;
+	color: #313131;
+}
+
+body a:hover {
+	text-decoration: underline;
+}
+
+#main-layout {
+	width: 960px;
+	margin: 0 auto;
+}
+
+#main-layout > #main-left {
+	float: left;
+	width: 220px;
+	margin-right: 10px;
+}
+
+ #main-layout > #main-content {
+	float: left;
+	width: 730px;
+	min-height: 600px;
+}
+
+ #main-layout .main-left-row {
+	margin-bottom: 10px;
+ }

@@ -1,0 +1,30 @@
+#current-user {
+	border: 1px solid #666666;
+	padding: 10px;
+	height: 100px;
+}
+
+#current-user > #no_of_current_user {
+	font-family: '맑은 고딕', AppleGothic;
+	border-bottom: 1px solid #666666;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	color: #303562;
+	font-weight: bold;
+	font-family: '맑은 고딕', AppleGothic;
+}
+
+#current-user > #current_users {
+	margin-top: 10px;
+	height: 70px;
+	overflow-y: auto;
+}
+
+#current-user > #current_users a {
+	text-decoration: none;
+	color: #313131;
+}
+#current-user > #current_users a:hover {
+	color: #722121;
+	text-decoration: underline;
+}

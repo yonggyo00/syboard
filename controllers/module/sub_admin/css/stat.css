@@ -1,0 +1,9 @@
+#sub-admin-stat {
+	border: 1px solid #666666;
+	margin-top: 10px;
+	padding: 10px;
+}
+
+#sub-admin-stat > .row {
+	margin-bottom: 3px;
+}

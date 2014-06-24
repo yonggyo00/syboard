@@ -1,0 +1,58 @@
+#register-auth {
+	border: 1px solid #666666;
+	padding: 50px 10px 10px 10px;
+	position: relative;
+	margin-left: 5px;
+	min-height: 150px;
+	text-align: center;
+}
+
+#register-auth > #title {
+	background-color: #496380;
+	color: #ffffff;
+	display: inline-block;
+	padding: 3px 10px;
+	position: absolute;
+	top: -10px;
+	left: -5px;
+}
+
+#register-auth #submit-button {
+	margin-top: 5px;
+}
+
+#register-auth #sub-title {
+	color: #ffffff;
+	background-color: #465373;
+	display: inline-block;
+	width: 100px;
+	padding: 4px 7px;
+	margin-bottom: 3px;
+	margin-right: 5px;
+}
+
+#register-auth  input[type='text'] {
+	padding: 0 10px;
+}
+
+#register-auth input[type='submit'] {
+	display:inline-block;
+	background-color: #6d899e;
+	border: 1px solid #465a69;
+	padding: 4px 100px;
+	color: #ffffff;
+	cursor: pointer;
+	font-family: dotum;
+}
+
+#register-auth input[type='submit']:hover {
+	background-color: #465a69;
+}
+
+#register-auth #register-auth-message {
+	padding: 10px;
+	border-radius: 3px;
+	font-family: '¸¼Àº °íµñ', AppleGothic;
+	color: #695a37;
+	font-weight: bold;
+}

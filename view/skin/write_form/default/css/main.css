@@ -1,0 +1,25 @@
+#write-form-skin {
+	font-family: '맑은 고딕', AppleGothic;
+}
+#write-form-skin > #subject {
+	margin-bottom: 7px;
+}
+#write-form-skin .title {
+	font-size: 11pt;
+	font-weight: bold;
+	color: #313131;
+	margin-right: 10px;
+}
+
+#write-form-skin > #subject input[type='text'] {
+	padding: 3px 10px;
+	width: 70%;
+}
+
+#write-form-skin > #write-content {
+	height: 300px;
+}
+
+#write-form-skin #secret_password {
+	display: none;
+}

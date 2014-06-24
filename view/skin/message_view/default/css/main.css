@@ -1,0 +1,132 @@
+#message-view-skin #left{
+	border-right: 1px solid #b4b4b4;
+	margin-right: 10px;
+	padding: 0 10px;
+	height: 550px;
+}
+
+#message-view-skin #left #left-top-menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+#message-view-skin #left #left-top-menu li {
+	float: left;
+	display: block;
+	background-color: #6d899e;
+	border: 1px solid #465a69;
+}
+
+#message-view-skin #left #left-top-menu li a {
+	display: inline-block;
+	text-decoration: none;
+	color: #ffffff;
+	height: 34px;
+	line-height: 34px;
+	padding: 0 10px;
+}
+
+#message-view-skin #left #write-form-button {
+	border-right: none !important;
+}
+
+#message-view-skin #left #left-middle-menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+#message-view-skin #left #left-middle-menu li {
+	border: 1px solid #e5e5e5;
+	border-left: 0;
+	border-right: 0;
+	float: left;
+	display: block;
+	margin-top: 5px;
+	padding: 5px 0;
+}
+#message-view-skin #left #left-middle-menu li a {
+	text-decoration: none;
+	color : #333333;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+#message-view-skin #left #left-bottom-menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#message-view-skin #left #left-bottom-menu li {
+	display: block;
+}
+
+#message-view-skin #left #left-bottom-menu li a {
+	display: inline-block;
+	width: 80%;
+	padding: 5px 10%;
+	text-decoration: none;
+	color: #333333;
+}
+
+#message-view-skin #left #left-bottom-menu li a:hover {
+	background-color: #e5e5e5;
+}
+
+#message-view-skin #left #left-bottom-menu li a img {
+	position: relative;
+	top: 3px; 
+	left: -5px;
+}
+
+#message-view-skin #user-info, #message-view-skin #subject {
+	border: 1px solid #666666;
+	padding: 10px;
+	margin-bottom: 5px;
+	border-radius: 3px;
+}
+
+#message-view-skin #user-info {
+	
+}
+
+#message-view-skin #user-info > #receiver {
+	margin-right: 20px;
+}
+
+#message-view-skin #user-info b {
+	margin-right: 5px;
+}
+
+#message-view-skin #subject {
+	margin-bottom: 10px;
+}
+
+#message-view-skin #content {
+	border: 1px solid #666666;
+	padding: 10px;
+	border-radius: 3px;
+	min-height: 300px;
+}
+
+#no_of_unreaded  {
+	font-weight: bold;
+	color: #0ba506;
+}
+
+#message-view-skin #reply-button {
+	float: right;
+	border: 1px solid #b4b4b4;
+	border-radius: 3px;
+	display: inline-block;
+	padding: 5px 7px;
+	cursor: pointer;
+	color: #333333;
+	margin-top: 10px;
+}
+
+#message-view-skin #reply-button:hover {
+	background-color: #b4b4b4;
+	color: #ffffff;
+	text-decoration: none;
+}

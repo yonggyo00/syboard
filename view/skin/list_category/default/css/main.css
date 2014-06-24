@@ -1,0 +1,31 @@
+#list-category-wrapper {
+	margin-bottom: 10px;
+	padding: 0 10px;
+}
+#list-category {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#list-category li {
+	float: left;
+}
+
+#list-category li > a {
+	text-decoration: none;
+	color: #3d5778;
+	border: 1px solid #313131;
+	height: 25px;
+	line-height: 25px;
+	padding: 0 10px;
+	display: inline-block;
+	margin-right: 3px;
+	border-radius: 3px;
+	font-family: '맑은 고딕', AppleGothic;
+}
+
+#list-category li > a:hover {
+	background-color: #3d5778;
+	color: #ffffff;
+}
