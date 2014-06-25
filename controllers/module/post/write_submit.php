@@ -1,26 +1,26 @@
 <?php
 // 금지어 체크 
-if ( $blocked_words = $sy['post']->blocked_words($in['content']) ) return $sy['js']->alert( "금지어 ".$blocked_words."(이)가 포함되었습니다. 해당 단어를 제거해 주세요.");
+if ( $blocked_words = $sy['post']->blocked_words($in['content']) ) return $sy['js']->alert( lang('Post_write_submit error1').$blocked_words.lang('Post_write_submit error2'));
 
 if ( empty($post_cfg['use_login_post']) && !$sy['mb']->is_login() ) {
 	if ( $site_config['use_captcha'] ) {
 		if ( $_SESSION['captcha'] != md5($in['captcha']) ) {
-			return $sy['js']->alert("보안문자를 정확하게 입력하세요.");
+			return $sy['js']->alert(lang('Post_write_submit error3'));
 		}
 		unset($in['captcha']);
 	}
 	// 게스트 사용자의 글쓰기인 경우는 guest_username을 학인 한다.
 	
 	if ( $in['mode'] != 'update' ) {
-		if ( empty($in['guest_username']) ) return $sy['js']->alert("글쓴이를 입력하세요");
+		if ( empty($in['guest_username']) ) return $sy['js']->alert(lang('Post_write_submit error9'));
 		else {
-			if ( strlen($in['guest_username'] ) >= 15) return $sy['js']->alert("글쓴이는 한글 5자 또는 영문 15자 이내로 입력하세요.");
+			if ( strlen($in['guest_username'] ) >= 15) return $sy['js']->alert(lang('Post_write_submit error4'));
 		}
 		
 		// 게스트 사용자의 글 비밀번호를 확인 한다.
-		if ( empty($in['guest_secret']) ) return $sy['js']->alert("글 비밀번호를 입력하세요.");
+		if ( empty($in['guest_secret']) ) return $sy['js']->alert(lang('Post_write_submit error5'));
 		else {
-			if ( strlen($in['guest_secret']) != 6 ) return $sy['js']->alert("비밀번호는 6자리의 영문, 숫자 조합으로 지정해 주세요.");
+			if ( strlen($in['guest_secret']) != 6 ) return $sy['js']->alert(lang('Post_write_submit error6'));
 		}
 	}
 }
@@ -29,8 +29,8 @@ if ( empty($post_cfg['use_login_post']) && !$sy['mb']->is_login() ) {
 if ( $post_cfg['use_secret'] ) {
 	if ( $in['use_secret'] ) {
 		if ( $in['secret'] ) {
-			if ( strlen($in['secret']) != 6 ) return $sy['js']->alert("비밀번호는 6자리 이하로 등록해 주세요.");
-		} else return $sy['js']->alert("비밀번호를 등록해 주세요.");
+			if ( strlen($in['secret']) != 6 ) return $sy['js']->alert(lang('Post_write_submit error7'));
+		} else return $sy['js']->alert(lang('Post_write_submit error8'));
 	}
 }
 

@@ -20,7 +20,7 @@ $posts = $sy['post']->latest_posts($query, $cache_name, 20, 1, $no_of_post);
 		
 		$secret = null;
 		if  ( $p['secret'] ) {
-			$secret = "<span class='secret'>[비밀글]</span>";
+			$secret = "<span class='secret'>[".lang('List view secret')."]</span>";
 			if ( !$sy['post']->my_post($p['seq_member']) && !admin() && !$sy['post']->admin() ) $view_url = $sy['post']->view_secret_check_url($p['seq']);
 		}
 ?>

@@ -4,7 +4,7 @@ $reminders = $so['reminder'];
 if ( $reminders ) {
 ?>
 <div id='post-list-reminder-skin'>
-	<span id='title'>공지</span>
+	<span id='title'><?=lang('LIst reminder')?></span>
 <?php
 	foreach ( $reminders as $re ) {
 		if ( $re['seq'] == $in['seq'] ) $add_re_style = "selected";

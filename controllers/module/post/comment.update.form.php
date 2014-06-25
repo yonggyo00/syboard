@@ -13,11 +13,11 @@ if ( $in['seq'] ) {
 		<input type='hidden' name='seq' value='<?=$in['seq']?>' />
 		
 		<textarea name='content'><?=$comment['content']?></textarea>
-		<input type='reset' value='취소' />
-		<input type='submit' value='글쓰기' />
+		<input type='reset' value='<?=lang('Comment_form reset')?>' />
+		<input type='submit' value='<?=lang('Comment_form write')?>' />
 		<div style='clear:right;'></div>
 	</form>
 <?
 }
-else $sy['js']->alert("잘못된 접근 입니다.");
+else $sy['js']->alert(lang('Comment_delete error'));
 ?>

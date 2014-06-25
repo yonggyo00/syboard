@@ -9,7 +9,7 @@
 				<input type='hidden' name='layout' value=1 />
 				<input type='hidden' name='seq_comment' value='<?=$comment['seq']?>' />
 				<input type='hidden' name='mode' value='good' />
-				<input class='vote-button' type='submit' value='찬성(<?=$comment['good']?>)' />	
+				<input class='vote-button' type='submit' value='<?=lang('Vote_comment good')?>(<?=$comment['good']?>)' />	
 			</form>
 		</td>
 		<td width=4></td>
@@ -20,7 +20,7 @@
 				<input type='hidden' name='layout' value=1 />
 				<input type='hidden' name='seq_comment' value='<?=$comment['seq']?>' />
 				<input type='hidden' name='mode' value='bad' />
-				<input class='vote-button' type='submit' value='반대(<?=$comment['bad']?>)' />	
+				<input class='vote-button' type='submit' value='<?=lang('Vote_comment bad')?>(<?=$comment['bad']?>)' />	
 			</form>
 		</td>
 	</tr>

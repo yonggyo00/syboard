@@ -13,12 +13,12 @@ echo module_javascript(__FILE__);
 		<?php
 		
 		if ( empty($post_cfg['use_login_post']) && !$sy['mb']->is_login() ) {
-			echo "글쓴이<input type='text' name='guest_username' placeholder='글쓴이' />
-			비밀번호<input type='password' name='secret' placeholder='6자리 비밀번호' />
+			echo lang('Comment_form poster')."<input type='text' name='guest_username' placeholder='".lang('Comment_form poster')."' />
+			".lang('Comment_form password')."<input type='password' name='secret' placeholder='".lang('Comment_form password_msg')."' />
 			";
 			
 			if ( $site_config['use_captcha'] ) {
-				echo "<div>보안문자";
+				echo "<div>".lang('Comment_form captcha');
 				if ( !$captcha_skin = $site_config['captcha_skin'] ) $captcha_skin = 'default';
 				load_skin('captcha', $captcha_skin);
 				echo "</div>";
@@ -29,8 +29,8 @@ echo module_javascript(__FILE__);
 		load_skin('comment_write_form', $comment_write_form_skin);
 		?>
 		<div id='comment-submit-button-group'>
-			<input type='reset' value='취소' />
-			<input type='submit' value='글쓰기' />
+			<input type='reset' value='<?=lang('Comment_form reset')?>' />
+			<input type='submit' value='<?=lang('Comment_form write')?>' />
 		<div style='clear:right;'></div>
 		</div>
 	</form>

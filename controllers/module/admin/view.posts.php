@@ -17,7 +17,7 @@ $page_no = $sy['post']->page_no($in['page_no']);
 
 $posts = $sy['post']->posts ( $query, $page_no, $no_of_post );
 ?>
-<form method='post' target='hiframe'>
+<form id='view-post-form' method='post' target='hiframe'>
 	<input type='hidden' name='module' value='admin' />
 	<input type='hidden' name='action' value='view_post_submit' />
 	<input type='hidden' name='layout' value=1 />

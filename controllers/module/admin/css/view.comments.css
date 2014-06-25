@@ -43,7 +43,7 @@
 	padding: 0 10px;
 }
 
-#select-all, input[type='submit'] {
+#view-comment-form #select-all, #view-comment-form input[type='submit'] {
 	display:inline-block;
 	background-color: #6d899e;
 	border: 1px solid #465a69;
@@ -55,6 +55,6 @@
 	margin-top: 10px;
 }
 
-#select-all:hover, input[type='submit']:hover {
+#view-comment-form #select-all:hover, #view-comment-form input[type='submit']:hover {
 	background-color: #465a69;
 }

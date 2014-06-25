@@ -16,8 +16,8 @@
 		?>
 			<span class='row' file_no='<?=$image['seq']?>' file_url='<?=$filepath?>' image_width='<?=$image['width']?>'>
 				<?=$image['filename']?>
-				<span class='delete_file'>삭제</span>
-				<span class='insert_content'>본문삽입</span>
+				<span class='delete_file'><?=lang('File_uploader delete')?></span>
+				<span class='insert_content'><?=lang('File_uploader insert_into_content')?></span>
 			</span>
 	<?
 		}

@@ -283,7 +283,7 @@ class post{
 	public function update_url ( $seq, $mode = 0 ) {
 	
 		$url = "?module=post&action=update&seq=".$seq;
-		if ( $mode && !admin() && !$this->admin() ) $url = $this->view_guest_secret_check_url($seq);
+		if ( $mode && !admin() && !$this->admin() && !site_admin() ) $url = $this->view_guest_secret_check_url($seq);
 		
 		return $url;
 	}
@@ -292,7 +292,7 @@ class post{
 		$url = "?module=post&action=delete&seq=".$seq;
 		if ( $post_id ) $url .= "&post_id=".$post_id;
 		
-		if ( $mode && !admin() && !$this->admin()) $url = $this->view_guest_secret_check_url($seq, 1, $post_id);
+		if ( $mode && !admin() && !$this->admin() && !site_admin()) $url = $this->view_guest_secret_check_url($seq, 1, $post_id);
 		
 		return $url;
 	}
@@ -437,6 +437,7 @@ class post{
 		global $sy;
 		
 		$option = array(
+						'deleted'=>'N',
 						'seq_root'=>$seq_root
 		);
 		

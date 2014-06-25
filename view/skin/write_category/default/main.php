@@ -1,9 +1,9 @@
 <?=skin_css($so, __FILE__)?>
 <?=skin_javascript($so, __FILE__)?>
 <div id='write-category'>
-	분류 
+	<?=lang('Write Category sort')?> 
 	<select name='category'>
-		<option value=''>카테고리</option>
+		<option value=''><?=lang('Write Category category')?></option>
 		<option value=''></option>
 	<?php
 	$i=1;
@@ -30,7 +30,7 @@
 			
 			<?}
 			echo "<select class='sub_category' sub_category='category_{$i}'>
-					<option value=''>서브카테고리</option>
+					<option value=''>".lang('Write Category sub_category')."</option>
 					<option value=''></option>";
 			foreach ( $value as $v ) {
 				if ( $v == $p['sub_category'] ) $selected = 'selected';

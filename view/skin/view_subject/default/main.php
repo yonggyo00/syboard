@@ -19,8 +19,8 @@ $signature = stringcut($user_info['signature'], 90);
 if ( empty($p['guest_secret'] ) ) {
 	$view_user_popup = "
 						<div id='view-user-popup'>
-							<div><a href='".$sy['ms']->sendto($p['username'])."'>쪽지보내기</a></div>
-							<div><a href='".$sy['post']->search_user_post_url($p['username'])."'>작성글보기</a></div>
+							<div><a href='".$sy['ms']->sendto($p['username'])."'>".lang('View subject send message')."</a></div>
+							<div><a href='".$sy['post']->search_user_post_url($p['username'])."'>".lang('View subject view posts')."</a></div>
 						</div>
 	";
 }else $view_user_popup = null;
@@ -31,17 +31,17 @@ if ( empty($p['guest_secret'] ) ) {
 		<div id='user-info'>
 			<span id='user-info-left'>
 				<span id='view-username'>
-					<b>글쓴이</b> <?=$p['nickname']?>(<?=$p['username']?>)
+					<b><?=lang('View subject post by')?></b> <?=$p['nickname']?>(<?=$p['username']?>)
 				</span>
 				<?=$view_user_popup?>
 				<?=$view_ip?>
 			</span>
 			<span id='user-info-right'>
 				<span id='no_of_view'>
-					<b>조회수</b> <?=number_format($p['no_of_view'])?>
+					<b><?=lang('View subject views')?></b> <?=number_format($p['no_of_view'])?>
 				</span>
 				<span id='view-date'>
-					<b>작성일</b> <?=date("Y-m-d H:i", $p['stamp'])?>
+					<b><?=lang('View subject date')?></b> <?=date("Y-m-d H:i", $p['stamp'])?>
 				</span>
 			</span>
 		</div>

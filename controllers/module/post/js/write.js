@@ -63,14 +63,14 @@ function insert_content_to_editor( data )
 }
 
 function callback_write_done( insert_id ) {
-	alert("등록되었습니다.");
+	alert(sm_post_write_submit_done);
 	window.location.href='?module=post&action=view&seq='+insert_id;
 }
 
 function update_file_info( seq, filename, file_url, image_width ) {
 	$("#file_info").append("<span class='row' file_no='"+seq+"' file_url='"+file_url+"' image_width='"+image_width+"' filename='"+filename+"'>"+filename+	
-							"<span class='delete_file'>삭제</span>"+
-							"<span class='insert_content'>본문삽입</span>" + 
+							"<span class='delete_file'>"+ sm_fu_delete +"</span>"+
+							"<span class='insert_content'>"+ sm_fu_insert_into_content +"</span>" + 
 							"</span>"
 	);
 }

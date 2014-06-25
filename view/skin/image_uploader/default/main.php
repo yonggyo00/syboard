@@ -27,7 +27,7 @@
 		<input type='hidden' name='layout' value=1 />
 		
 		<div>
-			<span id='sub-title'>사진 업로드</span><input type='file' name='file'/>
+			<span id='sub-title'><?=lang('image uploader skin title')?></span><input type='file' name='file'/>
 		</div>
 	</form>
 </div>

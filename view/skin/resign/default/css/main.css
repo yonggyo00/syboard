@@ -1,9 +1,9 @@
-#user-info {
+#resign-skin > #user-info {
 	padding: 10px;
 	border: 1px solid #666666;
 	border-radius: 3px;
 }
-#user-info #title {
+#resign-skin > #user-info #title {
 	font-family: '맑은 고딕', AppleGothic;
 	border-bottom: 1px solid #666666;
 	padding-bottom: 5px;
@@ -14,7 +14,7 @@
 	font-size: 11pt;
 }
 
-#user-info .sub-title {
+#resign-skin > #user-info .sub-title {
 	color: #ffffff;
 	background-color: #465373;
 	display: inline-block;
@@ -24,7 +24,7 @@
 	margin-right: 10px;
 }
 
-#user-info input[type='submit'] {
+#resign-skin > #user-info input[type='submit'] {
 	display:inline-block;
 	background-color: #6d899e;
 	border: 1px solid #465a69;
@@ -36,11 +36,11 @@
 	margin-top: 20px;
 }
 
-#user-info input[type='submit']:hover {
+#resign-skin > #user-info input[type='submit']:hover {
 	background-color: #465a69;
 }
 
-#user-info #notice {
+#resign-skin > #user-info #notice {
 	font-size: 8.7pt;
 	color: #644428;
 	font-family: '맑은 고딕', AppleGothic;

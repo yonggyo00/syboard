@@ -1,9 +1,9 @@
 <?php
-if ( empty($in['seq']) ) return $sy['js']->alert('잘못된 접근 입니다.');
+if ( empty($in['seq']) ) return $sy['js']->alert(lang('Post_scrap error1'));
 
-if ( !$sy['mb']->is_login() ) return $sy['js']->alert("로그인을 해 주세요.");
+if ( !$sy['mb']->is_login() ) return $sy['js']->alert(lang('Post_scrap error2'));
 
-if ( $sy['post']->is_scrapped($in['seq']) )  return $sy['js']->alert("이미 스크랩 되었습니다.");
+if ( $sy['post']->is_scrapped($in['seq']) )  return $sy['js']->alert(lang('Post_scrap error3'));
 else {
 	if ( $sy['post']->scrap($in['seq']) ) {
 		echo "
@@ -14,7 +14,7 @@ else {
 			</script>
 		";
 	}
-	else $sy['js']->alert("스크랩에 실패하였습니다.");
+	else $sy['js']->alert(lang('Post_scrap error4'));
 
 	
 }

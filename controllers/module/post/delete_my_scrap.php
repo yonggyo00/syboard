@@ -1,11 +1,11 @@
 <?php
-if ( empty($in['seq_scrap']) ) return $sy['js']->alert("잘못된 접근 입니다.");
+if ( empty($in['seq_scrap']) ) return $sy['js']->alert(lang('Delete_scrap error'));
 
 $msg = null;
 if ( $sy['post']->unscrap($in['seq_scrap']) ) {
-	$msg = "삭제되었습니다.";
+	$msg = lang('Delete_scrap success');
 }
-else $msg = "삭제에 실패하였습니다.";
+else $msg = lang('Delete_scrap failed');
 
 $sy['js']->alert($msg);
 ?>

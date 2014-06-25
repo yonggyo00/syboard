@@ -1,5 +1,5 @@
 $(document).ready(function(){
-	$("#select-all").click(function() {
+	$("#view-post-form #select-all").click(function() {
 		$checked = $("#view-posts .row input[type='checkbox']").prop("checked");
 		
 		if ( $checked == false ) {

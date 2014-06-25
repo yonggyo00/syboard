@@ -24,7 +24,7 @@ $register_url = $sy['mb']->register_url();
 		
 		<div id='profile-image'><?=$profile_image?></div>
 		<div id='pannel1'>
-			<div id='username'><?=stringcut($_member['nickname'], 15)?><?=lang("Login username")?></div>
+			<div id='username'><?=stringcut($_member['nickname'], 15)?><?=lang("Login msg")?></div>
 			<div><a href='?module=member&action=update'><?=lang("Login edit profile")?></a></div>
 			<div>
 				<a href='<?=$sy['ms']->list_url()?>'><?=lang("Login Message")?><?=$new?></a> &nbsp;&nbsp;
@@ -50,11 +50,11 @@ $register_url = $sy['mb']->register_url();
 	
 		<? if ( !admin() ) {?>
 			&nbsp;&nbsp;
-			<a href='?module=post&action=my_posts'/>나의글</a>&nbsp;
-			<a href='?module=post&action=my_comments'/>내의댓글</a>
+			<a href='?module=post&action=my_posts'/><?=lang('Login My Post')?></a>&nbsp;
+			<a href='?module=post&action=my_comments'/><?=lang('Login My Comment')?></a>
 		<? }?>
 		<?if ( site_admin() ) {?>
-			&nbsp;<a id='site-admin' href='?module=sub_admin&action=index'>관리</a>
+			&nbsp;<a id='site-admin' href='?module=sub_admin&action=index'><?=lang('Login Site')?></a>
 		<?}?>
 		
 		<div id='logout-button'><input type='submit' value='<?=lang("Login Logout")?>' /></div>
@@ -70,8 +70,8 @@ $register_url = $sy['mb']->register_url();
 		</div>
 		
 		<input type='hidden' name='action' value='login' />
-		<div id='username'><?=$user_img?><input type='text' name='username' placeholder="아이디" /></div>
-		<div id='password'><?=$pass_img?><input type='password' name='password' placeholder="비밀번호" /></div>
+		<div id='username'><?=$user_img?><input type='text' name='username' placeholder="<?=lang('Login username')?>" /></div>
+		<div id='password'><?=$pass_img?><input type='password' name='password' placeholder="<?=lang('Login password')?>" /></div>
 		<div style='margin-top: 5px;'>
 			<span id='auto-login'><input type='checkbox' name='auto_login' value=1 /><?=lang("Login autologin")?></span>
 			<input type='submit' value='<?=lang("Login Login")?>' />

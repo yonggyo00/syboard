@@ -7,7 +7,7 @@ $(document).ready(function() {
 				$("#current-user").html(data);
 			},
 			error : function(res) {
-				console.log(res);
+				
 			}
 	});
 	
@@ -21,7 +21,7 @@ $(document).ready(function() {
 		
 			},
 			error : function(res) {
-				console.log(res);
+				
 			}
 		});
 		
@@ -228,6 +228,5 @@ function readCookie(name) {
 function eraseCookie(name) {
   createCookie(name,"",-1);
 }
-
 
 

@@ -4,12 +4,12 @@ echo module_javascript(__FILE__);
 if ( $p ) {	
 	// 레벨 확인
 	$point = $sy['mb']->my_point();
-	if ( $sy['mb']->level($point) < $post_cfg['view_level'] ) return $sy['js']->back("레벨이 부족하여 글을 볼 수 없습니다.");
+	if ( $sy['mb']->level($point) < $post_cfg['view_level'] ) return $sy['js']->back(lang('Post_view error1'));
 	
 	// 비밀글인 경우 비밀번호 확인, 자기가 쓴 글인 경우 비밀번호 확인을 하지 않는다.
-	if ( $p['secret'] && !$sy['post']->my_post($p['seq_member']) && !admin() && !$sy['post']->admin() ) {
+	if ( $p['secret'] && !$sy['post']->my_post($p['seq_member']) && !admin() && !$sy['post']->admin() && !site_admin() ) {
 		if ( $_SESSION['post_no_'.$p['seq'].'_secret'] != $p['secret'] ) {
-			return $sy['js']->back("비밀글에 설정된 비밀번호가 다릅니다.");
+			return $sy['js']->back(lang('Post_view error2'));
 		}
 	}
 	
@@ -87,7 +87,7 @@ if ( $p ) {
 	// 지도 보기 스킨
 	if ( $post_cfg['map_use'] ) { // 지도 사용 선택 되었다면,
 		if( !$map_skin = $post_cfg['map_skin'] ) $map_skin = 'default';
-		load_skin('map', $map_skin, array('title'=>'지도'));
+		load_skin('map', $map_skin, array('title'=>lang('Post_view map')));
 	}
 	
 	// 지도 하단 콜백
@@ -127,5 +127,5 @@ if ( $p ) {
 	// 리스트 추가
 	if ( $post_cfg['view_with_list'] ) include_once 'list.php';
 }
-else $sy['js']->back("글이 존재 하지 않습니다.");
+else $sy['js']->back(lang('Post_view error3'));
 ?>

@@ -13,12 +13,12 @@
 <div class='main-left-row'>
 <?php
 	if ( !$keyword_stat_skin = $site_config['keyword_stat_skin'] ) $keyword_stat_skin = 'default';
-	load_skin('keyword_stat', $keyword_stat_skin, array('title'=>'검색어 순위', 'no_of_keywords'=>7));
+	load_skin('keyword_stat', $keyword_stat_skin, array('title'=>lang('Keyword stat title'), 'no_of_keywords'=>7));
 ?>
 </div>
 <div class='main-left-row'>
 <?php
 	if ( !$visitor_stat_skin = $site_config['visitor_stat_skin'] ) $visitor_stat_skin = 'default';
-	load_skin('visitor_stat', $visitor_stat_skin, array('title'=>'방문자 통계', 'visitor_stat'=>$_visitor_stat));
+	load_skin('visitor_stat', $visitor_stat_skin, array('title'=>lang('Visitor stat title'), 'visitor_stat'=>$_visitor_stat));
 ?>
 </div>

@@ -1,23 +1,23 @@
 <?=skin_css($so, __FILE__)?>
 <?php
 $vs = $so['visitor_stat'];
-if ( !$title = $so['title'] ) $title = "방문자 통계";
+if ( !$title = $so['title'] ) $title = lang('Visitor stat title');
 ?>
 <div id='visitor-stat-default-skin'>
 	<div id='title'><?=$title?></div>
 	<div class='row'>
-		<span class='sub-title'>오늘</span><?=number_format($vs['today'])?>
+		<span class='sub-title'><?=lang('Visitor stat today')?></span><?=number_format($vs['today'])?>
 	</div>
 	<div class='row'>
-		<span class='sub-title'>어제</span><?=number_format($vs['yesterday'])?>
+		<span class='sub-title'><?=lang('Visitor stat yesterday')?></span><?=number_format($vs['yesterday'])?>
 	</div>
 	<div class='row'>
-		<span class='sub-title'>일주일</span><?=number_format($vs['week'])?>
+		<span class='sub-title'><?=lang('Visitor stat 1week')?></span><?=number_format($vs['week'])?>
 	</div>
 	<div class='row'>
-		<span class='sub-title'>한달</span><?=number_format($vs['month'])?>
+		<span class='sub-title'><?=lang('Visitor stat 1month')?></span><?=number_format($vs['month'])?>
 	</div>
 	<div class='row'>
-		<span class='sub-title'>일년</span><?=number_format($vs['year'])?>
+		<span class='sub-title'><?=lang('Visitor stat 1year')?></span><?=number_format($vs['year'])?>
 	</div>
 </div>

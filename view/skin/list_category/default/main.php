@@ -3,7 +3,7 @@
 <div id='list-category-wrapper'>
 <ul id='list-category'>
 	<li>
-		<a href='<?=$sy['post']->list_url($in['post_id'])?>'>전체</a>
+		<a href='<?=$sy['post']->list_url($in['post_id'])?>'><?=lang('Post_list_category whole')?></a>
 	</li>
 <?php
 	foreach ( $_category as $key => $value ) {

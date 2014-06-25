@@ -17,9 +17,9 @@ if ( $in['seq'] ) {
 				</script>
 			";
 		}
-		else $sy['js']->alert("숫자 또는 영문의 6자리 글 비밀번호를 입력하세요.");
+		else $sy['js']->alert(lang('Guest_secret_check error1'));
 	}
-	else $sy['js']->alert("글 비밀번호를 입력하세요.");
+	else $sy['js']->alert(lang('Guest_secret_check error2'));
 }
-else $sy['js']->alert("잘못된 접근 입니다.");
+else $sy['js']->alert(lang('Guest_secret_check error3'));
 ?>

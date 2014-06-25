@@ -1,7 +1,7 @@
 <?php
 // 게시판 존재 여부 확인
 if ( $in['post_id'] ) {
-	if ( !$sy['post']->post_id_exist($in['post_id']) ) return $sy['js']->back("게시판이 존재하지 않습니다.");
+	if ( !$sy['post']->post_id_exist($in['post_id']) ) return $sy['js']->back(lang('init forum_not_exists'));
 }
 
 // 콜백 스크립트 인클루드

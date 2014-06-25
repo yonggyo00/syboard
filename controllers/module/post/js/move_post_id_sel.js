@@ -4,11 +4,11 @@ $(document).ready(function(){
 		
 		if ( $checked == false ) {
 			 $("#list-module-form .seq").prop("checked", true);
-			 $(this).text("전체해제");
+			 $(this).text(sm_deselect_all);
 		}
 		else {
 			 $("#list-module-form .seq").prop("checked", false);
-			 $(this).text("전체선택");
+			 $(this).text(sm_select_all);
 		}
 	});
 });

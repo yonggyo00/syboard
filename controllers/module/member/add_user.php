@@ -24,7 +24,7 @@ $current_users =  $sy['mb']->current_user();
 
 $total = intval($current_users['guest']) + intval($current_users['online']);
 
-echo "<div id='no_of_current_user'>현재 접속자 ".number_format($total)."(".number_format($current_users['online']).")</div>";
+echo "<div id='no_of_current_user'>".lang('Current user current users').number_format($total)."(".number_format($current_users['online']).")</div>";
 
 echo "<div id='current_users'>";
 if ( $current_users['users'] ) {
@@ -33,7 +33,7 @@ if ( $current_users['users'] ) {
 	}
 }
 for( $i = 1; $i <= $current_users['guest']; $i++ ) {
-	echo "<div>손님".$i."</div>";
+	echo "<div>".lang('Current user guest').$i."</div>";
 }
 echo "</div>";
 ?>

@@ -1,4 +1,4 @@
-<?php
+ <?php
 if ( $in['seq'] ) {
 
 	if ( $sy['db']->update(COMMENT_DATA_TABLE, array('deleted'=>'Y'), array('seq'=>$in['seq'])) ) {
@@ -20,10 +20,10 @@ if ( $in['seq'] ) {
 		}
 		
 		echo "<script>
-					alert('삭제 되었습니다.');
+					alert('".lang('Comment_delete success')."');
 					parent.location.reload();
 				</script>";
 	}
 }
-else $sy['js']->alert("잘못된 접근 입니다.");
+else $sy['js']->alert(lang('Comment_delete error'));
 ?>

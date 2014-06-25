@@ -1,4 +1,21 @@
 <?php
+/************************************************************
+ *                                                          *
+ * PHPROCKS.COM SYBOARD Version 0.2                         *
+ * Copyright(C) 2014, 만든이 이용교(LEE, YONGGYO)           *
+ * 이 소스는 GPL 라이센스로 배포됩니다.                     *
+ * 수정 및 상업적인 용도로 사용하셔도 무방하오나,           *
+ * 출처 및 만든이 관련 주석은 제거하지 마십시오.            *
+ * 만든이 이메일 - lyonggyo@gmail.com                       *
+ *                                                          *
+ * 사용법                                                   *
+ * http://www.phprocks.com의 SYBOARD 설치 및 사용법을       *
+ * 참고하세요.                                              *
+ *                                                          *
+ *                                                          *
+ ************************************************************
+*/
+
 	// 초기화 파일
 	include_once 'init/init.php';
 	
@@ -29,6 +46,10 @@
 	<? if ( $_lang == 'ko-KR' ) {?>
 			<script src='<?=LIB_JS_PATH?>/jquery-ui/jquery.ui.datepicker-ko.js'></script>
 	<? }?>
+	<?php
+		// 자바스크립트 메세지
+		include_once CONTROLLER_PATH .'/js.msg.php';
+	?>
 	<script src='js/index.js' /></script>
 	<?php 
 		include_once css_header_path();

@@ -685,10 +685,12 @@ function popup_config($seq = null) {
 
 // 사이트별 어드민
 function site_admin() {
-	global $site_config, $_member;
+	global $site_config, $_member, $sy;
 	
-	$admins = explode(",", $site_config['admin']);
-	if ( in_array($_member['username'], $admins) ) return 1;
+	if ( $site_config['admin'] && $sy['mb']->is_login() ) {
+		$admins = explode(",", $site_config['admin']);
+		if ( in_array($_member['username'], $admins) ) return 1;
+	}
 }
 
 // 스킨 목록을 종류 별로 가져온다.

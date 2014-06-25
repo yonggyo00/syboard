@@ -1,7 +1,7 @@
 <?php 
 if ( $in['post_id'] ) {
 	$point = $sy['mb']->my_point();
-	if ( $sy['mb']->level($point) < $post_cfg['list_level'] ) return $sy['js']->back("레벨이 부족하여 글 목록을 볼 수 없습니다.");
+	if ( $sy['mb']->level($point) < $post_cfg['list_level'] ) return $sy['js']->back(lang('List error1'));
 	
 	include_once 'paging.top.php';
 	
@@ -109,5 +109,5 @@ if ( $in['post_id'] ) {
 		after_paging();
 	}
 }
-else $sy['js']->alert("게시판 아이디가 전달 되지 않았습니다.");
+else $sy['js']->alert(lang('List error2'));
 ?>

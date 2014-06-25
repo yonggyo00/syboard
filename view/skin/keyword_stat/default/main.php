@@ -1,6 +1,6 @@
 <?=skin_css($so, __FILE__);?>
 <?php
-if ( !$title = $so['title'] ) $title = '검색어 순위';
+if ( !$title = $so['title'] ) $title = lang('Keyword stat title');
 if ( !$no_of_keywords = $so['no_of_keywords'] ) $no_of_keywords = 7;
 $keyword = $sy['post']->keyword_stat( $no_of_keywords );
 

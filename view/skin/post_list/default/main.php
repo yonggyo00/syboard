@@ -16,12 +16,12 @@ include_once MODEL_PATH . '/posts.php';
 
 ?>
 <div id='post-info-top'>
-	<span id='no_of_post'>등록된 글 총 <b><?=number_format($so['total_post'])?></b>개</span>
+	<span id='no_of_post'><?=lang('List no_of_post1')?> <b><?=number_format($so['total_post'])?></b><?=lang('List no_of_post2')?></span>
 	<span id='post-level'>
-		글목록 LV<b><?=$post_level['list_level']?></b>
-		글보기 LV<b><?=$post_level['view_level']?></b>
-		글쓰기 LV<b><?=$post_level['write_level']?></b>
-		댓글 LV<b><?=$post_level['comment_write_level']?></b>
+		<?=lang('List top list')?> LV<b><?=$post_level['list_level']?></b>
+		<?=lang('List top view')?> LV<b><?=$post_level['view_level']?></b>
+		<?=lang('List top write')?> LV<b><?=$post_level['write_level']?></b>
+		<?=lang('List top comment')?> LV<b><?=$post_level['comment_write_level']?></b>
 	</span>
 	<div style='clear:both;'></div>
 </div>
@@ -41,9 +41,9 @@ if ( $posts ) {
 			$secret = null;
 			
 			if ( $p['secret'] ) {
-				 $secret = "<span class='secret'>[비밀글]</span>";
+				 $secret = "<span class='secret'>[".lang('List view secret')."]</span>";
 				 
-				if ( !$sy['post']->my_post($p['seq_member']) && !admin() && !$sy['post']->admin() ) $url = $sy['post']->view_secret_check_url($p['seq']);
+				if ( !$sy['post']->my_post($p['seq_member']) && !admin() && !$sy['post']->admin() && !site_admin() ) $url = $sy['post']->view_secret_check_url($p['seq']);
 			}
 			
 			$nickname = stringcut($p['nickname'], 15);
@@ -99,8 +99,8 @@ if ( $posts ) {
 								<div class='user-popup'>
 									<div>$nickname</div>
 									<div>($username)</div>
-									<div class='popup-sendmessage'><a href='".$sy['ms']->sendto($p['username'])."'>쪽지보내기</a></div>
-									<div><a href='".$sy['post']->search_user_post_url($p['username'])."'>작성글보기</a></div>
+									<div class='popup-sendmessage'><a href='".$sy['ms']->sendto($p['username'])."'>".lang('List msg send message')."</a></div>
+									<div><a href='".$sy['post']->search_user_post_url($p['username'])."'>".lang('List msg view posts')."</a></div>
 								</div>
 							";
 			}

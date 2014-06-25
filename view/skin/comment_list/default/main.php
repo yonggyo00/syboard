@@ -31,8 +31,8 @@ if ( $_comments ) {?>
 			// 팝업
 			$user_popup = "
 								<div class='user-popup'>
-									<div><a href='".$sy['ms']->sendto($comment['username'])."'>쪽지보내기</a></div>
-									<div><a href='".$sy['post']->search_user_post_url($comment['username'])."'>작성글보기</a></div>
+									<div><a href='".$sy['ms']->sendto($comment['username'])."'>".lang('Comment_list send message')."</a></div>
+									<div><a href='".$sy['post']->search_user_post_url($comment['username'])."'>".lang('Comment_list send view posts')."</a></div>
 								</div>
 							";
 		}
@@ -47,27 +47,27 @@ if ( $_comments ) {?>
 						}
 				
 						if ( ($sy['mb']->is_login() && $sy['post']->is_my_comment ($comment['seq_member'])) || admin() || $sy['post']->admin() || site_admin()) {?>
-							<span class='comment-edit-button'>수정</span>
-							<a href='?module=post&action=comment_delete&layout=1&post_id=<?=$in['post_id']?>&seq=<?=$comment['seq']?>&seq_root=<?=$comment['seq_root']?>' target='hiframe' class='comment-delete-button' onclick='return confirm("정말 삭제하시겠습니까?")'>삭제</a>	
+							<span class='comment-edit-button'><?=lang('Comment_list edit')?></span>
+							<a href='?module=post&action=comment_delete&layout=1&post_id=<?=$in['post_id']?>&seq=<?=$comment['seq']?>&seq_root=<?=$comment['seq_root']?>' target='hiframe' class='comment-delete-button' onclick='return confirm("<?=lang('Comment_list delete_msg')?>")'><?=lang('Comment_list delete')?></a>	
 					<?}?>
 					
 					<?php
 					if ( admin() || $sy['post']->admin() || site_admin()) {
-						echo "<a id='scrap' href='?module=member&action=block&seq=".$comment['seq']."&layout=1&mode=comment' target='hiframe'>차단</a>";
+						echo "<a id='scrap' href='?module=member&action=block&seq=".$comment['seq']."&layout=1&mode=comment' target='hiframe'>".lang('Comment_list block')."</a>";
 					}
 					?>
 					<? if ( (empty($post_cfg['use_login_post']) && !$sy['mb']->is_login() ) || $sy['mb']->is_login() ) {?>
-						<span class='comment-cancel-button'>취소</span>
-						<span class='comment-write-button'>댓글</span>
+						<span class='comment-cancel-button'><?=lang('Comment_list cancel')?></span>
+						<span class='comment-write-button'><?=lang('Comment_list write')?></span>
 					<?}?>
 				</div>
 				<div class='comment-user-info'>
 					<?=$profile_photo?>
 					<div class='user-info'>
 						<div>
-						<span class='username'><b>작성자</b> <span><?=$comment['nickname']?>(<?=$comment['username']?>)</span></span><?=$ip?>
+						<span class='username'><b><?=lang('Comment_list Poster')?></b> <span><?=$comment['nickname']?>(<?=$comment['username']?>)</span></span><?=$ip?>
 						<?=$user_popup?>
-						<span class='date'><b>등록일</b> <?=date('Y-m-d H:i', $comment['stamp'])?></span>
+						<span class='date'><b><?=lang('Comment_list date')?></b> <?=date('Y-m-d H:i', $comment['stamp'])?></span>
 						</div>
 						<div class='signature'><?=$signature?></div>
 					</div>

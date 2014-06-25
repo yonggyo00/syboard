@@ -12,17 +12,17 @@
 	</div>	
 	<table cellpadding=0 cellspacing=0 border=0>
 		<tr>
-			<td><div class='sub-title'>아이디</div></td>
+			<td><div class='sub-title'><?=lang('Login username')?></div></td>
 			<td width=5></td>
-			<td><div class='sub-title'>비밀번호</div></td>
+			<td><div class='sub-title'><?=lang('Login password')?></div></td>
 		</tr>
 		<tr>
 			<td>
-				<input type='text' name='username' placeholder="아이디" />
+				<input type='text' name='username' placeholder="<?=lang('Login username')?>" />
 			</td>
 			<td width=5></td>
 			<td>
-				<input type='password' name='password' placeholder="비밀번호" />
+				<input type='password' name='password' placeholder="<?=lang('Login password')?>" />
 			</td>
 		</tr>
 	</table>

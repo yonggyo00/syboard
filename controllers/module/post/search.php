@@ -50,5 +50,5 @@ if ( $in['key'] || $in['username'] ) {
 	);
 	load_skin('search_paging', $search_paging_skin, $option);
 }
-else $sy['js']->back("검색어를 입력하세요.");
+else $sy['js']->back(lang('Post_search error1'));
 ?>

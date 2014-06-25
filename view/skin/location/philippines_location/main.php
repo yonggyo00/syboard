@@ -30,7 +30,7 @@ $region[1] = array (
 ?>
 <span id='philippines-location'>
 	<select name='province'>
-		<option value=''>지방선택</option>
+		<option value=''><?=lang('Location select province')?></option>
 		<option value=''></option>
 	<?php
 		foreach ( $provinces as $key=>$value ) {
@@ -52,7 +52,7 @@ $region[1] = array (
 	<?php
 		foreach ( $region as $key => $value ) {?>
 			<select class='cities' id='cities_<?=$key?>'>
-				<option value=''>도시선택</option>
+				<option value=''><?=lang('Location select city')?></option>
 				<option value=''></option>
 		<?php
 				foreach ( $value as $v ) {
