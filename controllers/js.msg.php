@@ -4,4 +4,6 @@
 	var sm_fu_delete = "<?=lang('File_uploader delete')?>";
 	var sm_fu_insert_into_content = "<?=lang('File_uploader insert_into_content')?>";
 	var sm_post_write_submit_done = "<?=lang('Post_write_submit done')?>";
+	var sm_register_terms_and_condition_agree = "<?=lang('register policy agree error')?>";
+	
 </script>

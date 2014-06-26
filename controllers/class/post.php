@@ -107,7 +107,7 @@ class post{
 			return $sy['db']->insert(POST_DATA_TABLE, $option);
 		}
 		else {
-			return $sy['js']->alert("제목과 본문의 내용을 입력해 주세요");
+			return $sy['js']->alert(lang('post class error1'));
 		}
 	}
 	
@@ -155,7 +155,7 @@ class post{
 			
 		}
 		else {
-			return $sy['js']->alert("제목과 본문의 내용을 입력해 주세요");
+			return $sy['js']->alert(lang('post class error1'));
 		}
 	}
 	
@@ -469,7 +469,7 @@ class post{
 		global $sy, $_member;
 		if ( $sy['mb']->is_login() ) {
 			if ( $this->is_voted($option['seq_post'], $_member['seq'])) {
-				return $sy['js']->alert("이미 투표를 하셨습니다.");
+				return $sy['js']->alert(lang('post class already voted'));
 			} else {
 				$op = array(
 							'seq_post'=>$option['seq_post'],
@@ -489,10 +489,10 @@ class post{
 				
 				$sy['db']->update(POST_DATA_TABLE, $op1, array('seq'=>$option['seq_post']));
 					
-				return $sy['js']->alert("투표하였습니다.");
+				return $sy['js']->alert(lang('post class voted'));
 			}
 		} else {
-			return $sy['js']->alert("투표를 하실려면 로그인을 해 주세요");
+			return $sy['js']->alert(lang('post class error2'));
 		}
 	}
 	
@@ -500,7 +500,7 @@ class post{
 		global $sy, $_member;
 		if ( $sy['mb']->is_login() ) {
 			if ( $this->is_comment_voted($option['seq_comment'], $_member['seq'])) {
-				return $sy['js']->alert("이미 투표를 하셨습니다.");
+				return $sy['js']->alert(lang('post class already voted'));
 			} else {
 				$op = array(
 							'seq_comment'=>$option['seq_comment'],
@@ -520,10 +520,10 @@ class post{
 				
 				$sy['db']->update(COMMENT_DATA_TABLE, $op1, array('seq'=>$option['seq_comment']));
 					
-				return $sy['js']->alert("투표하였습니다.");
+				return $sy['js']->alert(lang('post class voted'));
 			}
 		} else {
-			return $sy['js']->alert("투표를 하실려면 로그인을 해 주세요");
+			return $sy['js']->alert(lang('post class error2'));
 		}
 	}
 	

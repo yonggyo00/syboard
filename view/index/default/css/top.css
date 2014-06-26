@@ -1,15 +1,29 @@
 #site-top {
-	position: relative;
+	height: 25px;
+	line-height: 25px;
+	background-color: #eaeaea;
+	padding: 0 10px;
+	border-bottom: 1px solid #d5d5d5;
+	margin-bottom: 10px;
 }
 
-#site-top > #lang-default-skin {
-	position: absolute;
-	right: 0;
-	
+#site-top a {
+	color: #666666;
 }
 
-#site-top > #mobile-pc-skin {
-	position: absolute;
-	right: 85px;
-	top: 4px;
+#site-top a:hover {
+	text-decoration: none;
+}
+
+#site-top > #site-top-left {
+	float: left;
+}
+
+#site-top > #site-top-left a {
+	margin-right: 10px;
+}
+
+#site-top > #site-top-right {
+	float: right;
+	margin-top: 3px;
 }

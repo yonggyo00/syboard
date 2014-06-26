@@ -1,4 +1,4 @@
 <?php
-$desc['name'] = 'ABC 로그인';
+$desc['name'] = 'Flag 스킨';
 $desc['desc'] = 'This is Default';
 ?>

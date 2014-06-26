@@ -200,11 +200,11 @@ $sel_site_layout = $adm->sel_site_layout( $info['layout'] );
 		<div class='admin-row'><span class='sub-title'>사용금지 이름 등록</span></div> 
 		<div class='admin-row'><textarea name='names_cannot_be_used'><?=$info['names_cannot_be_used']?></textarea></div>
 		
-		<div class='admin-row'><input type='checkbox' name='use_terms_conds' value=1 <?=$in['use_terms_conds']?'checked':''?> />회원가입약관사용</div>
+		<div class='admin-row'><input type='checkbox' name='use_terms_conds' value=1 <?=$info['use_terms_conds']?'checked':''?> />회원가입약관사용</div>
 		<div class='admin-row'><span class='sub-title'>회원가입약관</span></div>
 		<div class='admin-row'><textarea name='terms_conds'><?=$info['terms_conds']?></textarea></div>
 		
-		<div class='admin-row'><input type='checkbox' name='use_policy' value=1 <?=$in['use_policy']?'checked':''?> />개인보호정책사용</div>
+		<div class='admin-row'><input type='checkbox' name='use_policy' value=1 <?=$info['use_policy']?'checked':''?> />개인보호정책사용</div>
 		<div class='admin-row'><span class='sub-title'>개인보호정책</span></div>
 		<div class='admin-row'><textarea name='policy'><?=$info['policy']?></textarea></div>
 		

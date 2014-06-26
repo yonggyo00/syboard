@@ -71,6 +71,12 @@ $_ln['Register notice'] = "반드시 수정하기 버튼을 클릭해서 완료 
 $_ln['Register notice1'] = "로그인 후에는 가입하실 수 없습니다.";
 $_ln['Register notice2'] = "가입 인증을 해 주세요.";
 
+$_ln['register policy title1'] = "회원가입약관";
+$_ln['register policy title2'] = "개인정보 보호정책";
+$_ln['register policy agree'] = "동의합니다.";
+$_ln['register policy agree error'] = "약관에 동의 해 주세요.";
+
+
 // image uploader skin
 $_ln['image uploader skin title'] = '사진 업로드';
 
@@ -404,6 +410,68 @@ $_ln['member resign confirm'] = "탈퇴한 아이디로는 재가입 하실 수 
 // member update 
 $_ln['member update error1'] = "로그인을 해 주세요.";
 $_ln['member update title'] = "회원정보 수정";
+$_ln['member update error1'] = "잘못된 접근 입니다.";
+$_ln['member update error2'] = "비밀번호는 4자 이상 입력하세요.";
+$_ln['member update error3'] = "비밀번호를 정확하게 입력하세요.";
+$_ln['member update error4'] = "비밀번호를 변경하실려면 비밀번호 확인에 입력하신 비밀번호를 재입력하세요.";
+$_ln['member update error5'] = "은(는) 닉네임으로 사용하실 수 없습니다.";
+$_ln['member update error6'] = "은(는) 이름으로 사용하실 수 없습니다.";
+$_ln['member update error7'] = "수정 되었습니다.";
+
+
+// message list 
+$_ln['message list error1'] = "로그인을 해 주세요.";
+$_ln['message list deleted'] = "삭제되었습니다.";
+$_ln['message list change_readed'] = "읽음 상태로 변경되었습니다.";
+$_ln['message list send'] = "보내기";
+$_ln['message list reset'] = "취소"; 
+$_ln['message list left write'] = "쪽지쓰기";
+$_ln['message list left whole'] = "전체쪽지";
+$_ln['message list left unread'] = "안읽음";
+$_ln['message list left important'] = "중요";
+$_ln['message list left attached'] = "첨부";
+$_ln['message list left receiver'] = "받는사람";
+$_ln['message list left received'] = "받은 쪽지함";
+$_ln['message list left self_message'] = "내게쓴 쪽지";
+$_ln['message list left sent'] = "보낸쪽지";
+
+$_ln['message list main sender'] = "보낸이";
+$_ln['message list main subject'] = "제목";
+$_ln['message list main date'] = "날짜";
+$_ln['message list main received date'] = "수신";
+
+$_ln['message list main mark read'] = "읽음";
+$_ln['message list main delete'] = "삭제";
+$_ln['message list main reply'] = "답장";
+$_ln['message list main confirm delete'] = "정말 삭제하시겠습니까?";
+
+
+// message write
+$_ln['message write error1'] = "보내는 사람을 입력하세요.";
+$_ln['message write error2'] = "받는 사람을 입력하세요.";
+$_ln['message write error3'] = "아이디 ";
+$_ln['message write error4'] = "와(과)";
+$_ln['message write error5'] = "(은)는 존재 하지 않습니다.";
+$_ln['message write error6'] = "보내는 사람과 받는사람을 모두 입력하세요.";
+$_ln['message write success'] = "쪽지가 전달 되었습니다.";
+$_ln['message write failed'] = "쪽지 전달에 실패 하였습니다.";
+
+$_ln['message write main sender'] = "보내는 사람";
+$_ln['message write main receiver'] = "받는 사람";
+$_ln['message write main subject'] = "제목";
+
+
+// message view
+$_ln['message view sender'] = "보낸이";
+$_ln['message view date'] = "보낸일";
+$_ln['message view reply'] = "답장 보내기";
+
+
+// Post class 
+$_ln['post class error1'] = "제목과 본문의 내용을 입력해 주세요";
+$_ln['post class error2'] = "투표를 하실려면 로그인을 해 주세요";
+$_ln['post class voted'] = "투표하였습니다.";
+$_ln['post class already voted'] = "이미 투표를 하셨습니다.";
 
 
 ?>

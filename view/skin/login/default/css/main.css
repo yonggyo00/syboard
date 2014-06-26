@@ -6,6 +6,13 @@
 	overflow: hidden;
 }
 
+@-moz-document url-prefix() {  /* 파이어폭스 */
+	#login_skin {
+		height: 112px;
+	}
+}
+
+
 #login_skin #login-skin-top {
 	margin-bottom: 3px;
 }
@@ -58,6 +65,14 @@
 	position: relative;
 	top: 1px;
 }
+
+@-moz-document url-prefix() {  /* 파이어폭스 */
+	#login_skin input[type='text'], #login_skin input[type='password'] {
+		top: 6px;
+		padding: 4px 10px;
+	}
+}
+
 
 #login_skin input[type='submit'] {
 	display:inline-block;

@@ -2,20 +2,49 @@
 	display: none;
 }
 
-#member-policy {
+#member-policy-form #member-policy {
 	border: 1px solid #3e5165;
 	padding: 10px 0;
 	border-radius: 2px;
+	margin-bottom: 10px;
 
 }
-#member-policy textarea {
-	width: 100%;
-	height: 200px;
+#member-policy-form #member-policy .title {
+	font-family: '맑은 고딕', AppleGothic;
+	border-bottom: 1px solid #666666;
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	color: #303562;
+	font-weight: bold;
+	font-family: '맑은 고딕', AppleGothic;
+	font-size: 11pt;
 }
-#member-policy > div {
+
+#member-policy-form #member-policy textarea {
+	width: 98%;
+	height: 180px;
+	border-radius: 3px;
+	padding: 10px 1%;
+}
+#member-policy-form #member-policy > div {
 	padding: 0 15px 0 10px;
 }
 
-#member-policy > #first-row {
+#member-policy-form #member-policy > #first-row {
 	margin-bottom: 10px;
+}
+
+#member-policy-form > input[type='submit'] {
+	display:inline-block;
+	background-color: #6d899e;
+	border: 1px solid #465a69;
+	padding: 5px 25px;
+	color: #ffffff;
+	cursor: pointer;
+	font-family: dotum;
+	float: right;
+}
+
+#member-policy-form > input[type='submit']:hover {
+	background-color: #465a69;
 }

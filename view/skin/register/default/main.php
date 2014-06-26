@@ -10,11 +10,29 @@ if ( $so['mode'] == 'update' ) {
 	$gid = $info['gid'];
 	$notice = "<div id='notice'>".lang('Register notice')."</div>";
 	$email = "<span class='sub-title'>".lang('Register email')."*</span> ".$info['email'];
+	
+	echo "
+			<style>
+				#member-register{
+					display: block !important;
+				}
+			</style>
+	";
 }
 else {
 	if ( $site_config['use_terms_conds'] || $site_config['use_policy'] )  {
 		include_once 'policy.php';
 	}
+	else {
+		echo "
+			<style>
+				#member-register{
+					display: block !important;
+				}
+			</style>
+		";
+	}
+	
 	$password = lang('Register password')."*";
 	$confirm_password = lang('Register confirm password')."*";
 	$action = 'register_submit';

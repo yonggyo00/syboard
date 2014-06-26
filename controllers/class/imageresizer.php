@@ -74,15 +74,6 @@ class imageresizer {
 			$image_size['new_width'] = $width;
 			$image_size['new_height'] = $image_size['height'] / ( $image_size['width'] / $width );
 		}
-		/*
-		if ( $w > $h ) $height = $height * round($h / $w, 2) -1;
-		else if ( $h > $w ) $width = $width * round($w / $h, 2) - 1;
-		*/
-		/* 본래 width사이즈와 reszied 될 이미지의 크기 비율을 구하고 이를 통해 높이를 구한다. */
-		/*
-		$image_size['new_width']  = $width;
-		$image_size['new_height'] = $height;
-		*/
 		
 		return $image_size;
 	}

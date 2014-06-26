@@ -6,6 +6,30 @@
 	margin-top: 7px;
 }
 
+#comment-form .comment-extra-info-box {
+	border: 1px solid #666666;
+	padding: 10px;
+	border-radius: 3px;
+	margin-bottom: 10px;
+}
+
+#comment-form .comment-extra-info-box > .row {
+	margin-bottom: 5px;
+}
+
+#comment-form .comment-extra-info-box > .row > .sub-title {
+	display:inline-block;
+	padding: 5px 10px;
+	width: 70px;
+	font-family: dotum;
+	margin-right: 5px;
+	color: #666666;
+}
+
+#comment-form .comment-extra-info-box > .row input[type='text'], #comment-form .comment-extra-info-box > .row input[type='password'] {
+	padding: 5px 10px;
+}
+
 #comment-form input[type='submit'], #comment-form input[type='reset'] {
 	display:inline-block;
 	background-color: #6d899e;

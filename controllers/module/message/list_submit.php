@@ -14,7 +14,7 @@ if ( $in['option'] == 'sended_msg' ) {
 			}
 			
 			if ( $result ) {
-				$sy['js']->alert("삭제되었습니다.");
+				$sy['js']->alert(lang('message list deleted'));
 				echo "
 					<script>
 						parent.location.reload();
@@ -33,7 +33,7 @@ else {
 			}
 			
 			if ( $result ) {
-				$sy['js']->alert("읽음 상태로 변경되었습니다.");
+				$sy['js']->alert(lang('message list change_readed'));
 				echo "
 					<script>
 						parent.location.reload();
@@ -56,7 +56,7 @@ else {
 			}
 
 			if ( $result ) {
-				$sy['js']->alert("삭제되었습니다.");
+				$sy['js']->alert(lang('message list deleted'));
 				echo "
 					<script>
 						parent.location.reload();

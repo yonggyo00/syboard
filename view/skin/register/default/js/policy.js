@@ -9,8 +9,7 @@ $(document).ready(function(){
 			$("#member-register").show();
 		}
 		else {
-			alert("회원가입약관 및 개인보호정책에 동의 해 주세요.");
+			alert(sm_register_terms_and_condition_agree);
 		}
-		
 	});
 });

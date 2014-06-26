@@ -20,7 +20,7 @@ if ( $sy['mb']->is_login() ) {
 	</form>	
 <?php
 }
-else $sy['js']->alert("로그인을 해 주세요.");
+else $sy['js']->alert(lang('message list error1'));
 // 페이지 네이션
 $option = array ( 
 				'total_post'=> $total_post,

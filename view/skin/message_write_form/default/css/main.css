@@ -84,19 +84,24 @@
 	padding: 10px;
 	margin-bottom: 10px;
 }
-#message-write-form-skin #user-info div {
-	margin-bottom: 3px;
-}
+
+
 #message-write-form-skin .sub-title {
 	background-color: #6d899e;
 	color: #ffffff;
-	width: 80px;
-	padding: 5px 10px;
+	height: 28px;
+	line-height: 28px;
 	display: inline-block;
+	width: 80px;
+	padding: 0 10px;
 }
-
+#message-write-form-skin table td .sub-title {
+	margin-bottom: 5px;
+}
 #message-write-form-skin input[type='text'] {
-	padding: 3px 10px;
+	padding: 0 10px;
+	height: 25px;
+	line-height: 25px;
 }
 
 #message-write-form-skin #subject {
@@ -106,7 +111,8 @@
 #message-write-form-skin #subject .sub-title {
 	width: 50px;
 	margin-right: 5px;
-	padding: 6px 10px;
+	padding: 0 10px;
+	
 }
 
 #message-write-form-skin #subject input[type='text'] {
@@ -121,7 +127,9 @@
 	font-weight: bold;
 	color: #0ba506;
 }
-
-input[name='ms-file'], #file_info {
-	margin-left: 25%;
+#message-write-module #message-file-uploader {
+	margin-top: 10px;
+}
+#message-write-module #message-file-uploader input[name='ms-file'], #file_info {
+	margin-left: 29%;
 }

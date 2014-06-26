@@ -19,13 +19,14 @@ $gid = gid();
 	load_skin('message_write_form', $message_write_form_skin);
 	?>
 	<div id='submit-button'>
-		<input type='submit' value='보내기' />
-		<input type='reset' value='취소' />
+		<input type='submit' value='<?=lang('message list send')?>' />
+		<input type='reset' value='<?=lang('message list reset')?>' />
 	</div>
 	</form>
-	<? 
-	include_once 'file_uploader.php';
-	}
-	else $sy['js']->location("로그인을 해 주세요.", site_url());	
+	<div id='message-file-uploader'>
+		<?include_once 'file_uploader.php';?>
+	</div>
+	<?}
+	else $sy['js']->location(lang('message list error1'), site_url());	
 	?>
 </div>

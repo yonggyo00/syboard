@@ -1,5 +1,5 @@
 <?php
-if ( $_FILES['file-upload']['error'] ) return $sy['js']->alert("파일 업로드 중 에러가 발생하였습니다.");
+if ( $_FILES['file-upload']['error'] ) return $sy['js']->alert(lang('File_uploader_submit error1'));
 
 $option = array(
 				'gid'=>$in['gid'],
@@ -13,7 +13,7 @@ $option = array(
  if ( $sy['file']->is_image ($_FILES['ms-file']['type']) ) {
 	
 	if ( $_FILES['ms-file']['size'] >= MAX_IMAGE_FILE_SIZE ) {
-		$sy['js']->alert("파일 용량은 ".round( MAX_IMAGE_FILE_SIZE / 1000000 ) . "MB 이하로 해 주세요");
+		$sy['js']->alert(lang('FIle_uploader_submit error2').round( MAX_IMAGE_FILE_SIZE / 1000000 ) . lang('FIle_uploader_submit error3'));
 	}
 	else {
 		$imagesize = getimagesize($_FILES['ms-file']['tmp_name']);

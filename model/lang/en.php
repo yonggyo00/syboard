@@ -67,7 +67,10 @@ $_ln['Register notice'] = "You should click the update button to finish, if not,
 $_ln['Register notice1'] = "You cannot register after signing up.";
 $_ln['Register notice2'] = "Please finish register authentication.";
 
-
+$_ln['register policy title1'] = "Terms and Conditions";
+$_ln['register policy title2'] = "Privacy Policy";
+$_ln['register policy agree'] = "Agree";
+$_ln['register policy agree error'] = "Please agree Terms and Conditions and(or) Policy to proceed to next step for sign up";
 
 
 // image uploader skin
@@ -399,6 +402,67 @@ $_ln['member resign confirm'] = "You cannot use this username after resigning th
 // member update 
 $_ln['member update error1'] = "Please sign in first.";
 $_ln['member update title'] = "Edit Profile";
+$_ln['member update error1'] = "Wrong access to this page.";
+$_ln['member update error2'] = "Password should be over 4 characters.";
+$_ln['member update error3'] = "Please input the password correctly.";
+$_ln['member update error4'] = "To change password, You should confirm your password.";
+$_ln['member update error5'] = "is canot be used as nickname.";
+$_ln['member update error6'] = "is cannot be used as name.";
+$_ln['member update error7'] = "Updated.";
+
+// message list 
+$_ln['message list error1'] = "Please sign in first.";
+$_ln['message list deleted'] = "Deleted.";
+$_ln['message list change_readed'] = "Messages has been changed to the read status.";
+$_ln['message list send'] = "SEND";
+$_ln['message list reset'] = "CANCEL"; 
+$_ln['message list left write'] = "WRITE";
+$_ln['message list left whole'] = "Whole Msg";
+$_ln['message list left unread'] = "Unread";
+$_ln['message list left important'] = "IPT";
+$_ln['message list left attached'] = "Attached";
+$_ln['message list left receiver'] = "RVR";
+$_ln['message list left received'] = "Received";
+$_ln['message list left self_message'] = "Self Msg";
+$_ln['message list left sent'] = "Sent";
+
+$_ln['message list main sender'] = "Sender";
+$_ln['message list main subject'] = "Subject";
+$_ln['message list main date'] = "Date";
+$_ln['message list main received date'] = "Rev Date";
+
+$_ln['message list main mark read'] = "READ";
+$_ln['message list main delete'] = "DELETE";
+$_ln['message list main reply'] = "REPLY";
+$_ln['message list main confirm delete'] = "Are you sure to delete?";
+
+
+// message write
+$_ln['message write error1'] = "Please input the sender.";
+$_ln['message write error2'] = "Please input the receiver.";
+$_ln['message write error3'] = "Username ";
+$_ln['message write error4'] = " and ";
+$_ln['message write error5'] = " does(do) not exist.";
+$_ln['message write error6'] = "You should input in both the sender and the receiver all.";
+$_ln['message write success'] = "Message has been sent successfully.";
+$_ln['message write failed'] = "Fail to send message.";
+
+$_ln['message write main sender'] = "Sender";
+$_ln['message write main receiver'] = "Receiver";
+$_ln['message write main subject'] = "Subject";
+
+
+// message view
+$_ln['message view sender'] = "Sender";
+$_ln['message view date'] = "Date";
+$_ln['message view reply'] = "Reply this message";
+
+
+// Post class 
+$_ln['post class error1'] = "Please input contents in subject and content box all.";
+$_ln['post class error2'] = "Please sign in first to vote";
+$_ln['post class voted'] = "Voted.";
+$_ln['post class already voted'] = "Already voted.";
 
 
 ?>

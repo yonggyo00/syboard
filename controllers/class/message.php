@@ -45,7 +45,7 @@ class message {
 			
 			return $sy['db']->insert(MESSAGE_DATA_TABLE, $option );
 		}
-		else return $sy['js']->alert("제목과 본문의 내용을 입력해 주세요");
+		else return $sy['js']->alert(lang('post class error1'));
 		
 		
 	}

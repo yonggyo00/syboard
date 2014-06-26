@@ -28,15 +28,15 @@ $attached = "<img src='".$so['path'].'/img/file.png'."' />";
 					<td width=20 valign='middle' align='center'><img src='<?=$so['path']?>/img/star_green.png' /></td>
 					<td width=20 valign='middle' align='center'><?=$attached?></td>
 					<td valign='middle' align='center' valign='middle' width=20><?=$unread?></td>
-					<td valign='middle' width=80>보낸이</td>
-					<td valign='middle'>제목</td>
-					<td valign='middle' width=100>날짜</td>
-					<td valign='middle' width=100>수신</td>
+					<td valign='middle' width=80><?=lang('message list main sender')?></td>
+					<td valign='middle'><?=lang('message list main subject')?></td>
+					<td valign='middle' width=100><?=lang('message list main date')?></td>
+					<td valign='middle' width=100><?=lang('message list main received date')?></td>
 				</tr>
 				<?php
 				foreach ( $messages as $ms ) {
 					$view_url = $sy['ms']->view_url($ms['seq']);
-					$subject = stringcut($ms['subject'], 33);
+					$subject = stringcut($ms['subject'], 30);
 					$date = date('Y-m-d H:i', $ms['stamp']);
 					
 					if ( $ms['readed_stamp'] ) {
@@ -77,12 +77,12 @@ $attached = "<img src='".$so['path'].'/img/file.png'."' />";
 				<tr>
 					<td colspan=8>
 						<div id='control-pannel'>
-							<span id='check_readed'>읽음</span>
-							<span id='delete' onclick="return confirm('정말 삭제하시겠습니까?');">
+							<span id='check_readed'><?=lang('message list main mark read')?></span>
+							<span id='delete' onclick="return confirm('<?=lang('message list main confirm delete')?>');">
 								<img src='<?=$so['path']?>/img/x.png' />
-								삭제
+								<?=lang('message list main delete')?>
 							</span>
-							<span id='reply'>답장</span>
+							<span id='reply'><?=lang('message list main reply')?></span>
 						</div>
 					</td>
 			</table>

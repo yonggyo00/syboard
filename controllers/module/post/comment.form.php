@@ -13,16 +13,18 @@ echo module_javascript(__FILE__);
 		<?php
 		
 		if ( empty($post_cfg['use_login_post']) && !$sy['mb']->is_login() ) {
-			echo lang('Comment_form poster')."<input type='text' name='guest_username' placeholder='".lang('Comment_form poster')."' />
-			".lang('Comment_form password')."<input type='password' name='secret' placeholder='".lang('Comment_form password_msg')."' />
-			";
+			
+			echo "<div class='comment-extra-info-box'>". 
+					"<div class='row'><span class='sub-title'>".lang('Comment_form poster')."</span><input type='text' name='guest_username' placeholder='".lang('Comment_form poster')."' />".
+					"<span class='sub-title'>".lang('Comment_form password')."</span><input type='password' name='secret' placeholder='".lang('Comment_form password_msg')."' /></div>";
 			
 			if ( $site_config['use_captcha'] ) {
-				echo "<div>".lang('Comment_form captcha');
+				echo "<div class='row'><span class='sub-title'>".lang('Comment_form captcha')."</span>";
 				if ( !$captcha_skin = $site_config['captcha_skin'] ) $captcha_skin = 'default';
 				load_skin('captcha', $captcha_skin);
 				echo "</div>";
 			}
+			echo "</div>";
 		}
 		
 		if ( !$comment_write_form_skin = $post_cfg['comment_write_form_skin'] ) $comment_write_form_skin = 'default';

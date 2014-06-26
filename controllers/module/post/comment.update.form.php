@@ -13,9 +13,10 @@ if ( $in['seq'] ) {
 		<input type='hidden' name='seq' value='<?=$in['seq']?>' />
 		
 		<textarea name='content'><?=$comment['content']?></textarea>
-		<input type='reset' value='<?=lang('Comment_form reset')?>' />
-		<input type='submit' value='<?=lang('Comment_form write')?>' />
-		<div style='clear:right;'></div>
+		<div style='margin-top: 5px; text-align: right;' >
+			<input type='submit' value='<?=lang('Comment_form write')?>' />
+			<input type='reset' value='<?=lang('Comment_form reset')?>' />
+		</div>
 	</form>
 <?
 }
