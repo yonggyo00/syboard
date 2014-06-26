@@ -69,8 +69,9 @@
 }
 
 #admin-submenu-below-980 {
-	position: absolute;
+	position: fixed;
 	top: 50px;
+	left: 0;
 	width: 100%;
 	background-color: #383838;
 	z-index: 100000;
