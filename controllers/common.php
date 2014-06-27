@@ -41,7 +41,7 @@ define('IP_SECURITY_TABLE', 'ip_security');
 // 최대 업로드 가능한 용량 지정 
 define('MAX_IMAGE_FILE_SIZE', 5242880); // 이미지는 5메가
 define('MAX_VIDEO_FILE_SIZE', 30000000); // 비디오는 30메가
-define('MAX_FILE_SIZE', 10000000); // 일반 파일은 10메가
+define('MAX_FILE_SIZE', 150000000); // 일반 파일은 150메가
 
 // 공용 함수 인클루드
 include_once CONTROLLER_PATH . '/functions.php';

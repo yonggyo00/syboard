@@ -4,7 +4,7 @@ if ( $_FILES['file-upload']['error'] ) {
 }
 else {
 	if ( $_FILES['file-upload']['size'] >= MAX_FILE_SIZE ) {
-		$sy['js']->alert(lang('FIle_uploader_submit error2').round( MAX_IMAGE_FILE_SIZE / 1000000 ) . lang('FIle_uploader_submit error3'));
+		$sy['js']->alert(lang('FIle_uploader_submit error2').round( MAX_FILE_SIZE / 1000000 ) . lang('FIle_uploader_submit error3'));
 	}
 	else {
 		$option = array(
