@@ -97,6 +97,7 @@ if ( $in['done'] ) {
 					'admin'=>$in['admin'],
 					'not_searching_forum'=>$in['not_searching_forum'],
 					'forums'=>$in['forums'],
+					'ip_sec_level_skin'=>$in['ip_sec_level_skin'],
 					'level' => $sy['file']->scalar($in['level']) // 레벨별 포인트는 스칼라 값으로 변환 한 후 데이터 테이블에 업데이트 한다.
 	);
 	
@@ -169,6 +170,7 @@ $sel_site_layout = $adm->sel_site_layout( $info['layout'] );
 		
 		<div class='admin-row'><span class='sub-title'>로그인</span> <?=$adm->skin_list('login', $info['login_skin'])?></div>
 		<div class='admin-row'><span class='sub-title'>로그인 페이지</span><?=$adm->skin_list('login_page', $info['login_page_skin'])?></div>
+		<div class='admin-row'><span class='sub-title'>IP 보안레벨변경</span><?=$adm->skin_list('ip_sec_level', $info['ip_sec_level_skin'])?></div>
 		<div class='admin-row'><span class='sub-title'>회원가입</span> <?=$adm->skin_list('register', $info['register_skin'])?></div>
 		<div class='admin-row'><span class='sub-title'>회원탈퇴</span> <?=$adm->skin_list('resign', $info['resign_skin'])?></div>
 		<div class='admin-row'><span class='sub-title'>나의 글</span> <?=$adm->skin_list('my_posts', $info['my_posts_skin'])?></div>

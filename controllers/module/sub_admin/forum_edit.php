@@ -20,6 +20,8 @@ $info = $sy['post']->post_cfg($in['post_id']);
 			<div><input type='checkbox' name='view_with_list' value=1 <?=$info['view_with_list']?'checked':''?> />글보기에 목록 보이기</div>
 			<div><input type='checkbox' name='view_with_comment' value=1 <?=$info['view_with_comment']?'checked':''?> />글보기에 코멘트 쓰기 보이기</div>
 			<div><input type='checkbox' name='view_with_comment_list' value=1 <?=$info['view_with_comment_list']?'checked':''?> />글보기에 코멘트 목록 보이기</div>
+			<div><input type='checkbox' name='use_post_list_search_form' value=1 <?=$info['use_post_list_search_form']?'checked':''?> />목록 하단 검색폼 사용</div>
+			
 			<div><input type='checkbox' name='use_login_post' value=1 <?=$info['use_login_post']?'checked':''?> />글쓰기 로그인 필수</div>
 			<div><input type='checkbox' name='use_secret' value=1 <?=$info['use_secret']?'checked':''?> />비밀글 사용</div>
 			<div><input type='checkbox' name='show_ip_view' value=1 <?=$info['show_ip_view']?'checked':''?> />글보기IP보이기</div>
@@ -50,6 +52,7 @@ $info = $sy['post']->post_cfg($in['post_id']);
 			<div><span>리스트 제목</span> <?=skin_list('list_subject', $info['list_subject_skin'])?></div>
 			<div><span>리스트 메뉴</span> <?=skin_list('post_list_menu', $info['post_list_menu_skin'])?></div>
 			<div><span>리스트 페이징</span> <?=skin_list('paging', $info['paging_skin'])?></div>
+			<div><span>리스트 검색폼</span> <?=skin_list('post_list_search_form', $info['post_list_search_form_skin'])?></div>
 			<div><span>글쓰기 게시판 제목</span> <?=skin_list('write_subject', $info['write_subject_skin'])?></div>
 			<div><span>보기 메뉴</span> <?=skin_list('view_menu', $info['view_menu_skin'])?></div>
 			<div><span>보기 게시판 제목</span> <?=skin_list('view_post_subject', $info['view_post_subject_skin'])?></div>

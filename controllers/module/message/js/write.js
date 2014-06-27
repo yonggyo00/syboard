@@ -22,9 +22,9 @@ $(document).ready(function() {
 		}
 		else {
 			if ( image_width > 710 ) image_width = 710;
-			content = "<div style='max-width: "+ image_width + "px;'><img src='"+ file_url + "' style='width: 100%' />";
+			content = "<div style='max-width: "+ image_width + "px;'><img src='"+ file_url + "' style='width: 100%' /></div>";
 		}
-		insert_content_to_editor( content );
+		insert_content_to_editor_msg( content );
 	});
 	
 	$("body").on("click", ".delete_file", function() {
@@ -43,13 +43,13 @@ $(document).ready(function() {
 	});
 });
 
-function insert_content_to_editor( data )
+function insert_content_to_editor_msg( data )
 {
 	// 이미지 삽입
 	tinyMCE.execCommand('mceInsertContent', false, data);
 }
 
-function update_file_info( seq, filename, file_url, image_width ) {
+function update_file_info_msg( seq, filename, file_url, image_width ) {
 	$("#file_info").append("<span class='row' file_no='"+seq+"' file_url='"+file_url+"' image_width='"+image_width+"' filename='"+filename+"'>"+filename+	
 							"<span class='delete_file'>삭제</span>"+
 							"<span class='insert_content'>본문삽입</span>" + 
@@ -57,6 +57,6 @@ function update_file_info( seq, filename, file_url, image_width ) {
 	);
 }
 
-function update_file_info_to_form ( seq ) {
+function update_file_info_to_form_msg ( seq ) {
 	$("#message-write-module input[name='first_file']").val(seq);
 }

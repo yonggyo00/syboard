@@ -137,6 +137,8 @@ if ( $_POST['done'] ) {
 						"`block_stamp` int(11) NOT NULL DEFAULT '0',".
 						"`resign_stamp` int(11) NOT NULL DEFAULT '0',".
 						"`point` int(11) NOT NULL DEFAULT '0',".
+						"`use_ip_sec` char(1) NOT NULL DEFAULT '0',".
+						"`ip_sec_level` tinyint(4) NOT NULL DEFAULT '1',".
 						"`is_admin` char(1) NOT NULL DEFAULT '',".
 						"`int_1` int(11) NOT NULL DEFAULT '0',".
 						"`int_2` int(11) NOT NULL DEFAULT '0',".
@@ -259,6 +261,8 @@ if ( $_POST['done'] ) {
 						"`write_category_skin` varchar(255) NOT NULL DEFAULT 'default',".
 						"`post_list_menu_skin` varchar(255) NOT NULL DEFAULT 'default',".
 						"`post_list_reminder_skin` varchar(255) NOT NULL DEFAULT 'default',".
+						"`post_list_search_form_skin` varchar(255) NOT NULL DEFAULT 'default',".
+						"`use_post_list_search_form` char(1) NOT NULL DEFAULT '',".
 						"`vote_skin` varchar(255) NOT NULL DEFAULT 'default',".
 						"`vote_comment_skin` varchar(255) NOT NULL DEFAULT 'default',".
 						"`map_skin` varchar(255) NOT NULL DEFAULT 'default',".
@@ -415,6 +419,7 @@ if ( $_POST['done'] ) {
 					"`version` int(11) NOT NULL DEFAULT '1',".
 					"`login_skin` varchar(255) NOT NULL DEFAULT 'default',".
 					"`login_page_skin` varchar(100) NOT NULL DEFAULT 'default',".
+					"`ip_sec_level_skin` varchar(255) NOT NULL DEFAULT 'default',".
 					"`register_skin` varchar(255) NOT NULL DEFAULT 'default',".
 					"`resign_skin` varchar(255) NOT NULL DEFAULT 'default',".
 					"`my_posts_skin` varchar(255) NOT NULL DEFAULT 'default',".
@@ -521,6 +526,18 @@ if ( $_POST['done'] ) {
 					"`seq_member` int(11) NOT NULL DEFAULT '0',".
 					"PRIMARY KEY (`seq`)".
 					") ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;"
+				);
+				
+				// ip_security 테이블
+				mysql_query("DROP TABLE `ip_security`");
+				mysql_query(
+					"CREATE TABLE IF NOT EXISTS `ip_security` (".
+					"`seq` int(11) NOT NULL AUTO_INCREMENT,".
+					"`seq_member` int(11) NOT NULL DEFAULT '0',".
+					"`ip` varchar(40) NOT NULL,".
+					"PRIMARY KEY (`seq`),".
+					"KEY `seq_member` (`seq_member`)".
+					") ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;".
 				);
 				
 				$sy['debug']->log( 'Creating tables into '.$_POST['database'].' has been finished now');

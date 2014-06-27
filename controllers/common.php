@@ -36,6 +36,7 @@ define('BLOCK_TABLE', 'block');
 define('VISITOR_STAT_TABLE', 'visitor_stat');
 define('REGISTER_AUTH_TABLE', 'register_auth');
 define('POPUP_CONFIG_TABLE', 'popup_config');
+define('IP_SECURITY_TABLE', 'ip_security');
 
 // 최대 업로드 가능한 용량 지정 
 define('MAX_IMAGE_FILE_SIZE', 5242880); // 이미지는 5메가

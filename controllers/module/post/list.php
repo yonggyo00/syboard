@@ -85,6 +85,12 @@ if ( $in['post_id'] ) {
 ?>	
 </form>
 <?php	
+	// 리스트 하단 검색 폼
+	if ( $post_cfg['use_post_list_search_form'] ) {
+		if ( !$post_list_search_form_skin = $post_cfg['post_list_search_form_skin'] ) $post_list_search_form_skin = 'default';
+		load_skin('post_list_search_form', $post_list_search_form_skin);
+	}
+	
 	// 리스트 하단 콜백
 	if ( function_exists('after_list') ) {
 		after_list();

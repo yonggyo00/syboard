@@ -1,3 +1,6 @@
+#move-post-sel {
+	margin: 10px 0 10px 0;
+}
 #move-post-sel > #move-select-all {
 	display:inline-block;
 	background-color: #6d899e;

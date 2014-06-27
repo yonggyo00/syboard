@@ -2,9 +2,9 @@
 <div id='search-list-skin'>
 	<div id='no_of_post'>
 		<? if ( $in['username'] ) {?>
-			<b><?=$in['username']?></b>님이 작성한 글 중 
+			<b><?=$in['username']?></b><?=lang('search list message1')?>
 		<?}?>
-		총 <b><?=number_format($so['total_post'])?></b>개의 게시글이 검색 되었습니다.
+		<?=lang('search list message2')?> <b><?=number_format($so['total_post'])?></b><?=lang('search list message3')?>
 	</div>
 <?php
 foreach ( $posts as $p ) {
@@ -41,8 +41,8 @@ foreach ( $posts as $p ) {
 					<? }?>
 						<div class='content'><a href='<?=$view_url?>'><?=$content?></a></div>
 						<div class='user-info'>
-							<span class='username'><b>작성자</b><?=$username?></span>
-							<span class='date'><b>작성일</b><?=$date?></span>
+							<span class='username'><b><?=lang('search list poster')?></b><?=$username?></span>
+							<span class='date'><b><?=lang('search list date')?></b><?=$date?></span>
 						</div>
 					</div>
 				</td>

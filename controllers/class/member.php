@@ -96,7 +96,7 @@ class member {
 	
 	
 	// 로그인 하기
-	public function login($username, $password, $auto_login = 0) {
+	public function login($username, $password, $auto_login = 0, $ip_sec = 0) {
 		global $sy;
 		
 		$row = $sy['db']->row("SELECT * FROM ". MEMBER_TABLE. " WHERE `username`='$username' AND `password`='".md5($password)."'");
@@ -112,19 +112,62 @@ class member {
 								'resign_stamp'=>$row['resign_stamp'],
 			);
 			
+			/* IP 보안 옵션이 체크 되었다면, IP_SECURITY 테이블에 seq_member와 ip를 등록한다.
+			 *  만약 이미 존재한다면, ip만 업데이트 한다.
+			 *  또한 member 테이블의 use_ip_sec을 1로 업데이트 한다.
+			*/
+			if ( $ip_sec ) {
+				// member 테이블의 use_ip_sec을 1로 업데이트 한다.
+				if ( $sy['db']->update(MEMBER_TABLE, array('use_ip_sec'=>1), array('seq'=>$row['seq']) ) ) {
+				   // 업데이트가 완료되었다면 ip security 테이블을 처리 한다.
+				
+					if ( $this->ip_sec_user_exists($row['seq']) ) { // 존재한다면 아이피 업데이트 
+						$sy['db']->update(IP_SECURITY_TABLE, array('ip'=>ip_2_long($_SERVER['REMOTE_ADDR'])), array('seq_member'=>$row['seq']));
+					}
+					else { // 존재 하지 않는다면 테이블 추가
+						$sy['db']->insert(IP_SECURITY_TABLE, array('seq_member'=>$row['seq'], 'ip'=>ip_2_long($_SERVER['REMOTE_ADDR'])));
+					}
+				}
+			}
+			else {
+				// IP 보안 옵션이 체크 되지 않았다면, use_ip_sec을 0으로 업데이트 한다,
+				$sy['db']->update(MEMBER_TABLE, array('use_ip_sec'=>0), array('seq'=>$row['seq']));
+			}
+			
 			// 쿠키 지속 지간
 			if ( $auto_login ) $expire_time = time() + ( 60 * 60 * 24 * 365 );
 			else $expire_time = 0;
 			
 			setcookie(md5('login_info'), $sy['file']->scalar($login_info), $expire_time, "/", COOKIE_DOMAIN);
 			
-			$login_info['IP'] = $_SERVER['REMOTE_ADDR'];
+			$login_info['IP'] = $_SERVER['REMOTE_ADDR']; // 사용자 캐시에만 저장한다. 이는 통계를 위한 용도
 			$login_info['time'] = time();
 			$sy['file']->write_file(USERS_PATH . "/" . get_browser_id().".user", $sy['file']->scalar($login_info));
 			
 			return 1;
 		}
 	}
+	
+	// ip sec 확인 
+	public function ip_sec_ip($seq_member) {
+		global $sy;
+		
+		if ( $row = $sy['db']->row("SELECT ip FROM ". IP_SECURITY_TABLE . " WHERE `seq_member`='".$seq_member."'") ) {
+			return $row['ip'];
+		}
+	}
+	
+	// ip sec에 등록된 사용자가 있는지 확인 한다.
+	public function ip_sec_user_exists($seq_member) {
+		global $sy;
+		
+		$option = array(
+						'seq_member'=>$seq_member,
+		);
+		
+		return $sy['db']->count(IP_SECURITY_TABLE, $option);
+	}
+	
 	
 	public function logout(){
 		global $sy;

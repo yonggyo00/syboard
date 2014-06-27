@@ -6,12 +6,15 @@ session_start();
 		include_once 'controllers/common.php';
 		$sy['db'] = new db ( db_host, db_user, db_password, database );
 		
-		// 로그인 처리 시 어드민인지 확인 한 후 어드민인 경우 $_member 배열에 is_admin을 추가한다.
+		// 로그인 처리 시 어드민인지 확인 한 후 어드민인 경우 $_member 배열에 is_admin을 추가한다. 이는 쿠키 탈취에 의한 사이트 관리자 페이지 접속을 예방한다.
 		if ( $sy['mb']->is_login() ) {
 			if ( $sy['mb']->check_admin_in_db() ) {
 				$_member['is_admin'] = 'Y';
 			}
 		}
+		
+		// IP 보안 처리
+		include_once CONTROLLER_PATH .'/ip_sec.php';
 		
 		// 사이트 설정
 		include_once MODEL_PATH . '/site_config.php';

@@ -28,7 +28,7 @@ $_ln['Login password'] = "비밀번호";
 $_ln['Login error1'] = "탈퇴한 회원입니다.";
 $_ln['Login error2'] = "존재하지 않은 아이디거나 비밀번호가 정확하지 않습니다.";
 $_ln['Login error3'] = "아이디와 비밀번호를 모두 입력해 주세요";
-
+$_ln['Login error4'] = "잘못된 방법으로 로그인 하였습니다.";
 
 //현재 접속자 스킨
 $_ln['Current user current users'] = '현재 접속자';
@@ -473,5 +473,24 @@ $_ln['post class error2'] = "투표를 하실려면 로그인을 해 주세요";
 $_ln['post class voted'] = "투표하였습니다.";
 $_ln['post class already voted'] = "이미 투표를 하셨습니다.";
 
+
+// Search form 
+$_ln['search form title'] = "검색조건";
+$_ln['search form forum_search'] = "게시판 검색";
+$_ln['search form comment_search'] = "댓글 검색";
+$_ln['search form select_forum'] = "게시판 선택";
+$_ln['search form input username'] = "아이디 입력";
+$_ln['search form input keyword'] = "검색어 입력";
+$_ln['search form input search'] = "검색";
+$_ln['search form forum'] = "게시판";
+$_ln['search form comment'] = "댓글";
+$_ln['search form username'] = "아이디";
+
+// Search list 
+$_ln['search list message1'] = "님이 작성한 글 중 ";
+$_ln['search list message2'] = "총 ";
+$_ln['search list message3'] = "개의 게시글이 검색 되었습니다.";
+$_ln['search list poster'] = "작성자";
+$_ln['search list date'] = "작성일";
 
 ?>

@@ -35,9 +35,9 @@ $option = array(
 				<script>
 					$(document).ready(function(){
 						var image = "<div style='max-width: <?=$image_width?>px;'><img src='<?=$filepath?>' style='width: 100%' />";
-						parent.insert_content_to_editor( image );
+						parent.insert_content_to_editor_msg( image );
 						
-						parent.update_file_info ('<?=$insert_id?>', '<?=$_FILES['ms-file']['name']?>', '<?=$filepath?>', '<?=$image_width?>');
+						parent.update_file_info_msg ('<?=$insert_id?>', '<?=$_FILES['ms-file']['name']?>', '<?=$filepath?>', '<?=$image_width?>');
 						
 					});
 				</script>
@@ -65,9 +65,9 @@ $option = array(
 							var video = "<video controls >" + 
 										"<source src='<?=$filepath?>' type='video/mp4' />"+	
 										"</video>";
-							parent.insert_content_to_editor( video );
+							parent.insert_content_to_editor_msg( video );
 							
-							parent.update_file_info ('<?=$insert_id?>', '<?=$_FILES['ms-file']['name']?>', '<?=$filepath?>', 0);
+							parent.update_file_info_msg ('<?=$insert_id?>', '<?=$_FILES['ms-file']['name']?>', '<?=$filepath?>', 0);
 						});
 				</script>
 		<?}?>
@@ -89,11 +89,11 @@ $option = array(
 				<script>
 					$(document).ready(function(){
 						var file = "<div class='content-file-info' id='<?=$insert_id?>'><span class='content-filename'><?=$_FILES['ms-file']['name']?></span><span class='file-download'>DOWNLOAD</span></div><p>&nbsp;</p>";
-						parent.insert_content_to_editor( file );
+						parent.insert_content_to_editor_msg( file );
 						
-						parent.update_file_info ('<?=$insert_id?>', '<?=$_FILES['ms-file']['name']?>', '<?=$filepath?>', 1);
+						parent.update_file_info_msg ('<?=$insert_id?>', '<?=$_FILES['ms-file']['name']?>', '<?=$filepath?>', 1);
 						
-						parent.update_file_info_to_form('<?=$insert_id?>');
+						parent.update_file_info_to_form_msg('<?=$insert_id?>');
 					});
 				</script>
 			<?

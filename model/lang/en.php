@@ -26,7 +26,7 @@ $_ln['Login password'] = "Password";
 $_ln['Login error1'] = "You are resigned already.";
 $_ln['Login error2'] = "Your username doesn\'t exist or password is incorrect.";
 $_ln['Login error3'] = "Please input username and password all.";
-
+$_ln['Login error4'] = "You are using wrong way to access this user.";
 
 //현재 접속자 스킨
 $_ln['Current user current users'] = 'Current Users';
@@ -465,4 +465,22 @@ $_ln['post class voted'] = "Voted.";
 $_ln['post class already voted'] = "Already voted.";
 
 
+// Search form 
+$_ln['search form title'] = "Search";
+$_ln['search form forum_search'] = "Forum";
+$_ln['search form comment_search'] = "Comment";
+$_ln['search form select_forum'] = "Select Forum";
+$_ln['search form input username'] = "Username";
+$_ln['search form input keyword'] = "Keyword";
+$_ln['search form input search'] = "Search";
+$_ln['search form forum'] = "Forum";
+$_ln['search form comment'] = "Comment";
+$_ln['search form username'] = "Username";
+
+// Search list 
+$_ln['search list message1'] = "'s posts... ";
+$_ln['search list message2'] = " ";
+$_ln['search list message3'] = "'s posts have been searched.";
+$_ln['search list poster'] = "Posted by";
+$_ln['search list date'] = "Date";
 ?>

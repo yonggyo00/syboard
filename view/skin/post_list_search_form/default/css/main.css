@@ -1,0 +1,55 @@
+#post-list-search-form-skin {
+	margin: 20px 0 10px 5px;
+	height: 35px;
+	border: 1px solid #666666;
+	line-height: 35px;
+	padding: 10px 10px 2px 10px;
+	position: relative;
+}
+
+#post-list-search-form-skin > #title {
+	background-color: #496380;
+	color: #ffffff;
+	display: inline-block;
+	height: 22px;
+	line-height: 22px;
+	padding: 0 10px;
+	position: absolute;
+	top: -10px;
+	left: -5px;
+}
+
+#post-list-search-form-skin table tr td input[type='text'] {
+	height: 22px;
+	line-height: 22px;
+	padding: 0 5px;
+	width: 120px;
+}
+
+#post-list-search-form-skin table tr td select {
+	height: 23px;
+	line-height: 23px;
+}
+
+#post-list-search-form-skin table tr td input[type='submit'] {
+	display:inline-block;
+	background-color: #6d899e;
+	border: 1px solid #465a69;
+	padding: 0 30px;
+	color: #ffffff;
+	cursor: pointer;
+	font-family: dotum;
+	height: 24px;
+	line-height: 24px;
+}
+
+@-moz-document url-prefix() {  /* 파이어폭스 */
+	#post-list-search-form-skin table tr td input[type='submit'] {
+		position: relative;
+		top: 2px;
+	}
+}
+
+#post-list-search-form-skin table tr td input[type='submit']:hover {
+	background-color: #465a69;
+}

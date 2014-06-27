@@ -16,6 +16,10 @@
 	left: -5px;
 }
 
+#search-form-skin #keyword-search {
+	margin-top: 5px;
+}
+
 #search-form-skin input[type='submit'] {
 	display:inline-block;
 	background-color: #6d899e;
@@ -24,6 +28,14 @@
 	color: #ffffff;
 	cursor: pointer;
 	font-family: dotum;
+	position: relative;
+	top: -1px;
+}
+
+@-moz-document url-prefix() {  /* 파이어폭스 */
+	#search-form-skin input[type='submit'] {
+		top: 0;
+	}
 }
 
 #search-form-skin input[type='submit']:hover {

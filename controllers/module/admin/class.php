@@ -155,6 +155,7 @@ class admin {
 		if ( empty($option['comment_write_level'] ) ) $option['comment_write_level'] = 0;
 		if ( empty($option['map_use'] ) ) $option['map_use'] = 0;
 		if ( empty($option['use_editor'] ) ) $option['use_editor'] = 0;
+		if ( empty($option['use_post_list_search_form']) ) $option['use_post_list_search_form'] = 0;
 		
 		if ( $option['keywords'] ) $option['keywords'] = strip_tags($option['keywords']);
 		

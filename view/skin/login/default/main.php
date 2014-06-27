@@ -41,22 +41,28 @@ $register_url = $sy['mb']->register_url();
 		</div>
 		<div style='clear:left;'></div>
 			
-		<?php
-			if ( admin() ) {
-				echo "<a href='?module=admin&action=index&layout=1' target='_blank'>".lang("Login Site Panel")."</a>";
-			}
-		?>
+		
 		&nbsp;<a href='?module=member&action=resign'><?=lang("Login Resign")?></a>
 	
-		<? if ( !admin() ) {?>
 			&nbsp;&nbsp;
 			<a href='?module=post&action=my_posts'/><?=lang('Login My Post')?></a>&nbsp;
 			<a href='?module=post&action=my_comments'/><?=lang('Login My Comment')?></a>
-		<? }?>
-		<?if ( site_admin() ) {?>
-			&nbsp;<a id='site-admin' href='?module=sub_admin&action=index'><?=lang('Login Site')?></a>
-		<?}?>
 		
+		<div>
+			<?php
+				if ( admin() ) {
+					echo "<a href='?module=admin&action=index&layout=1' target='_blank'>".lang("Login Site Panel")."</a>";
+				}
+			?>
+			
+			<?php
+				if ( site_admin() ) {?>
+					<a id='site-admin' href='?module=sub_admin&action=index'><?=lang('Login Site Panel')?></a>
+			<?}
+				$_levels = array('매우낮음', '낮음', '중간', '높음');
+			?>
+			&nbsp;<span popup_url='?module=member&action=ip_sec_level&layout=1' id='ip-sec-layer_popup'>IP보안 레벨(<?=$_levels[$_member['ip_sec_level']]?>)</span>
+		</div>
 		<div id='logout-button'><input type='submit' value='<?=lang("Login Logout")?>' /></div>
 		<div style='clear:right;'></div>
 	<? } else {
@@ -73,8 +79,11 @@ $register_url = $sy['mb']->register_url();
 		<div id='username'><?=$user_img?><input type='text' name='username' placeholder="<?=lang('Login username')?>" /></div>
 		<div id='password'><?=$pass_img?><input type='password' name='password' placeholder="<?=lang('Login password')?>" /></div>
 		<div style='margin-top: 5px;'>
-			<span id='auto-login'><input type='checkbox' name='auto_login' value=1 /><?=lang("Login autologin")?></span>
-			<input type='submit' value='<?=lang("Login Login")?>' />
+			<div id='login-bottom-left'>
+				<div id='auto-login'><input type='checkbox' name='auto_login' value=1 /><?=lang("Login autologin")?></div>
+				<div id='ip-sec'><input type='checkbox' name='ip_sec' value=1 checked />IP 보안접속</div>
+			</div>
+			<input id='login-button' type='submit' value='<?=lang("Login Login")?>' />
 			<div style='clear:right;'></div>
 		</div>
 	<? }?>
