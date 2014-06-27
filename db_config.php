@@ -537,7 +537,7 @@ if ( $_POST['done'] ) {
 					"`ip` varchar(40) NOT NULL,".
 					"PRIMARY KEY (`seq`),".
 					"KEY `seq_member` (`seq_member`)".
-					") ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;".
+					") ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;"
 				);
 				
 				$sy['debug']->log( 'Creating tables into '.$_POST['database'].' has been finished now');
