@@ -1,7 +1,7 @@
 #ip-sec-level-skin {
 	padding: 10px;
 	position: relative;
-	height: 130px;
+	height: 200px;
 }
 #ip-sec-level-skin > #title{
 	text-shadow: 1px 1px 1px #1c1d52;
@@ -14,18 +14,30 @@
 	margin-bottom: 10px;
 	padding-bottom: 5px;
 }
-#ip-sec-level-skin > #ip-sec-level-form {
-	text-align: center;
-}
 
 #ip-sec-level-skin > #ip-sec-level-form #sub-title {
-	margin-right: 5px;
+	text-align: center;
+	margin: 10px 0 5px 0;
+	font-family: '맑은 고딕', AppleGothic;
+	font-size: 11pt;
+	color: #666666;
+	font-style: italic;
+	font-weight: bold;
 }
 
-#ip-sec-level-skin #close {
+#ip-sec-level-skin > #ip-sec-level-form > #level-select {
+	border: 1px solid #898989;
+	border-radius: 3px;
+	padding: 10px;
+}
+
+#ip-sec-level-skin #button-group {
 	position: absolute;
 	bottom: 10px;
 	right: 10px;
+}
+
+#ip-sec-level-skin #button-group #close, #ip-sec-level-skin #button-group input[type='submit'] {
 	display:inline-block;
 	background-color: #6d899e;
 	border: 1px solid #465a69;
@@ -35,6 +47,6 @@
 	font-family: dotum;
 }
 
-#ip-sec-level-skin #close:hover {
+#ip-sec-level-skin #button-group #close:hover, #ip-sec-level-skin #button-group input[type='submit']:hover {
 	background-color: #465a69;
 }

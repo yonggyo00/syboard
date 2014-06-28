@@ -52,6 +52,11 @@ if ( $in['mode'] == 'update' ) {
 		// 총 글 갯수 업데이트
 		$sy['post']->update_total_post($in['post_id']);
 		
+		// 게시판 캐시 삭제
+		if ( $post_cfg['delete_cache_when_posted'] ) {
+			$sy['post']->delete_cache_by_post_id( $in['post_id'] );
+		}
+		
 		echo "
 			<script>
 				parent.callback_write_done('$in[seq]');
@@ -82,6 +87,11 @@ else {
 			$_SESSION['post_no_'.$insert_id."_secret"] = md5($in['secret']);
 		}
 		
+		// 게시판 캐시 삭제
+		if ( $post_cfg['delete_cache_when_posted'] ) {
+			$sy['post']->delete_cache_by_post_id( $in['post_id'] );
+		}
+	
 		echo "
 			<script>
 				parent.callback_write_done('$insert_id');

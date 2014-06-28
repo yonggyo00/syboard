@@ -20,6 +20,16 @@
 	width: 49%;
 	text-align: right;
 }
+
+#view-user-info #right #user-info #view-user-popup #view-send-message, #view-user-info #right #user-info #view-user-popup a {
+	color: #666666;
+	cursor: pointer;
+}
+
+#view-user-info #right #user-info #view-user-popup #view-send-message:hover {
+	text-decoration: underline;
+}
+
 #view-user-info #view-date, #view-user-info #no_of_view {
 	margin-right: 10px;
 }

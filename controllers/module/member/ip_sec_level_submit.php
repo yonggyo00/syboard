@@ -6,7 +6,7 @@ else {
 			echo "
 				<script>
 					alert('변경되었습니다.');
-					parent.location.reload();
+					parent.parent.location.reload();
 				</script>
 			";
 		}

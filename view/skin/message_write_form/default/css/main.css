@@ -1,7 +1,11 @@
+#message-write-form-skin {
+	padding: 10px;
+}
+
 #message-write-form-skin #left{
 	border-right: 1px solid #b4b4b4;
 	margin-right: 10px;
-	padding: 0 10px;
+	padding-right: 10px;
 	height: 550px;
 }
 
@@ -103,6 +107,22 @@
 	height: 25px;
 	line-height: 25px;
 }
+#message-write-module {
+	position: relative;
+}
+
+#message-write-module #submit-button {
+	position: fixed;
+	right: 10px;
+	top: 480px;
+}
+
+#message-write-module #message-file-uploader{
+	position: fixed;
+	top: 480px;
+	left: 25%;
+	max-width: 400px;
+}
 
 #message-write-form-skin #subject {
 	margin-bottom: 5px;
@@ -120,16 +140,11 @@
 }
 
 #message-write-form-skin textarea[name='content'] {
-	height: 300px;
+	height: 200px;
+	resize: none;
 }
 
 #no_of_unreaded  {
 	font-weight: bold;
 	color: #0ba506;
-}
-#message-write-module #message-file-uploader {
-	margin-top: 10px;
-}
-#message-write-module #message-file-uploader input[name='ms-file'], #file_info {
-	margin-left: 29%;
 }

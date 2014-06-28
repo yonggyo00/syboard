@@ -22,11 +22,27 @@ $_ln['Login My Comment'] = "MyComm";
 $_ln['Login Site'] = "Site";
 $_ln['Login username'] = "Username";
 $_ln['Login password'] = "Password";
+$_ln['Login ip_sec_level'] = "IP SEC LV";
+$_ln['Login ip_sec'] = 'IP Security';
 
 $_ln['Login error1'] = "You are resigned already.";
 $_ln['Login error2'] = "Your username doesn\'t exist or password is incorrect.";
 $_ln['Login error3'] = "Please input username and password all.";
 $_ln['Login error4'] = "You are using wrong way to access this user.";
+
+
+// Member Class
+$_ln['member class ip_sec_0'] = "Very Low";
+$_ln['member class ip_sec_1'] = "Low";
+$_ln['member class ip_sec_2'] = "Medium";
+$_ln['member class ip_sec_3'] = "High";
+
+
+//ip_sec_level 스킨
+$_ln['ip_sec_level title1'] = "Your IP Sec Level is ";
+$_ln['ip_sec_level title2'] = ".";
+$_ln['ip_sec_level sub-title'] = "Please select your IP Sec Level.";
+
 
 //현재 접속자 스킨
 $_ln['Current user current users'] = 'Current Users';
@@ -227,7 +243,11 @@ $_ln['Delete_scrap failed'] = "Fail to delete this scrap.";
 // file_uploader
 $_ln['File_uploader delete'] = "DELETE";
 $_ln['File_uploader insert_into_content'] = "INSERT";
-
+$_ln['File_uploader max'] = "MAX";
+$_ln['File_uploader support type'] = "Type";
+$_ln['File_uploader video'] = "Video";
+$_ln['File_uploader image'] = "Image";
+$_ln['File_uploader file']  = "File";
 
 // file_uploader_submit
 $_ln['File_uploader_submit error1'] = "Error occurs while uploading a file.";

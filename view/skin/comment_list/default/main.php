@@ -28,10 +28,14 @@ if ( $_comments ) {?>
 		
 		if ( $comment['secret'] ) $user_popup = null;
 		else {
+			// 로그인을 한 경우
+			if ( $sy['mb']->is_login() ) $comment_send_message = "class='comment-send-message'";
+			else $comment_send_message = null;
+			
 			// 팝업
 			$user_popup = "
 								<div class='user-popup'>
-									<div><a href='".$sy['ms']->sendto($comment['username'])."'>".lang('Comment_list send message')."</a></div>
+									<div><span $comment_send_message popup_url='".$sy['ms']->sendto($comment['username'])."'>".lang('Comment_list send message')."</span></div>
 									<div><a href='".$sy['post']->search_user_post_url($comment['username'])."'>".lang('Comment_list send view posts')."</a></div>
 								</div>
 							";

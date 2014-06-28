@@ -3,7 +3,7 @@ class message {
 
 	public function write_url ( $receiver = null ) {
 		
-		$url = "?module=message&action=write";
+		$url = "?module=message&action=write&layout=1";
 		
 		if ( $receiver ) $url .= "&receiver=".$receiver;
 		
@@ -11,11 +11,11 @@ class message {
 	}
 	
 	public function list_url () {
-		return "?module=message&action=list";
+		return "?module=message&action=list&layout=1";
 	}
 	
 	public function view_url ( $seq ) {
-		return "?module=message&action=view&seq=".$seq;
+		return "?module=message&action=view&seq=".$seq."&layout=1";
 	}
 	
 	public function send ( $option ) {
@@ -143,7 +143,7 @@ class message {
 	}
 	
 	public function sendto( $username ) {
-		return '?module=message&action=write&receiver='.$username;
+		return '?module=message&action=write&receiver='.$username."&layout=1";
 	}
 	
 }

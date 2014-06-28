@@ -3,7 +3,9 @@
 $post_ids = $sy['post']->post_ids();
 ?>
 <div id='post-list-search-form-skin'>
-	<span id='title'><?=lang('search form title')?></span>
+	<div id='title-wrapper'>
+		<span id='title'><?=lang('search form title')?></span>
+	</div>	
 	<form method='get' autocomplete='off'>
 		<input type='hidden' name='module' value='post' />
 		<input type='hidden' name='action' value='search' />

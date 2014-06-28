@@ -12,4 +12,11 @@ $(document).ready(function(){
 		}
 		else $user_popup.slideUp();
 	});
+	
+	$("#post-list-skin > .rows > .user-popup > .popup-sendmessage > .popup-send-message").click(function(e) {
+		var popup_url = $(this).attr('popup_url');
+		console.log($(this));
+		layer_popup($(this), popup_url, 900, 630, 1);
+		
+	});
 });

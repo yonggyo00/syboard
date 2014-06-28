@@ -17,9 +17,12 @@ $user_info = $sy['mb']->info($p['seq_member'], "signature");
 $signature = stringcut($user_info['signature'], 90);
 
 if ( empty($p['guest_secret'] ) ) {
+	if ( $sy['mb']->is_login() ) $view_send_message = "view-send-message";
+	else $view_send_message = 'view-send-message-without-login';
+	
 	$view_user_popup = "
 						<div id='view-user-popup'>
-							<div><a href='".$sy['ms']->sendto($p['username'])."'>".lang('View subject send message')."</a></div>
+							<div><span id='$view_send_message' popup_url='".$sy['ms']->sendto($p['username'])."'>".lang('View subject send message')."</span></div>
 							<div><a href='".$sy['post']->search_user_post_url($p['username'])."'>".lang('View subject view posts')."</a></div>
 						</div>
 	";

@@ -2,7 +2,7 @@
 <?php
 $post_ids = $sy['post']->post_ids();
 ?>
-<div id='search-form-skin'>
+<div id='search-form-skin-default'>
 	<span id='title'><?=lang('search form title')?></span>
 	<form method='get' autocomplete='off'>
 		<input type='hidden' name='module' value='post' />

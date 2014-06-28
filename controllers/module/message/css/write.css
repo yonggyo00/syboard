@@ -42,11 +42,7 @@
 	cursor: pointer;
 	font-family: dotum;
 }
-#message-write-module #submit-button {
-	position: absolute;
-	right: 5px;
-	bottom: -7px;
-}
+
 #message-write-module input[type='submit']:hover, #message-write-module input[type='reset']:hover {
 	background-color: #465a69;
 }

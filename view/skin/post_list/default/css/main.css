@@ -70,24 +70,28 @@
 	border: 1px solid #666666;
 	position: absolute;
 	background-color: #ffffff;
-	z-index: 3;
+	z-index: 9000;
 	display: none;
 	padding: 10px 15px;
 	border-radius: 3px;
 	text-align: center;
 }
 
-#post-list-skin .user-popup a {
+#post-list-skin .user-popup a, #post-list-skin .user-popup .popup-sendmessage > span {
 	line-height: 17px !important;
 	height: 17px !important;
 	font-weight: normal !important;
 	color: #313131 !important;
 }
 
-#post-list-skin .user-popup a:hover {
+#post-list-skin .user-popup a:hover, #post-list-skin .user-popup .popup-sendmessage > span:hover {
 	text-decoration: underline !important;
 }
 
 #post-list-skin .user-popup .popup-sendmessage {
 	margin-top: 10px;
+}
+
+#post-list-skin .user-popup .popup-sendmessage > span {
+	cursor: pointer;
 }

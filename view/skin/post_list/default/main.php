@@ -95,11 +95,15 @@ if ( $posts ) {
 			
 			if ( $p['guest_secret'] ) $user_popup = null; // 손님 글인 경우 
 			else { // 일반 글
+				// 로그인 한 경우만 쪽지를 보낼 수 있다.
+				if ( $sy['mb']->is_login() ) $popup_send_message = "class='popup-send-message'";
+				else $popup_send_message = null;
+				
 				$user_popup = "
 								<div class='user-popup'>
 									<div>$nickname</div>
 									<div>($username)</div>
-									<div class='popup-sendmessage'><a href='".$sy['ms']->sendto($p['username'])."'>".lang('List msg send message')."</a></div>
+									<div class='popup-sendmessage'><span $popup_send_message popup_url='".$sy['ms']->sendto($p['username'])."'>".lang('List msg send message')."</span></div>
 									<div><a href='".$sy['post']->search_user_post_url($p['username'])."'>".lang('List msg view posts')."</a></div>
 								</div>
 							";

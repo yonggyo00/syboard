@@ -1,15 +1,57 @@
-#logo-search {
+#site-top-logo-search {
 	margin: 20px 0 10px 0;
-	height: 25px;
+	height: 30px;
 }
 
-#logo-search #site-logo a{
-	font-size: 20pt;
+#site-top-logo-search > #site-logo {
+	float: left;
+}
+
+#site-top-logo-search > #site-top-search-bar {
+	float: right;
+}
+
+#site-top-logo-search > #site-logo a{
+	font-size: 22pt;
 	font-weight: bold;
 	color: #44677c;
-	font-family: comic, '¸¼Àº °íµñ', AppleGothic;
+	font-family: '¸¼Àº °íµñ', AppleGothic;
+	text-shadow: 1px 1px 1px #5b5b5b;
+	
 }
 
-#logo-search #site-logo a:hover {
+#site-top-logo-search > #site-logo a:hover {
 	text-decoration: none;
+}
+
+#site-top-logo-search > #site-top-search-bar {
+	position: relative;
+	width: 300px;
+	border:3px solid #44677c;
+	height: 25px;
+	overflow: hidden;
+}
+
+#site-top-logo-search > #site-top-search-bar input[type='text'] {
+	width: 200px;
+	padding: 5px 10px;
+	position: absolute;
+	left: 0;
+	top: -2px;
+	border: 0;
+	background-color: transparent;
+}
+
+#site-top-logo-search > #site-top-search-bar input[type='submit'] {
+	background-color: #44677c;
+	border: 0;
+	height: 29px;
+	line-height: 29px;
+	font-weight: bold;
+	color: #ffffff;
+	position: absolute;
+	width: 80px;
+	right: 0;
+	top: -2px;
+
 }

@@ -16,10 +16,20 @@
 #login_skin #login-skin-top {
 	margin-bottom: 3px;
 }
-#login_skin a, #login_skin #login-bottom-left {
+
+#login_skin #ip-sec-icon {
+	position: relative;
+	top: 1px;
+}
+
+#login_skin a, #login_skin #login-bottom-left, #login_skin #ip-sec-layer_popup, #login_skin #message-popup {
 	text-decoration: none;
 	color: #394454;
 	font-family: '맑은 고딕', AppleGothic;
+}
+
+#login_skin #ip-sec-layer_popup, #login_skin #message-popup {
+	cursor: pointer;
 }
 
 #login_skin #login-bottom-left {
@@ -32,7 +42,7 @@
 	top: 1px;
 }
 
-#login_skin a:hover {
+#login_skin a:hover, #login_skin #ip-sec-layer_popup:hover, #login_skin #message-popup:hover {
 	text-decoration: underline;
 }
 #login_skin #pannel1 #username {

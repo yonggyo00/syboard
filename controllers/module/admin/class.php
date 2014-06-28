@@ -156,7 +156,8 @@ class admin {
 		if ( empty($option['map_use'] ) ) $option['map_use'] = 0;
 		if ( empty($option['use_editor'] ) ) $option['use_editor'] = 0;
 		if ( empty($option['use_post_list_search_form']) ) $option['use_post_list_search_form'] = 0;
-		
+		if ( empty($option['delete_cache_when_posted']) ) $option['delete_cache_when_posted'] = 0;
+
 		if ( $option['keywords'] ) $option['keywords'] = strip_tags($option['keywords']);
 		
 		if ( $option['description'] ) {

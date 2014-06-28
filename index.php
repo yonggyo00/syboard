@@ -50,7 +50,7 @@
 		// 자바스크립트 메세지
 		include_once CONTROLLER_PATH .'/js.msg.php';
 	?>
-	<script src='js/index.js' /></script>
+	<script src='js/index.js'></script>
 	<?php 
 		include_once css_header_path();
 		foreach ( $css_header as $_css_header ) {

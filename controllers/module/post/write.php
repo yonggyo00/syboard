@@ -1,4 +1,6 @@
 <?php
+include_once CONTROLLER_PATH . '/max_file_size.php';
+
 if ( $block_no = $sy['mb']->check_block() ) return $sy['js']->back(lang('Post Write error1').$block_no);
 
 if ( $in['post_id'] ) {
@@ -99,9 +101,10 @@ if ( $in['post_id'] ) {
 	if ( ($post_cfg['use_editor'] && $in['action'] == 'write') || ($in['action'] == 'update' && $p['editor_used'] ) ) {?>
 		<div id="file-uploader-wrapper">	
 			<div id='file-upload-button-group'>
-				<span class='file-upload-button selected' filename='image_uploader_submit'><?=lang('Post Write image')?></span>
-				<span class='file-upload-button' filename='video_uploader_submit'><?=lang('Post Write video')?></span>
-				<span class='file-upload-button' filename='file_uploader_submit'><?=lang('Post Write file')?></span>
+				<span class='file-upload-button selected' filename='image_uploader_submit' title='<?=lang('File_uploader max')?> <?=round( MAX_IMAGE_FILE_SIZE / 1048576 )?>MB'><?=lang('Post Write image')?></span>
+				<span class='file-upload-button' filename='video_uploader_submit' title='<?=lang('File_uploader max')?> <?=round( MAX_VIDEO_FILE_SIZE / 1048576 )?>MB'><?=lang('Post Write video')?></span>
+				<span class='file-upload-button' filename='file_uploader_submit' title='<?=lang('File_uploader max')?> <?=round( MAX_FILE_UPLOAD_SIZE / 1048576 )?>MB'><?=lang('Post Write file')?></span>
+				<span>(<?=lang('File_uploader image')?>(png,jpeg,gif) <?=lang('File_uploader max')?> <?=round( MAX_IMAGE_FILE_SIZE / 1048576 )?>MB, <?=lang('File_uploader video')?>(mp4) <?=lang('File_uploader max')?> <?=round( MAX_VIDEO_FILE_SIZE / 1048576 )?>MB, <?=lang('File_uploader file')?> <?=lang('File_uploader max')?> <?=round( MAX_FILE_UPLOAD_SIZE / 1048576 )?>MB)</span>
 			</div>
 			<? include_once 'file_uploader.php';?>
 		</div>

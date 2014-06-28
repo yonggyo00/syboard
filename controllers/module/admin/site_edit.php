@@ -98,6 +98,9 @@ if ( $in['done'] ) {
 					'not_searching_forum'=>$in['not_searching_forum'],
 					'forums'=>$in['forums'],
 					'ip_sec_level_skin'=>$in['ip_sec_level_skin'],
+					'max_file_size'=>$in['max_file_size'],
+					'max_image_file_size'=>$in['max_image_file_size'],
+					'max_video_file_size'=>$in['max_video_file_size'],
 					'level' => $sy['file']->scalar($in['level']) // 레벨별 포인트는 스칼라 값으로 변환 한 후 데이터 테이블에 업데이트 한다.
 	);
 	
@@ -190,10 +193,23 @@ $sel_site_layout = $adm->sel_site_layout( $info['layout'] );
 		<div class='admin-row'><span class='sub-title'>보안문자</span> <?=$adm->skin_list('captcha', $info['captcha_skin'])?></div>
 		<div class='admin-row'><span class='sub-title'>비밀글확인</span> <?=$adm->skin_list('secret_check', $info['secret_check_skin'])?></div>
 		<div class='admin-row'><span class='sub-title'>게스트글비밀번호확인</span> <?=$adm->skin_list('guest_secret_check', $info['guest_secret_check_skin'])?></div>
-		
-		
 		<input type='submit' value='수정하기' />
 		
+		
+		<div class='admin-sub-title'>파일 크기관리</div>
+		<div class='admin-row'>
+			<span class='sub-title'>최대 파일크기</span>
+			<input type='text' name='max_file_size' value='<?=$info['max_file_size']?>' />bytes
+		</div>
+		<div class='admin-row'>
+			<span class='sub-title'>최대 이미지크기</span>
+			<input type='text' name='max_image_file_size' value='<?=$info['max_image_file_size']?>' />bytes
+		</div>
+		<div class='admin-row'>
+			<span class='sub-title'>최대 비디오크기</span>
+			<input type='text' name='max_video_file_size' value='<?=$info['max_video_file_size']?>' />bytes
+		</div>
+		<input type='submit' value='수정하기' />
 		
 		<div class='admin-sub-title'>회원가입관리</div>
 		

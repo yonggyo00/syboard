@@ -1,8 +1,10 @@
 <?php
-if ( $_FILES['file']['error'] ) $sy['js']->alert("파일 업로드 중 에러가 발생하였습니다.");
+include_once CONTROLLER_PATH . '/max_file_size.php';
+
+if ( $_FILES['file']['error'] ) $sy['js']->alert(lang('File_uploader_submit error1'));
 else {
 	if ( $_FILES['file']['size'] >= MAX_IMAGE_FILE_SIZE ) {
-		$sy['js']->alert("파일 용량은 ".round( MAX_IMAGE_FILE_SIZE / 1000000 ) . "MB 이하로 해 주세요");
+		return $sy['js']->alert(lang('FIle_uploader_submit error2').round( MAX_IMAGE_FILE_SIZE / 1048576 ) . lang('FIle_uploader_submit error3'));
 	}
 	else {
 		if ( $sy['file']->is_image($_FILES['file']['type']) ) {
@@ -53,9 +55,9 @@ else {
 				}
 			}
 			else {
-				$sy['js']->alert("파일 정보 업데이트에 실패 하였습니다.");
+				$sy['js']->alert(lang('FIle_uploader_submit error4'));
 			}	
-		}else $sy['js']->alert("지원하지 않는 이미지 타입 입니다. 이미지는 jpeg, gif, png 형식으로 변환하세요");
+		}else $sy['js']->alert(lang('FIle_uploader_submit error5'));
 	}
 }
 ?>

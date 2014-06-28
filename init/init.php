@@ -18,7 +18,6 @@ session_start();
 		
 		// 사이트 설정
 		include_once MODEL_PATH . '/site_config.php';
-       
         	   
 		// PC, Mobile 버전을 체크
 		include_once CONTROLLER_PATH . '/device.php';

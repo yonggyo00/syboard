@@ -1,4 +1,6 @@
 <?php
+include_once CONTROLLER_PATH . '/max_file_size.php';
+
 if ( $_FILES['file-upload']['error'] ) return $sy['js']->alert(lang('File_uploader_submit error1'));
 
 $option = array(
@@ -13,7 +15,10 @@ $option = array(
  if ( $sy['file']->is_image ($_FILES['ms-file']['type']) ) {
 	
 	if ( $_FILES['ms-file']['size'] >= MAX_IMAGE_FILE_SIZE ) {
-		$sy['js']->alert(lang('FIle_uploader_submit error2').round( MAX_IMAGE_FILE_SIZE / 1000000 ) . lang('FIle_uploader_submit error3'));
+		$sy['js']->alert(lang('FIle_uploader_submit error2').round( MAX_IMAGE_FILE_SIZE / 1048576 ) . lang('FIle_uploader_submit error3'));
+	}
+	else if ( $_FILES['ms-file']['size'] == 0 ) {
+		return $sy['js']->alert(lang('File_uploader_submit error1'));
 	}
 	else {
 		$imagesize = getimagesize($_FILES['ms-file']['tmp_name']);
@@ -47,6 +52,13 @@ $option = array(
 		
 	}
  } else if ( $sy['file']->is_video( $_FILES['ms-file']['type']) ) {
+	if ( $_FILES['ms-file']['size'] >= MAX_VIDEO_FILE_SIZE ) {
+		return $sy['js']->alert(lang('FIle_uploader_submit error2').round( MAX_VIDEO_FILE_SIZE / 1048576 ) . lang('FIle_uploader_submit error3'));
+	}
+	else if ( $_FILES['ms-file']['size'] == 0 ) {
+		return $sy['js']->alert(lang('File_uploader_submit error1'));
+	}
+	else {
 		$option['width'] = 0;
 		$option['type'] = 'video';
 		
@@ -72,31 +84,41 @@ $option = array(
 				</script>
 		<?}?>
 	<?}	
+	}
  }
  else {
-	$option['width'] = 1;
-	$option['type'] = 'file';
+	if ( $_FILES['ms-file']['size'] >= MAX_FILE_UPLOAD_SIZE ) {
+		return $sy['js']->alert(lang('FIle_uploader_submit error2').round( MAX_FILE_UPLOAD_SIZE / 1048576 ) . lang('FIle_uploader_submit error3'));
+	}
+	else if ( $_FILES['ms-file']['size'] == 0 ) {
+		return $sy['js']->alert(lang('File_uploader_submit error1'));
+	}
+	else {
 	
-	$insert_id = $sy['data']->insert_file_info($option);
-	if ( $insert_id ) {
-		$upload_path = $sy['data']->upload_path($insert_id);
+		$option['width'] = 1;
+		$option['type'] = 'file';
+		
+		$insert_id = $sy['data']->insert_file_info($option);
+		if ( $insert_id ) {
+			$upload_path = $sy['data']->upload_path($insert_id);
+					
+			$result = @move_uploaded_file($_FILES['ms-file']['tmp_name'], $upload_path);
 				
-		$result = @move_uploaded_file($_FILES['ms-file']['tmp_name'], $upload_path);
-			
-		if ( $result ) {
-			$filepath = site_url() . "/" . $upload_path;
-			?>
-				<script>
-					$(document).ready(function(){
-						var file = "<div class='content-file-info' id='<?=$insert_id?>'><span class='content-filename'><?=$_FILES['ms-file']['name']?></span><span class='file-download'>DOWNLOAD</span></div><p>&nbsp;</p>";
-						parent.insert_content_to_editor_msg( file );
-						
-						parent.update_file_info_msg ('<?=$insert_id?>', '<?=$_FILES['ms-file']['name']?>', '<?=$filepath?>', 1);
-						
-						parent.update_file_info_to_form_msg('<?=$insert_id?>');
-					});
-				</script>
-			<?
+			if ( $result ) {
+				$filepath = site_url() . "/" . $upload_path;
+				?>
+					<script>
+						$(document).ready(function(){
+							var file = "<div class='content-file-info' id='<?=$insert_id?>'><span class='content-filename'><?=$_FILES['ms-file']['name']?></span><span class='file-download'>DOWNLOAD</span></div><p>&nbsp;</p>";
+							parent.insert_content_to_editor_msg( file );
+							
+							parent.update_file_info_msg ('<?=$insert_id?>', '<?=$_FILES['ms-file']['name']?>', '<?=$filepath?>', 1);
+							
+							parent.update_file_info_to_form_msg('<?=$insert_id?>');
+						});
+					</script>
+				<?
+			}
 		}
 	}
  }

@@ -7,12 +7,12 @@ $re_subject = urlencode('[RE] '.$message['subject']);
 ?>
 <table id='message-view-skin' cellspacing=0 cellpadding=0 width='100%' border=0>
 	<tr valign='top'>
-		<td width='28%'>
+		<td width='24%'>
 			<?php
 				include_once 'left.php';
 			?>
 		</td>
-		<td width='72%'>
+		<td width='76%'>
 			<div id='user-info'>
 				<span id='receiver'><b><?=lang('message view sender')?></b>
 					<a href='<?=$sy['ms']->sendto($userinfo['username'])?>&subject=<?=$re_subject?>'>

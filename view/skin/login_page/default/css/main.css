@@ -28,16 +28,21 @@
 	padding: 3px 10px;
 	color: #ffffff;
 	cursor: pointer;
+	margin-bottom: 2px;
 }
 
-#login-page-skin #login-page-top {
+#login-page-skin #login-page-top, #login-page-skin #login-page-bottom {
 	margin-bottom: 5px;
 	color: #394454;
 	font-family: '맑은 고딕', AppleGothic;
 }
 
-#login-page-skin #login-page-top > #auto-login {
-	float: right;
+#login-page-skin #login-page-bottom {
+	padding-right: 5px;
+}
+
+#login-page-skin #login-page-bottom > #auto-login {
+	float: left;
 }
 
 #login-page-skin #login-page-top > a:hover {

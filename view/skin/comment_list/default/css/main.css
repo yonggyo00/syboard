@@ -86,15 +86,15 @@
 	margin-top: 2px;
 }
 
-#comment-list .row .username {
+#comment-list > .row .username {
 	cursor: pointer;
 }
 
-#comment-list .row .username span:hover {
+#comment-list > .row .username span:hover {
 	text-decoration: underline;
 }
 
-#comment-list .row .user-popup {
+#comment-list > .row .user-popup {
 	border: 1px solid #666666;
 	position: absolute;
 	background-color: #ffffff !important;
@@ -104,14 +104,16 @@
 	border-radius: 3px;
 	text-align: center;
 }
-
-#comment-list .row .user-popup a {
+#comment-list > .row .user-popup div > span {
+	cursor: pointer;
+}
+#comment-list > .row .user-popup div > a #comment-list > .row .user-popup div > span {
 	line-height: 17px !important;
 	height: 17px !important;
 	font-weight: normal !important;
 	color: #313131 !important;
 }
 
-#comment-list .row .user-popup a:hover {
+#comment-list > .row .user-popup a:hover, .user-popup div > span:hover {
 	text-decoration: underline !important;
 }

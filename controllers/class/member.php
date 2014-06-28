@@ -1,6 +1,12 @@
 <?php
 class member {
-
+	
+	// 보안레벨 종류 배열
+	public function ip_security_levels() {
+		
+		return array(lang('member class ip_sec_0'), lang('member class ip_sec_1'), lang('member class ip_sec_2'), lang('member class ip_sec_3'));
+	}
+	
 	// Register URL
 	public function register_url() {
 		global $site_config;
@@ -167,7 +173,7 @@ class member {
 		
 		return $sy['db']->count(IP_SECURITY_TABLE, $option);
 	}
-	
+
 	
 	public function logout(){
 		global $sy;
@@ -263,7 +269,7 @@ class member {
 							
 							$_current_user = $sy['file']->unscalar($data);
 							
-							$current_user['users'][$_current_user['username']] = "<a href='?module=message&action=write&receiver=".$_current_user['username']."'>".$_current_user['nickname']."(".$_current_user['username'].")</a>";
+							$current_user['users'][$_current_user['username']] = "<span class='current-user-message' popup_url='?module=message&action=write&receiver=".$_current_user['username']."&layout=1'>".$_current_user['nickname']."(".$_current_user['username'].")</span>";
 							
 							$sy['file']->write_file(USERS_PATH . "/" . get_browser_id() . '.stamp', time());	
 						}

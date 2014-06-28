@@ -19,15 +19,21 @@ $register_url = $sy['mb']->register_url();
 		}
 		else $profile_image = "<img src='".$so['path']."/img/profile.png' />";
 		
+		// ip보안 로그인인 경우
+		if ( $_member['use_ip_sec'] ) $ip_sec_icon = "<img id='ip-sec-icon' src='".$so['path']."/img/ip_sec_on.png' align='center'/>";
+		else $ip_sec_icon = "<img id='ip-sec-icon' src='".$so['path']."/img/ip_sec_off.png' align='center' />";
 	?>
 		<input type='hidden' name='action' value='logout' />
 		
 		<div id='profile-image'><?=$profile_image?></div>
 		<div id='pannel1'>
 			<div id='username'><?=stringcut($_member['nickname'], 15)?><?=lang("Login msg")?></div>
-			<div><a href='?module=member&action=update'><?=lang("Login edit profile")?></a></div>
 			<div>
-				<a href='<?=$sy['ms']->list_url()?>'><?=lang("Login Message")?><?=$new?></a> &nbsp;&nbsp;
+				<a href='?module=member&action=update'><?=lang("Login edit profile")?></a>
+				<?=$ip_sec_icon?>
+			</div>
+			<div>
+				<span popup_url= '<?=$sy['ms']->list_url()?>' id='message-popup'><?=lang("Login Message")?><?=$new?></span>&nbsp;&nbsp;
 				<a href='?module=post&action=my_scrap'><?=lang("Login Scrap")?></a>
 			</div>
 			<div>
@@ -59,9 +65,10 @@ $register_url = $sy['mb']->register_url();
 				if ( site_admin() ) {?>
 					<a id='site-admin' href='?module=sub_admin&action=index'><?=lang('Login Site Panel')?></a>
 			<?}
-				$_levels = array('매우낮음', '낮음', '중간', '높음');
+				// 보안레벨종류 가져오기
+				$_levels = $sy['mb']->ip_security_levels();
 			?>
-			&nbsp;<span popup_url='?module=member&action=ip_sec_level&layout=1' id='ip-sec-layer_popup'>IP보안 레벨(<?=$_levels[$_member['ip_sec_level']]?>)</span>
+			&nbsp;<span popup_url='?module=member&action=ip_sec_level&layout=1' id='ip-sec-layer_popup'><?=lang('Login ip_sec_level')?>(<?=$_levels[$_member['ip_sec_level']]?>)</span>
 		</div>
 		<div id='logout-button'><input type='submit' value='<?=lang("Login Logout")?>' /></div>
 		<div style='clear:right;'></div>
@@ -81,7 +88,7 @@ $register_url = $sy['mb']->register_url();
 		<div style='margin-top: 5px;'>
 			<div id='login-bottom-left'>
 				<div id='auto-login'><input type='checkbox' name='auto_login' value=1 /><?=lang("Login autologin")?></div>
-				<div id='ip-sec'><input type='checkbox' name='ip_sec' value=1 checked />IP 보안접속</div>
+				<div id='ip-sec'><input type='checkbox' name='ip_sec' value=1 checked /><?=lang('Login ip_sec')?></div>
 			</div>
 			<input id='login-button' type='submit' value='<?=lang("Login Login")?>' />
 			<div style='clear:right;'></div>

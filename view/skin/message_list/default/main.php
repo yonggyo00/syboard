@@ -16,12 +16,12 @@ $attached = "<img src='".$so['path'].'/img/file.png'."' />";
 <?=skin_javascript($so, __FILE__)?>
 <table id='message-list-skin' cellspacing=0 cellpadding=0 width='100%' border=0>
 	<tr valign='top'>
-		<td width='28%'>
+		<td width='24%'>
 			<?php
 				include_once 'left.php';
 			?>
 		</td>
-		<td width='72%'>
+		<td width='76%'>
 			<table cellpadding=0 cellspacing=0 width='100%' border=0>
 				<tr id='table-header' valign='top'>
 					<td width=20><input type='checkbox' id='select-all' value=1 /></td>

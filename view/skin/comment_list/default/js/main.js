@@ -40,4 +40,9 @@ $(document).ready(function() {
 		}
 		else $user_popup.slideUp();
 	});
+	
+	$("#comment-list > .row .user-popup > div > .comment-send-message").click(function() {
+		var popup_url = $(this).attr('popup_url');
+		layer_popup($(this), popup_url, 900, 630, 1);
+	});
 });

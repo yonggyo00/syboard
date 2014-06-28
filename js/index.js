@@ -67,13 +67,16 @@ function layer_popup( $this, url, fwidth, fheight, scrolling ) {
 	else { // 팝업 높이 보다 작다면
 		var window_height = $(window).height(); // 모니터 창의 사이즈를 구하고
 		
-		var click_ypos = $this.position().top; // 레이어 팝업을 발생시킨 element의 y좌표를 가져오고
+		var click_ypos = $this.offset().top; // 레이어 팝업을 발생시킨 element의 y좌표를 가져오고
 		
 		var pages = Math.ceil(height / window_height); // 전체 높이가 모니터 창의 사이즈로 나누었을 때 몇 페이지가 되는지 구한다.
 		
 		var content_ypos = 0;
 		
-		for ( var i=1;  i <= pages; i++ ) {
+		// 만약 윈도우 높이 * pages가 body 높이보다 크다면 body + window 높이를 한다,
+		if ( window_height * pages >= height ) height += window_height;
+		
+		for ( var i = 1; i <= pages; i++ ) {
 			if ( click_ypos >= window_height * ( i - 1 ) && click_ypos < window_height * i ) {
 				content_ypos = Math.round(window_height * ( i - 1 ) + (window_height / 2 ) - (fheight / 2));
 			}
@@ -115,8 +118,8 @@ function image_layer_popup( $this, image_url) {
 	var height = $("body").height();
 	var width = $(window).width();
 	
-	var position = $this.position();
-	var ypos = position.top;
+	var offset = $this.offset();
+	var ypos = offset.top;
 	
 	var window_height = $(window).height();
 	var pages = Math.ceil(height / window_height);

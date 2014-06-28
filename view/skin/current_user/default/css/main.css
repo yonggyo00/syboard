@@ -20,11 +20,13 @@
 	overflow-y: auto;
 }
 
-#current-user > #current_users a {
-	text-decoration: none;
-	color: #313131;
-}
-#current-user > #current_users a:hover {
+#current-user > #current_users .current-user-message:hover {
 	color: #722121;
 	text-decoration: underline;
+}
+
+#current-user > #current_users .current-user-message {
+	text-decoration: none;
+	color: #313131;
+	cursor: pointer;
 }

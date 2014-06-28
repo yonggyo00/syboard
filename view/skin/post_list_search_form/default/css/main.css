@@ -4,10 +4,13 @@
 	border: 1px solid #666666;
 	line-height: 35px;
 	padding: 10px 10px 2px 10px;
+}
+
+#post-list-search-form-skin > #title-wrapper {
 	position: relative;
 }
 
-#post-list-search-form-skin > #title {
+#post-list-search-form-skin > #title-wrapper > #title {
 	background-color: #496380;
 	color: #ffffff;
 	display: inline-block;
@@ -15,8 +18,8 @@
 	line-height: 22px;
 	padding: 0 10px;
 	position: absolute;
-	top: -10px;
-	left: -5px;
+	top: -21px;
+	left: -17px;
 }
 
 #post-list-search-form-skin table tr td input[type='text'] {

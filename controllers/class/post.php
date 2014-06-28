@@ -41,6 +41,7 @@ class post{
 		if ( empty($option['map_use'] ) ) $option['map_use'] = 0;
 		if ( empty($option['use_editor'] ) ) $option['use_editor'] = 0;
 		if ( empty($option['use_post_list_search_form']) ) $option['use_post_list_search_form'] = 0;
+		if ( empty($option['delete_cache_when_posted']) ) $option['delete_cache_when_posted'] = 0;
 		
 		if ( $option['keywords'] ) $option['keywords'] = strip_tags($option['keywords']);
 		
@@ -880,5 +881,20 @@ class post{
 	public function escaped_textarea($content ) {
 		return stripslashes(str_replace('\r\n', "\n", $content));
 	}
+	
+	// 게시판별 최신글 캐시 삭제 하기
+	public function delete_cache_by_post_id( $post_id ) {
+		global $sy;
+		$files = $sy['file']->readdir(CACHE_PATH);
+		di ( $files );
+		foreach ( $files as $file ) {
+			if ( preg_match("/^{$post_id}/", $file) ) {
+				@unlink(CACHE_PATH . '/'.$file);
+			}
+		}
+	}
+	
+	
+	
 }
 ?>

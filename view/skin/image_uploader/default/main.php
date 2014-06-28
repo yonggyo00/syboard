@@ -1,6 +1,8 @@
 <?=skin_css($so, __FILE__)?>
 <?=skin_javascript($so, __FILE__)?>
 <?php
+include_once CONTROLLER_PATH . '/max_file_size.php';
+
  // gid에 이미 등록된 이미지가 있는지 확인 한다.
  if ( $so['gid'] ) {
 	$file = $sy['file']->files_by_gid($so['gid']);
@@ -27,7 +29,8 @@
 		<input type='hidden' name='layout' value=1 />
 		
 		<div>
-			<span id='sub-title'><?=lang('image uploader skin title')?></span><input type='file' name='file'/>
+			<span id='sub-title'><?=lang('image uploader skin title')?></span>(<?=lang('File_uploader max')?> <?=round( MAX_IMAGE_FILE_SIZE / 1048576 )?>MB, <?=lang('File_uploader support type')?> - png, jpeg, gif)
+			<input type='file' name='file'/>
 		</div>
 	</form>
 </div>

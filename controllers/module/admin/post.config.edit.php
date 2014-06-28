@@ -30,6 +30,7 @@
 			<div class='admin-row'><input type='checkbox' name='blog_api_use' value=1 <?=$post_cfg['blog_api_use']?'checked':''?> />블로그 자동등록 사용</div>
 			<div class='admin-row'><input type='checkbox' name='map_use' value=1 <?=$post_cfg['map_use']?'checked':''?> />지도 사용</div>
 			<div class='admin-row'><input type='checkbox' name='use_editor' value=1 <?=$post_cfg['use_editor']?'checked':''?> />글쓰기 에디터 사용</div>
+			<div class='admin-row'><input type='checkbox' name='delete_cache_when_posted' value=1 <?=$post_cfg['delete_cache_when_posted']?'checked':''?> />글쓰기,수정시 캐쉬삭제</div>
 			<div class='admin-row'><span class='sub-title'>게시판 관리자</span> <input type='text' name='admin' value='<?=$post_cfg['admin']?>' /></div>
 		</fieldset>
 		<input type='submit' value='수정하기' />

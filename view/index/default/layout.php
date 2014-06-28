@@ -6,6 +6,8 @@
 <?php
 	include_once 'top.php';
 	include_once 'logo_search.php';
+	include_once 'menu.php';
+	
 	echo "<div id='main-left'>";
 	
 	include_once 'left.php';

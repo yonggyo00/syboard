@@ -24,11 +24,27 @@ $_ln['Login My Comment'] = "나의댓글";
 $_ln['Login Site'] = "관리";
 $_ln['Login username'] = "아이디";
 $_ln['Login password'] = "비밀번호";
+$_ln['Login ip_sec_level'] = "IP보안 레벨";
+$_ln['Login ip_sec'] = 'IP보안접속';
 
 $_ln['Login error1'] = "탈퇴한 회원입니다.";
 $_ln['Login error2'] = "존재하지 않은 아이디거나 비밀번호가 정확하지 않습니다.";
 $_ln['Login error3'] = "아이디와 비밀번호를 모두 입력해 주세요";
 $_ln['Login error4'] = "잘못된 방법으로 로그인 하였습니다.";
+
+
+// Member Class
+$_ln['member class ip_sec_0'] = "매우낮음";
+$_ln['member class ip_sec_1'] = "낮음";
+$_ln['member class ip_sec_2'] = "중간";
+$_ln['member class ip_sec_3'] = "높음";
+
+
+//ip_sec_level 스킨
+$_ln['ip_sec_level title1'] = "회원님의 IP보안 레벨은 ";
+$_ln['ip_sec_level title2'] = "입니다.";
+$_ln['ip_sec_level sub-title'] = "IP 보안레벨을 선택하세요.";
+
 
 //현재 접속자 스킨
 $_ln['Current user current users'] = '현재 접속자';
@@ -237,7 +253,11 @@ $_ln['Delete_scrap failed'] = "삭제에 실패하였습니다.";
 // file_uploader
 $_ln['File_uploader delete'] = "삭제";
 $_ln['File_uploader insert_into_content'] = "본문삽입";
-
+$_ln['File_uploader max'] = "최대";
+$_ln['File_uploader support type'] = "지원형식";
+$_ln['File_uploader video'] = "비디오";
+$_ln['File_uploader image'] = "이미지";
+$_ln['File_uploader file']  = "파일";
 
 // file_uploader_submit
 $_ln['File_uploader_submit error1'] = "파일 업로드 중 에러가 발생하였습니다.";
@@ -246,6 +266,7 @@ $_ln['FIle_uploader_submit error3'] = "MB 이하로 해 주세요";
 $_ln['FIle_uploader_submit error4'] = "파일 정보 업데이트에 실패 하였습니다.";
 $_ln['FIle_uploader_submit error5'] = "지원하지 않는 이미지 타입 입니다. 이미지는 jpeg, gif, png 형식으로 변환하세요";
 $_ln['FIle_uploader_submit error6'] = "지원하지 않는 비디오 타입 입니다. 비디오는 mp4형식으로 변환하세요";
+
 
 // guest_secret_check_submit
 $_ln['Guest_secret_check error1'] = "숫자 또는 영문의 6자리 글 비밀번호를 입력하세요.";
