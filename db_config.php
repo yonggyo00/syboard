@@ -274,6 +274,7 @@ if ( $_POST['done'] ) {
 						"`use_view_vote` char(1) NOT NULL DEFAULT '',".
 						"`use_comment_vote` char(1) NOT NULL DEFAULT '',".
 						"`use_editor` char(1) NOT NULL DEFAULT '0',".
+						"`delete_cache_when_posted` char(1) NOT NULL DEFAULT '0',".
 						"`show_ip_view` char(1) NOT NULL DEFAULT '',".
 						"`show_ip_comment` char(1) NOT NULL DEFAULT '',".
 						"`write_level` tinyint(4) NOT NULL DEFAULT '0',".
@@ -465,6 +466,9 @@ if ( $_POST['done'] ) {
 					"`use_facebook` char(1) NOT NULL DEFAULT '0',".
 					"`use_twitter` char(1) NOT NULL DEFAULT '0',".
 					"`forums` varchar(1000) NOT NULL DEFAULT '',".
+					"`max_file_size` varchar(60) NOT NULL DEFAULT '5242880',".
+					"`max_image_file_size` varchar(60) NOT NULL DEFAULT '5242880',".
+					"`max_video_file_size` varchar(60) NOT NULL DEFAULT '5242880',".
 					"`admin` varchar(255) NOT NULL DEFAULT '',".
 					"PRIMARY KEY (`seq`),".
 					"KEY `domain` (`domain`)".
