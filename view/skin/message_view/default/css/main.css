@@ -1,6 +1,18 @@
 #message-view-skin {
 	padding: 10px;
+	font-size: 9pt;
+	font-family: dotum;
 }
+
+#message-view-skin a {
+	text-decoration: none;
+	color: #313131;
+}
+
+#message-view-skin a:hover {
+	text-decoration: underline;
+}
+
 #message-view-skin #left{
 	border-right: 1px solid #b4b4b4;
 	margin-right: 10px;

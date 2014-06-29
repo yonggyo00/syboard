@@ -32,8 +32,8 @@ else {
 				?>
 					<script>
 						$(document).ready(function(){
-							var video = "<video controls >" + 
-										"<source src='<?=$filepath?>' type='video/mp4' />"+	
+							var video = "<video controls>" + 
+										"<source src='<?=$filepath?>' type='video/mp4'/>"+	
 										"</video>";
 										parent.insert_content_to_editor( video );
 										parent.update_file_info ('<?=$insert_id?>', '<?=$_FILES['file-upload']['name']?>', '<?=$filepath?>', 0);

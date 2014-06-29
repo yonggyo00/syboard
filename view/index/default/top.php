@@ -1,4 +1,6 @@
 <?=css('css', 'top')?>
+<?=javascript('js', 'top')?>
+
 <div id='site-top'>
 	<span id='site-top-left'>
 		<a href='<?=site_url()?>'><?=lang('top home')?></a>
@@ -6,6 +8,7 @@
 			if ( $sy['mb']->is_login() ) {?>
 				<a href='?module=member&action=logout' target='hiframe'><?=lang('Login Logout')?></a>
 				<a href='?module=member&action=update'><?=lang('Login edit profile')?></a>
+				<a popup_url='<?=$sy['ms']->list_url()?>' href='javascript:void(0)' id='site-top-message'><?=lang('Login Message')?></a>
 		<? } else {?>
 			<a href='?module=member&action=login_page#login_box'><?=lang('Login Login')?></a>
 			<a href='?module=member&action=register'><?=lang('Login Register')?></a>

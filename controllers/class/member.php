@@ -269,7 +269,10 @@ class member {
 							
 							$_current_user = $sy['file']->unscalar($data);
 							
-							$current_user['users'][$_current_user['username']] = "<span class='current-user-message' popup_url='?module=message&action=write&receiver=".$_current_user['username']."&layout=1'>".$_current_user['nickname']."(".$_current_user['username'].")</span>";
+							if ( $this->is_login() ) $current_user_message = "class='current-user-message'";
+							else $current_user_message = null;
+							
+							$current_user['users'][$_current_user['username']] = "<span $current_user_message popup_url='?module=message&action=write&receiver=".$_current_user['username']."&layout=1'>".$_current_user['nickname']."(".$_current_user['username'].")</span>";
 							
 							$sy['file']->write_file(USERS_PATH . "/" . get_browser_id() . '.stamp', time());	
 						}

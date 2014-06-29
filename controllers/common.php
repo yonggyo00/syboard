@@ -18,6 +18,7 @@ define('USERS_PATH', 'data/users');
 define('UPLOAD_PATH', 'data/upload');
 define('RESIZED_IMAGE_PATH', 'data/resized_image');
 define('FAVICON_PATH', 'data/favicon');
+define('JS_CSS_HEADER', 'data/js_css_header');
 
 // 데이터베이스 테이블 상수
 define('SITE_CONFIG', 'site_config');

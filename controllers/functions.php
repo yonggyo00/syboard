@@ -81,11 +81,28 @@ function site_url() {
 }
 
 function css_header_path() {
-	return site_path() . "/css/css.header.php";
+	global $site_config, $sy;
+	
+	$path = JS_CSS_HEADER."/".$site_config['domain']."_".$site_config['layout']."_css.header.php";
+	
+	if ( !file_exists($path) ) {
+		$data = '<?php $css_header = array();';
+		$sy['file']->write_file($path, $data);
+	}
+	
+	return $path;
 }
 
 function js_header_path() {
-	return site_path() . "/js/js.header.php";
+	global $site_config, $sy;
+	$path = JS_CSS_HEADER."/".$site_config['domain']."_".$site_config['layout']."_js.header.php";
+	
+	if ( !file_exists($path) ) {
+		$data = '<?php $js_header = array();';
+		$sy['file']->write_file($path, $data);
+	}
+	
+	return $path;
 }
 
 // css를 인클루드 하는 함수

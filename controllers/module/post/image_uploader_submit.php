@@ -38,7 +38,7 @@ else {
 				?>
 						<script>
 							$(document).ready(function(){
-								var image = "<div style='max-width: <?=$image_width?>px;'><img src='<?=$filepath?>' style='width: 100%' class='content_image_popup'/>";
+								var image = "<div style='max-width: <?=$image_width?>px;'><img src='<?=$filepath?>' style='width: 100%' class='content_image_popup'/></div>";
 								parent.insert_content_to_editor( image );
 								parent.update_file_info ('<?=$insert_id?>', '<?=$_FILES['file-upload']['name']?>', '<?=$filepath?>', '<?=$image_width?>');
 								parent.update_file_into_form ( <?=$insert_id?>, 'image');

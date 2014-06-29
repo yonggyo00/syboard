@@ -1,6 +1,18 @@
 #message-list-skin {
 	padding: 10px;
+	font-size: 9pt;
+	font-family: dotum;
 }
+
+#message-list-skin a {
+	text-decoration: none;
+	color: #313131;
+}
+
+#message-list-skin a:hover {
+	text-decoration: underline;
+}
+
 #message-list-skin #left{
 	border-right: 1px solid #b4b4b4;
 	margin-right: 10px;

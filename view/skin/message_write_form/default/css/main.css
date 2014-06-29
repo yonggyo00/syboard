@@ -1,5 +1,15 @@
 #message-write-form-skin {
 	padding: 10px;
+	font-size: 9pt;
+	font-family: dotum;
+}
+#message-write-form-skin a {
+	text-decoration: none;
+	color: #313131;
+}
+
+#message-write-form-skin a:hover {
+	text-decoration: underline;
 }
 
 #message-write-form-skin #left{
