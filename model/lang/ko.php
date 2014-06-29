@@ -514,4 +514,10 @@ $_ln['search list message3'] = "개의 게시글이 검색 되었습니다.";
 $_ln['search list poster'] = "작성자";
 $_ln['search list date'] = "작성일";
 
+
+// post subject
+$_ln['Post subject talk'] = "자유토론";
+$_ln['Post subject qna'] = "질문과 답변"
+
+
 ?>

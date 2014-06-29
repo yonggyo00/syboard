@@ -17,3 +17,9 @@
 #vote-skin > a:hover {
 	background-color: #465a69;
 }
+
+@media all and (max-width: 550px) {
+	#vote-skin {
+		display: none;
+	}
+}

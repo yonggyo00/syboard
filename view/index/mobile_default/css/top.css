@@ -1,0 +1,53 @@
+#site-top {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	color: #313131;
+	background-color: #ffffff;
+	z-index: 1000000;
+}
+#site-top a {
+	color: #313131;
+}
+#site-top > #site-top-panel {
+	background-color: #e4e4e4;
+	height: 30px;
+	line-height: 30px;
+	overflow: hidden;
+}
+
+#site-top > #site-top-panel > #site-top-left {
+	float: left;
+}
+
+#site-top > #site-top-panel > #site-top-left #site-logo {
+	font-family: '맑은 고딕', AppleGothic;
+	font-weight: bold;
+	font-size: 11pt;
+	text-shadow: 1px 1px 1px #202020;
+	color: #666666;
+}
+
+#site-top > #site-top-panel > #site-top-left #site-logo:hover {
+	color: #ffffff;
+}
+
+#site-top > #site-top-panel > #site-top-right {
+	float: right;
+	margin-top: 4px;
+}
+
+#site-top > #site-top-panel > #site-top-left > a {
+	display: inline-block;
+	height: 24px;
+	line-height: 24px;
+	padding: 0 5px;
+	border-radius: 7px;
+}
+
+#site-top > #site-top-panel > #site-top-left > a:hover {
+	background-color: #656565;
+	color: #ffffff;
+	text-decoration: none;
+}

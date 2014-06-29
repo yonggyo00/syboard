@@ -1,16 +1,16 @@
 <?=css('css', 'top')?>
 <?=javascript('js', 'top')?>
-
 <div id='site-top'>
+	<div id='site-top-panel'>
 		<span id='site-top-left'>
-			<a href='?'><?=lang('top home')?></a>
+			<a id='site-logo' href='<?=site_url()?>'>SYBOARD</a>
 			<?php
 				if ( $sy['mb']->is_login() ) {?>
 					<a href='?module=member&action=logout' target='hiframe'><?=lang('Login Logout')?></a>
 					<a href='?module=member&action=update'><?=lang('Login edit profile')?></a>
-					<a popup_url='<?=$sy['ms']->list_url()?>' href='javascript:void(0)' id='site-top-message'><?=lang('Login Message')?></a>
+					<a href='<?=$sy['ms']->list_url()?>' target='_blank'><?=lang('Login Message')?></a>
 			<? } else {?>
-				<a href='?module=member&action=login_page#login_box'><?=lang('Login Login')?></a>
+				<a href='?module=member&action=login_page'><?=lang('Login Login')?></a>
 				<a href='?module=member&action=register'><?=lang('Login Register')?></a>
 			<?}?>
 		</span>
@@ -24,4 +24,15 @@
 			?>
 		</span>
 		<div style='clear:both;'></div>
+	</div>
+	<div id='site-top-menu-row'>
+<?php
+		include_once 'menu.php';
+?>
+	</div>
+	<div id='site-top-search-bar'>
+<?php
+	include_once 'search.php';
+?>
+	</div>
 </div>

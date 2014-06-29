@@ -1,6 +1,7 @@
 /* 파일 업로드 */
 #file_info {
 	margin-top: 10px;
+	font-size: 9pt;
 }
 #file_info > .row {
 	border: 1px solid #d5d5d5;

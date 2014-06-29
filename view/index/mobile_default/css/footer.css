@@ -1,0 +1,9 @@
+#site-bottom-footer {
+	text-align: center;
+	margin-top: 50px;
+	padding: 30px 0;
+	border-top: 1px solid #44677c;
+	background-color: #dfdfdf;
+	font-size: 10pt;
+	font-family: '맑은 고딕', AppleGothic;
+}

@@ -1,25 +1,15 @@
 <?=skin_css($so, __FILE__)?>
-<?=skin_javascript($so, __FILE__)?>
 <?php
-	$lang = array(
-					'ko_KR'=>'한국어',
-					'en_US'=>'English',			
-					'tl_PH'=>'Tagalog'
-	);
+	$flags = array(
+					'ko_KR'=>"<img src='".$so['path']."/img/korea.png' />",
+					'en_US'=>"<img src='".$so['path']."/img/us.png' />",			
+					'tl_PH'=>"<img src='".$so['path']."/img/philippines.png' />"
+				);
 ?>
-<span id='lang-default-skin'>
-	<form method='get'>
-		<select name='lang'>
-			<option value=1><?=lang("Lang select")?></option>
-			<option value=1></option>
-		<?php
-			foreach( $lang as $key => $value ) {
-				if ( $key == $_lang ) $selected = "selected";
-				else $selected = null;
-				
-				echo "<option value='{$key}' {$selected}>{$value}</option>";
-			}
-		?>
-		</select>
-	</form>
+<span id='lang-flag-skin'>
+	<?php
+		foreach ( $flags as $lang => $flag ) {
+			echo "<a href='?lang=".$lang."'>".$flag."</a>";
+		}
+	?>
 </span>

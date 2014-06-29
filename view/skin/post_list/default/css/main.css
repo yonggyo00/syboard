@@ -48,6 +48,7 @@
 	line-height: 30px;
 	max-width: 450px;
 	overflow: hidden;
+	white-space: nowrap;
 }
 
 #post-list-skin > .rows > .date, #post-list-skin > .rows > .nickname, #post-list-skin > .rows > .no_of_view {
@@ -56,6 +57,7 @@
 	height: 30px;
 	line-height: 30px;
 	margin-left: 10px;
+	white-space: nowrap;
 }
 
 #post-list-skin > .rows > .nickname {
@@ -94,4 +96,22 @@
 
 #post-list-skin .user-popup .popup-sendmessage > span {
 	cursor: pointer;
+}
+
+@media all and (max-width: 550px) {
+	#post-list-skin > .rows > .date {
+		display: none;
+	}
+}
+
+@media all and (max-width: 500px) {
+	#post-list-skin > .rows > .no_of_view {
+		display: none;
+	}
+}
+
+@media all and (max-width: 400px) { 
+	#post-list-skin > .rows > .nickname {
+		display: none;
+	}
 }

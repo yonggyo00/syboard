@@ -1,0 +1,34 @@
+#site-top > #site-top-search-bar #site-top-search-form {
+	width: 96%;
+	margin-top: 3px;
+	border: 5px solid #3f3f3f;
+	height: 28px;
+	background-color: #ffffff;
+	position: relative;
+	overflow: hidden;
+}
+
+#site-top > #site-top-search-bar #site-top-search-form input[type='text'] {
+	width: 71%;
+	height: 31px;
+	position: relative;
+	top: -3px;
+	border: 0;
+	padding: 0 10px;
+	background-color: transparent;
+	color: #313131;
+}
+
+#site-top > #site-top-search-bar #site-top-search-form input[type='submit'] {
+	background-color: #3f3f3f;
+	width: 25%;
+	position: absolute;
+	right: 0;
+	top: -4px;
+	height: 33px;
+	border: 0;
+	cursor: pointer;
+	color: #ffffff;
+	font-weight: bold;
+	font-family: dotum;
+}

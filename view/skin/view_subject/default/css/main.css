@@ -89,3 +89,20 @@
 #view-user-info #view-user-popup > div > a:hover {
 	text-decoration: underline;
 }
+
+@media all and (max-width: 620px) {
+	#view-user-info #right #user-info #user-info-left #view-ip {
+		display: none;
+	}
+}
+@media all and (max-width: 520px) {
+	#view-user-info #right #signature {
+		display: none;
+	}
+}
+
+@media all and (max-width: 400px) {
+	#view-user-info #right #user-info #user-info-right #no_of_view {
+		display: none;
+	}
+}

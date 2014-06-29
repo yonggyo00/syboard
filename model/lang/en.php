@@ -500,7 +500,12 @@ $_ln['search form username'] = "Username";
 // Search list 
 $_ln['search list message1'] = "'s posts... ";
 $_ln['search list message2'] = " ";
-$_ln['search list message3'] = "'s posts have been searched.";
+$_ln['search list message3'] = " posts have been searched.";
 $_ln['search list poster'] = "Posted by";
 $_ln['search list date'] = "Date";
+
+
+// post subject
+$_ln['Post subject talk'] = "Talk";
+$_ln['Post subject qna'] = "Q&A"
 ?>

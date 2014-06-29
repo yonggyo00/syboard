@@ -1,0 +1,78 @@
+#site-top-menu  {
+	list-style: none;
+	margin:0;
+	padding: 0;
+	background-color: #3f3f3f;
+	height: 45px;
+}
+
+#site-top-menu > li {
+	display: block;
+	float: left;
+}
+
+#site-top-menu > li a {
+	display: inline-block;
+	height: 45px;
+	line-height: 45px;
+	font-size: 11pt;
+	font-weight: bold;
+	color: #ffffff;
+	padding: 0 10px;
+}
+
+#site-top-menu > li a:hover {
+	background-color: #666666;
+	text-decoration: none;
+}
+
+#site-top-menu > #mobile-more-button {
+	display: none;
+	margin: 3px 0 0 3px ;
+	cursor: pointer;
+}
+
+#site-top > #site-top-menu-row > #mobile-more-button-menu {
+	position:fixed;
+	background-color: #6e6e6e;
+	top: 75px;
+	left: 0;
+	width: 100%;
+	z-index: 1000001;
+	display: none;
+}
+
+#site-top > #site-top-menu-row > #mobile-more-button-menu div {
+	border: 1px solid #a6a6a6;
+	border-radius: 3px;
+	margin: 2px 0;
+}
+
+#site-top > #site-top-menu-row > #mobile-more-button-menu div a {
+	display: inline-block;
+	width: 100%;
+	height: 35px;
+	line-height: 35px;
+	padding: 0 10px;
+	font-size: 11pt;
+	color: #ffffff;
+	font-family: dotum;
+	font-weight: bold;
+}
+#site-top > #site-top-menu-row > #mobile-more-button-menu div a:hover {
+	text-decoration: none;
+}
+
+#site-top > #site-top-menu-row > #mobile-more-button-menu div:hover {
+	background-color: #4f4f4f;
+}
+
+@media all and (max-width: 500px) {
+	#site-top > #site-top-menu-row > #site-top-menu > #mobile-more-button {
+		display: block;
+	}
+	
+	#site-top > #site-top-menu-row > #site-top-menu  > .top-menu {
+		display: none;
+	}
+}

@@ -9,6 +9,6 @@ include_once CONTROLLER_PATH . '/max_file_size.php';
 			<input type='hidden' name='gid' value='<?=$gid?>' />
 			<input type='file' name='ms-file' />
 	</form>
-	<span><?=lang('File_uploader image')?>(png,jpeg,gif) <?=lang('File_uploader max')?> <?=round( MAX_IMAGE_FILE_SIZE / 1048576 )?>MB, <?=lang('File_uploader video')?>(mp4) <?=lang('File_uploader max')?> <?=round( MAX_VIDEO_FILE_SIZE / 1048576 )?>MB, <?=lang('File_uploader file')?> <?=lang('File_uploader max')?> <?=round( MAX_FILE_UPLOAD_SIZE / 1048576 )?>MB</span>
+	<span style='font-size: 9pt;'><?=lang('File_uploader image')?>(png,jpeg,gif) <?=lang('File_uploader max')?> <?=round( MAX_IMAGE_FILE_SIZE / 1048576 )?>MB, <?=lang('File_uploader video')?>(mp4) <?=lang('File_uploader max')?> <?=round( MAX_VIDEO_FILE_SIZE / 1048576 )?>MB, <?=lang('File_uploader file')?> <?=lang('File_uploader max')?> <?=round( MAX_FILE_UPLOAD_SIZE / 1048576 )?>MB</span>
 	<div id="file_info"></div>
 </div>

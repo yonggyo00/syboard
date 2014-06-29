@@ -1,7 +1,7 @@
 <?=css('css', 'menu')?>
 <ul id='site-top-menu'>
-	<li><a menu-id='talk' href='?talk'>자유토론</a></li>
-	<li><a menu-id='qna' href='?qna'>질문과 답변</a></li>
+	<li><a menu-id='talk' href='?talk'><?=lang('Post subject talk')?></a></li>
+	<li><a menu-id='qna' href='?qna'><?=lang('Post subject qna')?></a></li>
 </ul>
 <div style='clear:left;'></div>
 
