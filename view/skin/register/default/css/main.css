@@ -76,3 +76,9 @@
 	width: 98%;
 	resize: none;
 }
+
+@media all and (max-width: 740px ) {
+	#profile-uploader {
+		display: none;
+	}
+}
