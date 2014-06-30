@@ -1,5 +1,5 @@
 <?php
-if ( $sy['mb']->is_login() ) return $sy['js']->location(lang('member find_username_check error1'), site_url());
+if ( $sy['mb']->is_login() ) return $sy['js']->location(lang('member find_username_check error1'), "?");
 
 if ( $in['name'] && $in['email'] ) {
 	echo "<div id='find-username-check'>";

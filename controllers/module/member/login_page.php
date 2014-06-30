@@ -1,5 +1,5 @@
 <?php
-	if ( $sy['mb']->is_login() ) return $sy['js']->location(lang('Login msg2'), site_url());
+	if ( $sy['mb']->is_login() ) return $sy['js']->location(lang('Login msg2'), "?");
 ?>
 <form method='post' autocomplete='off'>
 	<input type='hidden' name='layout' value=1 />

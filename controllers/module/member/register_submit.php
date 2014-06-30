@@ -50,14 +50,10 @@ if ( $in['username'] && $in['password'] && $in['confirm_password'] && $in['name'
 			// 정상적으로 가입 된 경우 로그인을 시킨다.
 			$sy['mb']->login($in['username'], $in['password']);
 		} else return $sy['js']->alert(lang('member register_submit register_fail'));
-		
-		$pathinfo = pathinfo($_SERVER['REQUEST_URI']);
-		if ( $pathinfo['dirname'] ) $url = $pathinfo['dirname'];
-		else $url = '/';
 	
 		echo "
 			<script>
-				parent.location.href='$url';
+				parent.location.href='?';
 			</script>
 		";
 	}

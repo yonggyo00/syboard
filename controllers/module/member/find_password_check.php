@@ -59,7 +59,7 @@ if ( $in['username'] && $in['email'] ) {
 		}
 		else $msg = "새로운 비밀번호를 가입시 등록한 메일로 전송하지 못하였습니다.";
 		
-		$sy['js']->location($msg, site_url());
+		$sy['js']->location($msg, "?");
 		
 	} else echo $sy['js']->back("등록하신 아이디또는 이메일이 정확하지 않습니다.");
 	

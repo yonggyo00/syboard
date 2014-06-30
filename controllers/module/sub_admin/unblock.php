@@ -1,6 +1,6 @@
 <?php
 if ( !admin() ) {
-	if ( !site_admin() ) return $sy['js']->location("관리자가 아닙니다.", site_url() );
+	if ( !site_admin() ) return $sy['js']->location("관리자가 아닙니다.", "?" );
 }
 
 if ( empty($in['seq']) ) return $sy['js']->alert("잘못된 접근 입니다.");

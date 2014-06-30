@@ -1,5 +1,5 @@
 <?php
-if ( $sy['mb']->is_login() ) return $sy['js']->location(lang('member find_username_password error1'), site_url());
+if ( $sy['mb']->is_login() ) return $sy['js']->location(lang('member find_username_password error1'), "?");
 
 echo module_css(__FILE__);
 

@@ -1,5 +1,5 @@
 <?php
-if ( $sy['mb']->is_login() ) return $sy['js']->location("로그인 후에는 가입 하실 수 없습니다.", site_url());
+if ( $sy['mb']->is_login() ) return $sy['js']->location("로그인 후에는 가입 하실 수 없습니다.", "?");
 ?>
 <script>
 	var success_msg1 = "가입인증 주소가 전송 되었습니다. 회원님의 메일 ";

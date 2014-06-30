@@ -1,5 +1,5 @@
 <?php
-if ( !$sy['mb']->is_login() ) return $sy['js']->location(lang('My_scrap error1'), site_url()); 
+if ( !$sy['mb']->is_login() ) return $sy['js']->location(lang('My_scrap error1'), "?"); 
 
 $no_of_post = 20;
 $total_post = $sy['post']->total_my_scrap();

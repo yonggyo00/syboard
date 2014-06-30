@@ -27,6 +27,6 @@ $gid = gid();
 		<?include_once 'file_uploader.php';?>
 	</div>
 	<?}
-	else $sy['js']->location(lang('message list error1'), site_url());	
+	else $sy['js']->location(lang('message list error1'), "?");	
 	?>
 </div>

@@ -1,5 +1,5 @@
 <?php
-if ( !$sy['mb']->is_login() ) return $sy['js']->location("로그인을 해 주세요", site_url());
+if ( !$sy['mb']->is_login() ) return $sy['js']->location("로그인을 해 주세요", "?");
 else {
 ?>
 	<div id='resign-module'>
