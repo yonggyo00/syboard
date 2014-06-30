@@ -1,4 +1,7 @@
 <?php
+// 사이트별 추가 언어 디렉토리 경로
+define(EXTRA_LANG_PATH, INDEX_PATH .'/'.$site_config['layout'].'/lang');
+
 if ( $_GET['lang'] && $_GET['lang'] != 1 ) {
 	setcookie('lang', $_GET['lang'], time() + ( 60 * 60 * 24 * 365), "/");
 	// 쿠키 반영을 위해 새로고침 한다.

@@ -52,15 +52,19 @@
 	?>
 	<script src='js/index.js'></script>
 	<?php 
+	if ( $site_config['use_css_in_header'] ) {
 		include_once css_header_path();
 		foreach ( $css_header as $_css_header ) {
 			echo $_css_header;
 		}
-		
+	}
+
+	if ( $site_config['use_js_in_header'] ) {
 		include_once js_header_path();
 		foreach ( $js_header as $_js_header ) {
 			echo $_js_header;
 		}
+	}
 	?>
 </head>
 <body>

@@ -51,6 +51,11 @@
 	white-space: nowrap;
 }
 
+#post-list-skin > .rows > input[type='checkbox']{
+	position: relative;
+	top: -9px;
+}
+
 #post-list-skin > .rows > .date, #post-list-skin > .rows > .nickname, #post-list-skin > .rows > .no_of_view {
 	float: right;
 	display: inline-block;

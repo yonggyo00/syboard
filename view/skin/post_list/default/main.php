@@ -88,7 +88,7 @@ if ( $posts ) {
 			else $new_icon = null;
 			
 			
-			if ( admin() || $sy['post']->admin() ) {
+			if ( admin() || $sy['post']->admin() || site_admin() ) {
 				$checked = "<input class='seq' type='checkbox' name='seq[]' value='".$p['seq']."' />";
 			}
 			else $checked = null;
@@ -111,7 +111,7 @@ if ( $posts ) {
 			
 			echo "
 				<div class='rows $selected'>
-					<a href='$url'>$checked $secret $subject $no_of_comment $good $bad  $image $video $file $new_icon</a>
+					$checked<a href='$url'>$secret $subject $no_of_comment $good $bad  $image $video $file $new_icon</a>
 					<span class='date'>$date</span>
 					<span class='no_of_view'>$no_of_view</span>
 					<span class='nickname'>$nickname</span>

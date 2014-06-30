@@ -17,7 +17,7 @@
 <?php
 	foreach ( $referral as $re ) {
 		$ua = user_agent($re['user_agent']);
-		$date = date('Y:m:d h:i:s', $re['stamp']);
+		$date = date('Y:m:d H:i:s', $re['stamp']);
 		$ip = long_2_ip($re['ip']);
 		echo "
 			<tr>

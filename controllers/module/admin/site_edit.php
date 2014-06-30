@@ -7,12 +7,12 @@ include_once 'top.menu.php';
 if ( $in['done'] ) {
 	if ( empty($in['use_css_in_header'])) {
 		$data = '<?php $css_header = array();';
-		$sy['file']->write_file(css_header_path(), $data);
+		$sy['file']->write_file(css_header_path($in['site_domain']), $data);
 	}
 	
 	if ( empty($in['use_js_in_header'])) {
 		$data = '<?php $js_header = array();';
-		$sy['file']->write_file(js_header_path(), $data);
+		$sy['file']->write_file(js_header_path($in['site_domain']), $data);
 	}
 	// Blog_api 데이터는 scalar 값으로 저장한다.
 	$blog_api = array();

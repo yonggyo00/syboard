@@ -78,7 +78,7 @@ if ( $in['post_id'] ) {
 	if ( !$_skinname = $post_cfg['post_list_skin'] ) $_skinname = 'default';
 	load_skin('post_list', $_skinname, array('total_post' => $total_post));
 	
-	if ( admin() || $sy['post']->admin() ) {
+	if ( admin() || $sy['post']->admin() || site_admin() ) {
 		// 게시물 이동
 		include_once 'move_post_id_sel.php';
 	}

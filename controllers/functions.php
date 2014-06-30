@@ -66,6 +66,7 @@ function sub_domain($url = null ) {
 
 function site_path() {
 	global $site_config;
+	
 	if ( !$layout = $site_config['layout'] ) $layout = 'default';
 	
 	return INDEX_PATH . "/" . $layout;
@@ -80,10 +81,14 @@ function site_url() {
 	return $host;
 }
 
-function css_header_path() {
+function css_header_path( $site_domain = null ) {
 	global $site_config, $sy;
 	
-	$path = JS_CSS_HEADER."/".$site_config['domain']."_".$site_config['layout']."_css.header.php";
+	if ( $site_domain ) $domain = $site_domain;
+	else $domain = $site_config['domain'];
+	
+	
+	$path = JS_CSS_HEADER."/".$domain."_".$site_config['layout']."_css.header.php";
 	
 	if ( !file_exists($path) ) {
 		$data = '<?php $css_header = array();';
@@ -93,9 +98,13 @@ function css_header_path() {
 	return $path;
 }
 
-function js_header_path() {
+function js_header_path( $site_domain = null ) {
 	global $site_config, $sy;
-	$path = JS_CSS_HEADER."/".$site_config['domain']."_".$site_config['layout']."_js.header.php";
+	
+	if ( $site_domain ) $domain = $site_domain;
+	else $domain = $site_config['domain'];
+	
+	$path = JS_CSS_HEADER."/".$domain."_".$site_config['layout']."_js.header.php";
 	
 	if ( !file_exists($path) ) {
 		$data = '<?php $js_header = array();';
@@ -660,12 +669,38 @@ function isValidEmail($email, $checkDNS = false)
  
  // 언어별 배열 리턴
  function load_lang($_lang) {
+	global $sy, $site_config;
 	
-	if ( preg_match("/^en/", $_lang) ) include_once LANG_PATH . '/en.php';
-	else if ( preg_match("/^ko/", $_lang) ) include_once LANG_PATH ."/ko.php";
-	else if ( preg_match("/^zh/", $_lang) ) include_once LANG_PATH ."/en.php";
-	else if ( preg_match("/^ja/", $_lang) ) include_once LANG_PATH ."/en.php";
-	else if ( preg_match("/^tl/", $_lang) ) include_once LANG_PATH ."/en.php";
+	if ( preg_match("/^en/", $_lang) ) {
+		include_once LANG_PATH . '/en.php';
+		
+		// 각 레이아웃에 추가된 언어 파일을 인클루드 한다.
+		if ( file_exists(EXTRA_LANG_PATH . '/en.php') ) include_once EXTRA_LANG_PATH . '/en.php';
+	}
+	else if ( preg_match("/^ko/", $_lang) ) {
+		include_once LANG_PATH ."/ko.php";
+		
+		// 각 레이아웃에 추가된 언어 파일을 인클루드 한다.
+		if ( file_exists(EXTRA_LANG_PATH . '/ko.php') ) include_once EXTRA_LANG_PATH . '/ko.php';
+	}
+	else if ( preg_match("/^zh/", $_lang) ) {
+		include_once LANG_PATH ."/ja.php";
+		
+		// 각 레이아웃에 추가된 언어 파일을 인클루드 한다.
+		if ( file_exists(EXTRA_LANG_PATH . '/zh.php') ) include_once EXTRA_LANG_PATH . '/zh.php';
+	}
+	else if ( preg_match("/^ja/", $_lang) ) {
+		include_once LANG_PATH ."/ja.php";
+		
+		// 각 레이아웃에 추가된 언어 파일을 인클루드 한다.
+		if ( file_exists(EXTRA_LANG_PATH . '/ja.php') ) include_once EXTRA_LANG_PATH . '/ja.php';
+	}
+	else if ( preg_match("/^tl/", $_lang) ) {
+		include_once LANG_PATH ."/en.php";
+		
+		// 각 레이아웃에 추가된 언어 파일을 인클루드 한다.
+		if ( file_exists(EXTRA_LANG_PATH . '/tl.php') ) include_once EXTRA_LANG_PATH . '/tl.php';
+	}
 	else include_once LANG_PATH . '/en.php';
 	
 	return $_ln;

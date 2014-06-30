@@ -1,7 +1,7 @@
 <?=css('css', 'logo_search')?>
 <div id='site-top-logo-search'>
 	<div id='site-logo'>
-		<a href='<?=site_url()?>'>SYBOARD</a>
+		<a href='?'>SYBOARD</a>
 	</div>
 	<div id='site-top-search-bar'>
 		<form method='get' autocomplete='off'>

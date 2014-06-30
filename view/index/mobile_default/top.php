@@ -3,7 +3,7 @@
 <div id='site-top'>
 	<div id='site-top-panel'>
 		<span id='site-top-left'>
-			<a id='site-logo' href='<?=site_url()?>'>SYBOARD</a>
+			<a id='site-logo' href='?'>SYBOARD</a>
 			<?php
 				if ( $sy['mb']->is_login() ) {?>
 					<a href='?module=member&action=logout' target='hiframe'><?=lang('Login Logout')?></a>
