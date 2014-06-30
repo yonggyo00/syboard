@@ -6,7 +6,7 @@ if ( $in['username'] && $in['password'] ) {
 	if ( $sy['mb']->login($in['username'], $in['password'], $in['auto_login'], $in['ip_sec']) ) {
 		
 		if ( $in['mode'] == 'page' ) {
-			header('Location: '.site_url());
+			header("Location: ?");
 		}
 		else {
 			echo "

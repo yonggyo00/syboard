@@ -35,6 +35,7 @@ class message {
 		unset($option['module']);
 		unset($option['action']);
 		unset($option['layout']);
+		unset($option['mode']);
 		
 		if ( empty($option['first_file']) ) unset($option['first_file']);
 		

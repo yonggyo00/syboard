@@ -21,11 +21,10 @@ foreach ( explode(",", $in['receiver']) as $re ) {
 			$msg = lang('message write success');
 			
 			$sy['file']->file_insert_finished($in['gid']);
-			
 			?>
 			<script>
 				alert('<?=$msg?>');
-				parent.window.location.href="<?=$sy['ms']->list_url()?>";
+				parent.window.location.href="<?=$sy['ms']->list_url($in['mode'])?>";
 			</script>
 	<?	}
 	}?>

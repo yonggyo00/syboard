@@ -84,7 +84,7 @@ else {
 			
 			$senders = array_unique($senders);
 			$sender = implode(",", $senders);
-			$write_url = $sy['ms']->write_url($sender);
+			$write_url = $sy['ms']->write_url($sender, $in['layout_mode']);
 			echo "
 				<script>
 					parent.location.href='".$write_url."';

@@ -1,3 +1,24 @@
+#message-list-skin > #message-write-button {
+	display:inline-block;
+	background-color: #666666;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	width: 100%;
+	color: #ffffff;
+	cursor: pointer;
+	font-family: dotum;
+	font-size: 11pt;
+	text-decoration: none;
+	font-weight: bold;
+	border-radius: 3px;
+	margin-bottom: 3px;
+}
+
+#message-list-skin > #message-write-button:hover {
+	background-color: #3e3e3e;
+}
+
 #message-list-skin > .row{
 	border: 1px solid #666666;
 	height: 35px;

@@ -3,7 +3,7 @@ if ( $sy['mb']->is_login()) {
 echo module_css(__FILE__);
 echo module_javascript(__FILE__);
 
-if ( !isMobile() ) include_once 'editor_js.php';
+include_once 'editor_js.php';
 
 $gid = gid();
 ?>

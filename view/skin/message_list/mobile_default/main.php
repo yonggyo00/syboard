@@ -7,7 +7,9 @@ $readed = "<img src='".$so['path'].'/img/readed.png'."' align='center' />";
 ?>
 <?=skin_css($so, __FILE__)?>
 <?=skin_javascript($so, __FILE__)?>
+<input type='hidden' name='layout_mode' value=1 />
 <div id='message-list-skin'>
+	<a id='message-write-button' href='?module=message&action=write'><?=lang('message list left write')?></a>
 <?php
 	foreach ( $messages as $ms ) {
 		$view_url = $sy['ms']->view_url($ms['seq'], 1);

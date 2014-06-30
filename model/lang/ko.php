@@ -468,6 +468,7 @@ $_ln['message list main confirm delete'] = "정말 삭제하시겠습니까?";
 
 
 // message write
+$_ln['message write title'] = "쪽지 쓰기";
 $_ln['message write error1'] = "보내는 사람을 입력하세요.";
 $_ln['message write error2'] = "받는 사람을 입력하세요.";
 $_ln['message write error3'] = "아이디 ";

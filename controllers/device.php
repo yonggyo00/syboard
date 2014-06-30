@@ -3,7 +3,7 @@
 if ( $_GET['device'] ) {
 	setcookie('device', $_GET['device'], time() + (60 * 60 * 24 * 365), "/", COOKIE_DOMAIN);
 	// 쿠키 반영을 위해 새로고침 한다.
-	header("Location: ".site_url());
+	header("Location: ?");
 	
 }
 $_device = $_COOKIE['device'];

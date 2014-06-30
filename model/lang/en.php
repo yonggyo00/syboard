@@ -458,6 +458,7 @@ $_ln['message list main confirm delete'] = "Are you sure to delete?";
 
 
 // message write
+$_ln['message write title'] = "Write Message";
 $_ln['message write error1'] = "Please input the sender.";
 $_ln['message write error2'] = "Please input the receiver.";
 $_ln['message write error3'] = "Username ";

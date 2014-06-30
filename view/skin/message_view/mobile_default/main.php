@@ -8,7 +8,7 @@ $re_subject = urlencode('[RE] '.$message['subject']);
 <div id='message-view-skin'>
 	<div id='user-info'>
 		<span id='receiver'><b><?=lang('message view sender')?></b>
-			<a href='<?=$sy['ms']->sendto($userinfo['username'])?>&subject=<?=$re_subject?>'>
+			<a href='<?=$sy['ms']->sendto($userinfo['username'], 1)?>&subject=<?=$re_subject?>'>
 				<?=$userinfo['nickname']?>(<?=$userinfo['username']?>)
 			</a>
 		</span>
@@ -17,6 +17,6 @@ $re_subject = urlencode('[RE] '.$message['subject']);
 	
 	<div id='subject'><?=stripslashes($message['subject'])?></div>
 	<div id='content'><?=stripslashes($message['content'])?></div>
-	<a id='reply-button' href='<?=$sy['ms']->sendto($userinfo['username'])?>&subject=<?=$re_subject?>'><?=lang('message view reply')?></a>
+	<a id='reply-button' href='<?=$sy['ms']->sendto($userinfo['username'], 1)?>&subject=<?=$re_subject?>'><?=lang('message view reply')?></a>
 	<div style='clear:right;'></div>
 </div>
