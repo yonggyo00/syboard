@@ -47,7 +47,7 @@ function layer_popup( $this, url, fwidth, fheight, scrolling ) {
 	$("body").prepend(
 						"<div id='layer_popup'></div>" +
 						"<div id='layer_popup_content'></div>"
-					);
+					).css('overflow-x', "hidden");
 	
 	if ( typeof fwidth == 'undefined' ) fwidth = 300;
 	if ( typeof fheight == 'undefined' ) fheight = 300;
@@ -100,11 +100,13 @@ function layer_popup( $this, url, fwidth, fheight, scrolling ) {
 
 	$("#layer_popup").click(function() {
 		$("#layer_popup, #layer_popup_content").remove();
+		$("body").css("overflow-x", "auto");
 	});
 }
 
 function close_layer_popup() {
 	$("#layer_popup, #layer_popup_content").remove();
+	$("body").css("overflow-x", "auto");
 }
 
 
@@ -113,8 +115,8 @@ function image_layer_popup( $this, image_url) {
 	$("body").prepend(
 						"<div id='layer_popup'></div>" +
 						"<div id='layer_popup_content'></div>"
-					);
-	
+					).css('overflow-x', "hidden");
+					
 	var height = $("body").height();
 	var width = $(window).width();
 	
@@ -148,11 +150,13 @@ function image_layer_popup( $this, image_url) {
 	$("#layer_popup").click(function() {
 		$("#popup-image-loader-gif").remove();
 		$("#layer_popup, #layer_popup_content").remove();
+		$("body").css("overflow-x", "auto");
 	});
 	
 	$("#layer_popup_content").click(function() {
 		$("#popup-image-loader-gif").remove();
 		$("#layer_popup, #layer_popup_content").remove();
+		$("body").css("overflow-x", "auto");
 	});
 }
 
