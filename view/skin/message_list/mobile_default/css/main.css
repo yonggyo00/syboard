@@ -1,0 +1,68 @@
+#message-list-skin > .row{
+	border: 1px solid #666666;
+	height: 35px;
+	line-height: 35px;
+	margin: 2px 0;
+	border-radius: 3px;
+	padding: 0 10px;
+}
+
+#message-list-skin > .row:hover {
+	background-color: #666666;
+}
+
+#message-list-skin > .row:hover a {
+	color: #ffffff;
+}
+
+#message-list-skin > .row a {
+	display: inline-block;
+	height: 35px;
+	line-height: 35px;
+}
+
+#message-list-skin > .row a:hover {
+	text-decoration: none;
+}
+
+#message-list-skin > .row > .subject {
+	width: 70%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+#message-list-skin > .row > .subject > input[type='checkbox'] {
+	position: relative;
+	top: 3px;
+	margin-right: 5px;
+}
+
+#message-list-skin > .row > .subject > img {
+	margin-right: 10px;
+	position: relative;
+	top: -1px;
+}
+
+#message-list-skin > .row > .sender {
+	width: 30%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-align: right;
+}
+
+#message-list-skin > #control-pannel {
+	margin-top: 10px;
+}
+
+#message-list-skin > #control-pannel span {
+	border: 1px solid #b4b4b4;
+	border-radius: 3px;
+	display: inline-block;
+	padding: 5px 7px;
+	cursor: pointer;
+	color: #333333;
+}
+
+#message-list-skin > #control-pannel span:hover {
+	background-color: #b4b4b4;
+	color: #ffffff;
+}

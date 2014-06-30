@@ -1,0 +1,67 @@
+#message-view-skin {
+	padding: 10px;
+	font-size: 9pt;
+	font-family: dotum;
+}
+
+#message-view-skin a {
+	text-decoration: none;
+	color: #313131;
+	font-size: 9pt;
+}
+
+#message-view-skin a:hover {
+	text-decoration: underline;
+}
+
+#message-view-skin #user-info, #message-view-skin #subject {
+	border: 1px solid #666666;
+	padding: 10px;
+	margin-bottom: 5px;
+	border-radius: 3px;
+}
+
+#message-view-skin #user-info {
+	
+}
+
+#message-view-skin #user-info > #receiver {
+	margin-right: 20px;
+}
+
+#message-view-skin #user-info b {
+	margin-right: 5px;
+}
+
+#message-view-skin #subject {
+	margin-bottom: 10px;
+}
+
+#message-view-skin #content {
+	border: 1px solid #666666;
+	padding: 10px;
+	border-radius: 3px;
+	min-height: 300px;
+}
+
+#no_of_unreaded  {
+	font-weight: bold;
+	color: #0ba506;
+}
+
+#message-view-skin #reply-button {
+	float: right;
+	border: 1px solid #b4b4b4;
+	border-radius: 3px;
+	display: inline-block;
+	padding: 5px 7px;
+	cursor: pointer;
+	color: #333333;
+	margin-top: 10px;
+}
+
+#message-view-skin #reply-button:hover {
+	background-color: #b4b4b4;
+	color: #ffffff;
+	text-decoration: none;
+}

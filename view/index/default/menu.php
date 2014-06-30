@@ -5,8 +5,12 @@
 </ul>
 <div style='clear:left;'></div>
 
-<style>
-#site-top-menu li a[menu-id='<?=$in['post_id']?>'] {
-	background-color: #2f4553;
-}
-</style>
+
+<?php 
+if ( $in['post_id'] ) {?> 
+	<style>
+	#site-top-menu li a[menu-id='<?=$in['post_id']?>'] {
+		background-color: #2f4553;
+	}
+	</style>
+<? }?>

@@ -1,21 +1,32 @@
 <?php
 class message {
 
-	public function write_url ( $receiver = null ) {
+	public function write_url ( $receiver = null, $mode = 0 ) {
 		
-		$url = "?module=message&action=write&layout=1";
+		$url = "?module=message&action=write";
+		
+		if ( $mode != 1 ) $url .= "&layout=1";
 		
 		if ( $receiver ) $url .= "&receiver=".$receiver;
 		
 		return $url;
 	}
 	
-	public function list_url () {
-		return "?module=message&action=list&layout=1";
+	public function list_url ($mode = 0) {
+		
+		$url = "?module=message&action=list";
+		if ( $mode != 1 ) $url .= "&layout=1";
+		
+		return $url;
 	}
 	
-	public function view_url ( $seq ) {
-		return "?module=message&action=view&seq=".$seq."&layout=1";
+	public function view_url ( $seq, $mode = 0 ) {
+	
+		$url = "?module=message&action=view&seq=".$seq;
+		
+		if ( $mode != 1 ) $url .= "&layout=1";
+		
+		return $url;
 	}
 	
 	public function send ( $option ) {
@@ -142,8 +153,12 @@ class message {
 		return $sy['db']->count(MESSAGE_DATA_TABLE, $option );
 	}
 	
-	public function sendto( $username ) {
-		return '?module=message&action=write&receiver='.$username."&layout=1";
+	public function sendto( $username, $mode = 0 ) {
+		
+		$url = '?module=message&action=write&receiver='.$username;
+		
+		if ( $mode != 1 ) $url .= "&layout=1";
+		return $url;
 	}
 	
 }

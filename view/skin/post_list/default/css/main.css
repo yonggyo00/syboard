@@ -103,6 +103,12 @@
 	cursor: pointer;
 }
 
+@media all and (max-width: 900px) {
+	#post-list-skin .user-popup .popup-sendmessage {
+		display: none;
+	}
+}
+
 @media all and (max-width: 550px) {
 	#post-list-skin > .rows > .date {
 		display: none;

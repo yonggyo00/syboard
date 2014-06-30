@@ -1,14 +1,17 @@
 <?=css('css', 'top')?>
-<?=javascript('js', 'top')?>
 <div id='site-top'>
 	<div id='site-top-panel'>
 		<span id='site-top-left'>
 			<a id='site-logo' href='?'>SYBOARD</a>
 			<?php
-				if ( $sy['mb']->is_login() ) {?>
+				if ( $sy['mb']->is_login() ) {
+					if ( $new = number_format($sy['ms']->no_of_unreaded()) ) {
+						$new = "(".$new.")";
+					} else $new = null;
+				?>
 					<a href='?module=member&action=logout' target='hiframe'><?=lang('Login Logout')?></a>
 					<a href='?module=member&action=update'><?=lang('Login edit profile')?></a>
-					<a href='<?=$sy['ms']->list_url()?>' target='_blank'><?=lang('Login Message')?></a>
+					<a href='<?=$sy['ms']->list_url(1)?>'><?=lang('Login Message')?><?=$new?></a>
 			<? } else {?>
 				<a href='?module=member&action=login_page'><?=lang('Login Login')?></a>
 				<a href='?module=member&action=register'><?=lang('Login Register')?></a>
