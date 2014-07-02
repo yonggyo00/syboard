@@ -17,7 +17,7 @@
 .paging a:hover, .paging .selected {
 	border: 1px solid #465a69;
 	background-color: #6d899e;
-	color: #ffffff;
+	color: #ffffff !important;
 }
 
 .paging a:hover {

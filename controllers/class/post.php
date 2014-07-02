@@ -869,7 +869,7 @@ class post{
 	public function content($content, $mode = 1) {
 		global $post_cfg;
 		
-		if ( $mode ) $content = stripslashes($content);
+		if ( $mode ) $content = stripslashes(stripslashes($content));
 		else {
 			$content = $this->escaped_textarea($content);
 			$content = "<xmp>$content</xmp>";

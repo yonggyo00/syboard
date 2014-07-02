@@ -95,13 +95,10 @@
 		display: none;
 	}
 }
-@media all and (max-width: 520px) {
+@media all and (max-width: 550px) {
 	#view-user-info #right #signature {
 		display: none;
 	}
-}
-
-@media all and (max-width: 400px) {
 	#view-user-info #right #user-info #user-info-right #no_of_view {
 		display: none;
 	}

@@ -104,7 +104,7 @@ if ( $posts ) {
 									<div class='user-popup'>
 										<div>$nickname</div>
 										<div>($username)</div>
-										<div class='popup-sendmessage'><span $popup_send_message $popup_url>".lang('List msg send message')."</span></div>
+										<div class='popup-sendmessage'><span $popup_send_message' popup_url='".$sy['ms']->write_url($p['username'])."'>".lang('List msg send message')."</span></div>
 										<div><a href='".$sy['post']->search_user_post_url($p['username'])."'>".lang('List msg view posts')."</a></div>
 									</div>
 								";
