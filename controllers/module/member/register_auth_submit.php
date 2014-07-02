@@ -19,8 +19,6 @@ if ( !$sy['mb']->is_login() ) {
 	
 	// 가입 인증 주소
 	$register_auth_confirm_url = $sy['mb']->register_auth_confirm_url($auth_key);
-	
-	echo $register_auth_confirm_url;
 
 	ob_start();
 ?>		
@@ -47,7 +45,7 @@ if ( !$sy['mb']->is_login() ) {
 	$content = ob_get_clean();
 	$domain = domain("//".$_SERVER['HTTP_HOST']);
 	$mail_domain = $domain[2].$domain[3];
-	
+	$subject = "[발신전용]회원님에게 회원가입 인증 주소가 발급되었습니다.";
 	if ( $domain[1] && $domain[1] != 'www' ) $mail_domain = $domain[1].".".$mail_domain;
 		
 	$option = array(
@@ -56,10 +54,8 @@ if ( !$sy['mb']->is_login() ) {
 					'content'=> $content,
 					'from'=> $site_config['title'] . ' <no-reply@'.$mail_domain.'>'
 	);
-	
 	$is_sent = 0;
 	if ( mailer($option) ) {
-	
 		if ( !$is_register_auth_exists ) { // 기존에 인증 시도를 하지 않은 경우
 			// 이메일을 성공적으로 보냈을 경우 register_auth 테이블에 이메일과 인증 키 값을 저장한다. 
 			$op = array(

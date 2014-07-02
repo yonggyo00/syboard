@@ -28,7 +28,8 @@ if ( $in['username'] && $in['email'] ) {
 						회원님에게 새로운 비밀번호가 발급 되었습니다. 
 					</h3>
 					
-					<div style="font-family:'맑은 고딕', AppleGothic; color='#313131'">새로운 비밀번호는 <b style='color:orange;'><?=$new_password?></b> 입니다.<br />로그인 하신 후 회원정보변경에서 원하시는 비밀번호로 변경하세요.</div>
+					<div style="font-family:'맑은 고딕', AppleGothic; color='#313131'">새로운 비밀번호는 
+						<b style='color:orange;'><?=$new_password?></b>입니다.<br />로그인 하신 후 회원정보변경에서 원하시는 비밀번호로 변경하세요.</div>
 					
 					<br />
 					<br />

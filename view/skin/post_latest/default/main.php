@@ -1,6 +1,6 @@
 <?php
 echo skin_css($so, __FILE__);
-$query = "SELECT seq, seq_member, subject, stamp, secret FROM " . POST_DATA_TABLE . " WHERE post_id='".$so['post_id']."'";
+$query = "SELECT seq, seq_member, subject, stamp, secret FROM " . POST_DATA_TABLE . " WHERE post_id='".$so['post_id']."' AND deleted='N'";
 
 $cache_name = $so['post_id']."_".md5($query);
 
