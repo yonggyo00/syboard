@@ -99,7 +99,7 @@
 			before_write_content();
 	}
 	?>
-	<textarea id='write-content' name='content'><?=$p['content']?></textarea>
+	<textarea id='write-content' name='content'><?=stripslashes($p['content'])?></textarea>
 	<?php
 	// 글 본문 상단
 	if ( function_exists('after_write_content') ) {
