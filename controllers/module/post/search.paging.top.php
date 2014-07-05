@@ -8,10 +8,18 @@ if ( empty($in['search_op']) ) $in['search_op'] = 'OR';
 
 if ( $_keywords ) {
 	if ( $in['search_op'] == 'OR' ) {
-		if ( $in['search_subject'] && $in['search_content'] ) {
-			$_q = array();
-			foreach ( $_keywords as $_key ) {
-				$_q[] = "subject LIKE '%".$_key."%' OR content LIKE '%".$_key."%'";
+		if ( $in['search_post_comment'] == 'post' ) {
+			if ( $in['search_subject'] && $in['search_content'] ) {
+				$_q = array();
+				foreach ( $_keywords as $_key ) {
+					$_q[] = "subject LIKE '%".$_key."%' OR content LIKE '%".$_key."%'";
+				}
+			}
+			else {
+				$_q = array();
+				foreach ( $_keywords as $_key ) {
+					$_q[] = "content LIKE '%".$_key."%'";
+				}
 			}
 			
 			$_conds[] = "( ".implode(' OR ', $_q) . " )";
