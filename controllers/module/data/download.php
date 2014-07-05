@@ -5,7 +5,11 @@ if ( $in['seq'] ) {
 	
 	if( file_exists($uploaded_path) ) {
 		
-		$download_path = DOWNLOAD_PATH . '/'.urlencode($file_info['filename']);
+		if ( !is_dir(DOWNLOAD_PATH . '/'.get_browser_id()) ) {
+			mkdir(DOWNLOAD_PATH . '/'.get_browser_id(), 0777); // 다운로드 경로가 없는 경우 생성한다.
+		}
+		
+		$download_path = DOWNLOAD_PATH . '/'.get_browser_id()."/".urlencode($file_info['filename']);
 		
 		$file_data = $sy['file']->read_file($uploaded_path);
 		$result = $sy['file']->write_file($download_path, $file_data);
