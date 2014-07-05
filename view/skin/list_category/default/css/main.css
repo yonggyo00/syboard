@@ -10,6 +10,7 @@
 
 #list-category li {
 	float: left;
+	margin: 10px 0 5px 0;
 }
 
 #list-category li > a {
@@ -25,7 +26,7 @@
 	font-family: '맑은 고딕', AppleGothic;
 }
 
-#list-category li > a:hover {
+#list-category li > a:hover, #list-category li > .selected {
 	background-color: #3d5778;
 	color: #ffffff;
 }

@@ -34,7 +34,7 @@ if ( $posts ) {
 	
 	echo "<div id='post-list-skin'>";
 		foreach ( $posts as $p ) {
-			$subject = stripslashes(stringcut($p['subject'] ));
+			$subject = stringcut($p['subject'] );
 			
 			// 비밀글, 게스트 사용자글, 또는 일반 글에 따라 $url 변수에 경로를 할당하고, 비밀글의 경우 $secret에 비밀글이라고 표시해 준다.
 			$url = $sy['post']->view_url($p['seq']);

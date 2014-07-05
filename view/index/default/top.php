@@ -11,7 +11,7 @@
 					<a popup_url='<?=$sy['ms']->list_url()?>' href='javascript:void(0)' id='site-top-message'><?=lang('Login Message')?></a>
 			<? } else {?>
 				<a href='?module=member&action=login_page#login_box'><?=lang('Login Login')?></a>
-				<a href='?module=member&action=register'><?=lang('Login Register')?></a>
+				<a href='<?=$sy['mb']->register_url()?>'><?=lang('Login Register')?></a>
 			<?}?>
 		</span>
 		<span id='site-top-right'>

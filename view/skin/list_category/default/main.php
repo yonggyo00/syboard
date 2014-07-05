@@ -8,7 +8,11 @@
 <?php
 	foreach ( $_category as $key => $value ) {
 		$category_url = $sy['post']->list_url($in['post_id'], $key);
-		echo "<li><a href='$category_url'>$key</a></li>";
+		
+		$selected = null;
+		if ( $key == $in['category'] ) $selected = "class='selected'";
+		
+		echo "<li><a href='$category_url' {$selected}>$key</a></li>";
 	}
 ?>
 </ul>

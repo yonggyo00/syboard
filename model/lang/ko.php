@@ -504,9 +504,12 @@ $_ln['search form select_forum'] = "게시판 선택";
 $_ln['search form input username'] = "아이디 입력";
 $_ln['search form input keyword'] = "검색어 입력";
 $_ln['search form input search'] = "검색";
-$_ln['search form forum'] = "게시판";
+$_ln['search form forum'] = "게시글";
 $_ln['search form comment'] = "댓글";
 $_ln['search form username'] = "아이디";
+$_ln['search form subject'] = "제목";
+$_ln['search form content'] = "내용";
+$_ln['search form operator'] = '연산자';
 
 // Search list 
 $_ln['search list message1'] = "님이 작성한 글 중 ";

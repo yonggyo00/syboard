@@ -4,7 +4,7 @@ $_meta_desc = null;
 $_meta_keyword = null;
 if ( $meta_post_content ) {
 	$_meta_title = $post_cfg['subject'] . " - " . $meta_post_content['subject'];
-	$_meta_desc = $meta_post_content['content_stripped'];
+	$_meta_desc = stripslashes($meta_post_content['content_stripped']);
 	$_meta_keyword = $post_cfg['keywords'];
 }
 else if ( $in['post_id'] && empty($meta_post_content) ) {
@@ -18,7 +18,7 @@ else {
 	$_meta_title = $site_config['title'];
 	if ( $site_config['sub_title'] ) $_meta_title .= " - " . $site_config['sub_title'];
 	
-	$_meta_desc = $site_config['description'];
+	$_meta_desc = stripslashes($site_config['description']);
 	$_meta_keyword = $site_config['keyword'];
 }
 ?>

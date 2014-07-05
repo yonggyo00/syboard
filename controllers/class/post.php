@@ -265,6 +265,8 @@ class post{
 		
 		if ( $in['nav_no'] ) $url .= "&nav_no=".$in['nav_no'];
 		if ( $in['page_no'] ) $url .= "&page_no=".$in['page_no'];
+		if ( $in['category'] ) $url .= "&category=".urlencode($in['category']);
+		if ( $in['sub_category'] ) $url .= "&sub_category=".urlencode($in['sub_category']);
 		
 		return $url;
 	}
@@ -276,8 +278,8 @@ class post{
 	public function list_url ( $post_id, $category = null, $sub_category = null ) {
 		$url = "?module=post&action=list&post_id=".$post_id;
 		
-		if ( $category ) $url .= "&category=".$category;
-		if ( $sub_category ) $url .= "&sub_category=".$sub_category;
+		if ( $category ) $url .= "&category=".urlencode($category);
+		if ( $sub_category ) $url .= "&sub_category=".urlencode($sub_category);
 		
 		return $url;
 	}
@@ -869,7 +871,7 @@ class post{
 	public function content($content, $mode = 1) {
 		global $post_cfg;
 		
-		if ( $mode ) $content = stripslashes(stripslashes($content));
+		if ( $mode ) $content = stripslashes($content);
 		else {
 			$content = $this->escaped_textarea($content);
 			$content = "<xmp>$content</xmp>";

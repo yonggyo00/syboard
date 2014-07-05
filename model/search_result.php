@@ -2,6 +2,7 @@
 $query = "SELECT " . $_fields . " FROM " . $_table_name;
 
 if ( $_conds ) {
+
 	$query .= " WHERE (".implode(" AND ", $_conds).")";
 	
 	if ( $ext_conds ) {

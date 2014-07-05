@@ -14,7 +14,7 @@
 					<a href='<?=$sy['ms']->list_url(1)?>'><?=lang('Login Message')?><?=$new?></a>
 			<? } else {?>
 				<a href='?module=member&action=login_page'><?=lang('Login Login')?></a>
-				<a href='?module=member&action=register'><?=lang('Login Register')?></a>
+				<a href='<?=$sy['mb']->register_url()?>'><?=lang('Login Register')?></a>
 			<?}?>
 		</span>
 		<span id='site-top-right'>

@@ -493,9 +493,12 @@ $_ln['search form select_forum'] = "Select Forum";
 $_ln['search form input username'] = "Username";
 $_ln['search form input keyword'] = "Keyword";
 $_ln['search form input search'] = "Search";
-$_ln['search form forum'] = "Forum";
+$_ln['search form forum'] = "Post";
 $_ln['search form comment'] = "Comment";
 $_ln['search form username'] = "Username";
+$_ln['search form subject'] = "Subject";
+$_ln['search form content'] = "Content";
+$_ln['search form operator'] = 'Operator';
 
 // Search list 
 $_ln['search list message1'] = "'s posts... ";
