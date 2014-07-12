@@ -194,7 +194,7 @@ $_ln['Comment_form password'] = "비밀번호";
 $_ln['Comment_form password_msg'] = "6자리 비밀번호";
 $_ln['Comment_form captcha'] = "보안문자";
 $_ln['Comment_form reset'] = "취소";
-$_ln['Comment_form write'] = "글쓰기";
+$_ln['Comment_form write'] = "댓글등록";
 
 // post_list_category
 $_ln['Post_list_category whole'] = "전체";

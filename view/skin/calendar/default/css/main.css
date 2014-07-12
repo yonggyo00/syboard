@@ -1,0 +1,67 @@
+.calendar-skin-default {
+	border: 1px solid #666666;
+	padding: 10px;
+}
+.calendar-skin-default > #top-pannel {
+	text-align: right;
+	
+}
+
+.calendar-skin-default > #top-pannel > span {
+	cursor: pointer;
+}
+
+.calendar-skin-default > #top-pannel > span:hover {
+	text-decoration: underline;
+}
+
+.calendar-skin-default > #title {
+	margin-bottom: 5px;
+	text-align: center;
+	font-family: '맑은 고딕', AppleGothic;
+	font-size: 10pt;
+	color: #302a4b;
+}
+
+.calendar-skin-default .cel {
+	float: left;
+	border: 1px solid #666666;
+	width: 10.5%;
+	height: 30px;
+	padding-right: 3%;
+	text-align: right;
+	border-left: 0;
+	border-bottom: 0;
+	line-height: 30px;
+}
+
+.calendar-skin-default .cel:nth-child(7n + 1) {
+	border-left: 1px solid #666666;
+}
+.calendar-skin-default .bottom-line {
+	border-bottom: 1px solid #666666;
+}
+
+.calendar-skin-default .today {
+	background-color: #9891bb;
+	color: #ffffff;
+}
+
+.calendar-skin-default .red {
+	color: #801515;
+	font-weight: bold;
+}
+
+.calendar-skin-default .blue {
+	color: #19233d;
+	font-weight: bold;
+}
+
+.calendar-skin-default .cel_view_schedule {
+	cursor: pointer;
+}
+
+.calendar-skin-default .cel_view_schedule:hover {
+	background-color: #666666;
+	color: #ffffff;
+}

@@ -18,6 +18,7 @@ else if ( $in['option'] == 'referral' ) include_once 'admin.referral.php';
 else if ( $in['option'] == 'current_user_cache' ) include_once 'admin.current_user_cache.php';
 else if ( $in['option'] == 'popup' ) include_once 'admin.popup.php';
 else if ( $in['option'] == 'view_stat' ) include_once 'admin.view.stat.php';
+else if ( $in['option'] == 'calendar' ) include_once 'admin_calendar.php';
 else {
 	echo "
 		<div class='admin-title'>관리자 페이지에 접속하였습니다.</div>

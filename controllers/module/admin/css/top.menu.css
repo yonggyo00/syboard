@@ -99,7 +99,7 @@
 	background-color: #282828;
 }
 
-@media all and (max-width: 980px) {
+@media all and (max-width: 1075px) {
 	#admin-top-menu .mainmenu {
 		display: none;
 	}

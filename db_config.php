@@ -544,6 +544,21 @@ if ( $_POST['done'] ) {
 					") ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;"
 				);
 				
+				// calendar 테이블
+				mysql_query("DROP TABLE `calendar`");
+				mysql_query(
+					"CREATE TABLE IF NOT EXISTS `calendar` (".
+					"`seq` int(11) NOT NULL AUTO_INCREMENT,".
+					"`stamp` int(11) NOT NULL DEFAULT '0',".
+					"`time` varchar(6) NOT NULL DEFAULT '',".
+					"`schedule` text,".
+					"PRIMARY KEY (`seq`),".
+					"KEY `stamp` (`stamp`),".
+					"KEY `time` (`time`)".
+					") ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;"
+				);
+				
+				
 				$sy['debug']->log( 'Creating tables into '.$_POST['database'].' has been finished now');
 				
 				$sy['debug']->log( 'Creating the administrator account in member table');

@@ -189,7 +189,7 @@ $_ln['Comment_form password'] = "Password";
 $_ln['Comment_form password_msg'] = "6 characters password";
 $_ln['Comment_form captcha'] = "Captcha";
 $_ln['Comment_form reset'] = "CANCEL";
-$_ln['Comment_form write'] = "WRITE";
+$_ln['Comment_form write'] = "REPLY";
 
 
 // post_list_category

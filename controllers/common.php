@@ -38,7 +38,7 @@ define('VISITOR_STAT_TABLE', 'visitor_stat');
 define('REGISTER_AUTH_TABLE', 'register_auth');
 define('POPUP_CONFIG_TABLE', 'popup_config');
 define('IP_SECURITY_TABLE', 'ip_security');
-
+define('CALENDAR_TABLE', 'calendar');
 
 // 공용 함수 인클루드
 include_once CONTROLLER_PATH . '/functions.php';

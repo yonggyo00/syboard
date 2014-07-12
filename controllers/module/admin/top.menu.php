@@ -41,6 +41,9 @@ echo module_javascript(__FILE__);
 	<li class='mainmenu-below-980'>
 		<img id='top-more-button' src='<?=MODULE_PATH?>/admin/img/icon-3bar.png' />
 	</li>
+	<li class='mainmenu'>
+		<a href='?module=admin&action=index&option=calendar&layout=1'>스케줄관리</a>
+	</li>
 </ul>
 <div style='clear:left;'></div>
 <?php

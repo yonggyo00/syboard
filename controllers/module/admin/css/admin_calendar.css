@@ -1,0 +1,68 @@
+#admin-calendar {
+	border: 1px solid #666666;
+	padding: 10px;
+}
+#admin-calendar > #top-pannel {
+	text-align: right;
+	
+}
+
+#admin-calendar > #top-pannel > span {
+	cursor: pointer;
+}
+
+#admin-calendar > #top-pannel > span:hover {
+	text-decoration: underline;
+}
+
+#admin-calendar > #title {
+	margin-bottom: 5px;
+	text-align: center;
+	font-family: '맑은 고딕', AppleGothic;
+	font-size: 10pt;
+	color: #302a4b;
+}
+
+#admin-calendar .cel {
+	float: left;
+	border: 1px solid #666666;
+	width: 10.5%;
+	height: 60px;
+	padding-right: 3%;
+	text-align: right;
+	border-left: 0;
+	border-bottom: 0;
+	line-height: 60px;
+	font-size: 11pt;
+}
+
+#admin-calendar .cel:nth-child(7n + 1) {
+	border-left: 1px solid #666666;
+}
+#admin-calendar .bottom-line {
+	border-bottom: 1px solid #666666;
+}
+
+#admin-calendar .today {
+	background-color: #9891bb;
+	color: #ffffff;
+}
+
+#admin-calendar .red {
+	color: #801515;
+	font-weight: bold;
+}
+
+#admin-calendar .blue {
+	color: #19233d;
+	font-weight: bold;
+}
+
+#admin-calendar .cel_view_schedule {
+	cursor: pointer;
+}
+
+#admin-calendar .cel_view_schedule:hover {
+	background-color: #666666;
+	color: #ffffff;
+}

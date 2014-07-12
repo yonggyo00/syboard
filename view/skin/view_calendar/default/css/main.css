@@ -1,0 +1,32 @@
+#view-calendar-default {
+	font-size: 9pt;
+	border: 1px solid #666666;
+	padding: 10px;
+	border-radius: 3px;
+	font-family: '맑은 고딕', AppleGothic;
+	min-height: 550px;
+}
+
+#view-calendar-default > #title {
+	font-size: 10pt;
+	font-weight: bold;
+	color: #2b2740;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+#view-calendar-default table tr td {
+	padding: 5px 10px;
+	border-top: 1px solid #d5d5d5;
+}
+
+#view-calendar-default table #tr-header {
+	background-color: #666666;
+	color: #ffffff;
+	padding: 7px 10px;
+}
+
+#view-calendar-default table #tr-header td {
+	border-right: 1px solid #ffffff;
+	border-top: 0;
+}	

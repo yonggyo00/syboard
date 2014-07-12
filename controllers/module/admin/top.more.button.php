@@ -27,4 +27,5 @@
 	</div>
 	<div><a href='?module=admin&action=index&option=stat&layout=1'>방문자통계</a></div>
 	<div><a href='?module=admin&action=index&option=referral&layout=1'>유입경로</a></div>
+	<div><a href='?module=admin&action=index&option=calendar&layout=1'>스케줄관리</a></div>
 </div>

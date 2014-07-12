@@ -3,7 +3,7 @@
 <?php
 $message = $so['message'];
 $userinfo = $sy['mb']->info($message['sender']);
-$re_subject = urlencode('[RE] '.$message['subject']));
+$re_subject = urlencode('[RE] '.$message['subject']);
 ?>
 <table id='message-view-skin' cellspacing=0 cellpadding=0 width='100%' border=0>
 	<tr valign='top'>

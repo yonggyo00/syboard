@@ -99,7 +99,6 @@ if ( $in['post_id'] ) {
 	// 리스트 스킨
 	if ( !$_skinname = $post_cfg['paging_skin'] ) $_skinname = 'default';
 	
-	
 	// 페이지 네이션
 	$option = array ( 
 					'total_post'=> $total_post,

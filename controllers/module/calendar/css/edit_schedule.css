@@ -1,0 +1,40 @@
+#edit-schedule {
+	border: 1px solid #666666;
+	padding: 10px;
+	border-radius: 3px;
+	font-size: 9pt;
+}
+
+#edit-schedule table {
+	margin-bottom: 10px;
+}
+
+#edit-schedule table tr td {
+	padding: 5px 10px;
+}
+#edit-schedule table .tr-header {
+	background-color: #666666;
+	color: #ffffff;
+}
+
+#edit-schedule table tr td textarea {
+	width: 430px;
+	height: 130px;
+	padding: 10px;
+}
+
+#edit-schedule input[type='submit'] {
+	float: right;
+	cursor: pointer;
+	border: 0;
+	background-color: #39335b;
+	color: #ffffff;
+	display: inline-block;
+	padding: 4px 10px;
+	font-size: 9pt;
+}
+
+
+#edit-schedule input[type='submit']:hover {
+	background-color: #312d46;
+}
